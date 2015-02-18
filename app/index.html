@@ -6,27 +6,37 @@
 </head>
 
 <body>
-<div class="container form-group">
+<div class="container">
     <div class="page-header">
-        <h1>The Most Famous Paintings
-            <small>in one place</small>
-        </h1>
+        <h1>Printers </h1>
     </div>
-    <div>
-        <ul class="nav nav-justified">
-            <li><a>Paintings Vertical</a></li>
-            <li><a>Start</a></li>
-            <li><a>Paintings Horizontal</a></li>
-        </ul>
+    <div id="list" ng-controller="PrinterCtrl as ctrl">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Number of ink</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="printer in ctrl.printerList">
+                <td>{{printer.name}}</td>
+                <td>{{printer.type}}</td>
+                <td>{{printer.inkNumber}}</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="text-center">
+            <div id="random">
+                <strong>Lucky printer:</strong> {{ctrl.randomPrinter()}}
+            </div>
+        </div>
     </div>
+
 </div>
-<div class="container"></div>
 
 <script src="../bower_components/angular/angular.js"></script>
-<script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="app.js"></script>
-<script src="PaintingListCtrl.js"></script>
-<script src="PaintingDetailCtrl.js"></script>
-
 </body>
 </html>

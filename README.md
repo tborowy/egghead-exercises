@@ -1,33 +1,21 @@
-##Exercise 41 : Introduction to ui-router
-Create navigation to a page that contains information about the most popular paintings. Use an alternative to AngularJS's default routing module: ui-router.
+##Exercise 42 : Using angular.bootstrap to Initialize Your App
+Use angular.bootstrap to replace all the ng directives (ng-app, ng-controller, ng-repeat) that you will find in the file index.html.
 
 ###Requirements
-* implement tabs that redirect the user to:
-    * the main page (redirect to **start** with  welcome information)
-    * vertical paintings list (redirect to **vpaintings**)
-    * horizontal paintings list (redirect to **hpaintings**)
-    * otherwise redirect user to start page
-* you should see the details about painting when it is clicked
+* create two directives:
+    * ***lucky*** responsible for **randomPrinter()** function
+    * ***printerTable*** responsible for list of printers 
+    * put a piece of code responsible for the display of the table in a separate file and add it to the directive using ***templateUrl*** property
+    
+    ```templateUrl: 'printerTable.html'```
+
 
 ###Result
-* you start with
-
-![alt text](app/assets/1.jpg)
-
-* paintings list
-
-![alt text](app/assets/1.1.jpg)
-
-* horizontal paintings details
-
-![alt text](app/assets/2.jpg)
-
-* vertical paintings details
-
-![alt text](app/assets/3.jpg)
+The result of the exercises should be application that displays a list of printers and a random printer. In the file index. html cannot be ng-elements.
 
 
 ###Before you start, please refer to:
-* [angularjs-introduction-ui-router](https://egghead.io/lessons/angularjs-introduction-ui-router)
+* [angularjs-angular-bootstrap-app-init](https://egghead.io/lessons/angularjs-angular-bootstrap-app-init)
+* [angularjs-with-no-custom-markup](https://egghead.io/lessons/angularjs-with-no-custom-markup)
 
 Good luck!
