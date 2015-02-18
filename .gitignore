@@ -3,4 +3,5 @@
 .idea
 *.iml
 *bower_components
-node_modules
+*node_modules
+target

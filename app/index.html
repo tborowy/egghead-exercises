@@ -1,42 +1,55 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html>
 <head lang="en">
     <title>AngularJS Tutorials</title>
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
-<body>
-<div class="container">
+<body ng-app="myFilter">
+<div class="container" ng-controller="FilterCtrl">
     <div class="page-header">
-        <h1>Printers </h1>
+        <h1>Just
+            <small>filter</small>
+        </h1>
     </div>
-    <div id="list" ng-controller="PrinterCtrl as ctrl">
-        <table class="table table-bordered">
-            <thead>
-            <tr>
-                <th>Name</th>
-                <th>Type</th>
-                <th>Number of ink</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr ng-repeat="printer in ctrl.printerList">
-                <td>{{printer.name}}</td>
-                <td>{{printer.type}}</td>
-                <td>{{printer.inkNumber}}</td>
-            </tr>
-            </tbody>
-        </table>
-        <div class="text-center">
-            <div id="random">
-                <strong>Lucky printer:</strong> {{ctrl.randomPrinter()}}
-            </div>
-        </div>
+    <div class="well">
+        <label for="tellMe" class="label label-default">Give me some text ...</label>
+        <input type="text" id="tellMe" class="form-control" ng-model="data.tellMe">
     </div>
+    <table class="table table-striped table-bordered">
+        <thead>
+        <tr>
+            <th>Filter</th>
+            <th>Without filter</th>
+            <th>With filter</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>quote</td>
+            <td>{{data.citation}}</td>
+            <td>{{data.citation | quote}}</td>
+        </tr>
+        <tr>
+            <td>withoutH</td>
+            <td>{{data.title}}</td>
+            <td>{{data.title | withoutH}}</td>
+        </tr>
+        <tr>
+            <td>firstLetterUp</td>
+            <td>{{data.someText}}</td>
+            <td>{{data.someText | firstLetterUpp : true}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <div>
+        <label class="label label-default">... and I repeat it in capitals </label>
 
+        <h3 class="active">{{data.tellMe | uppercase}}</h3>
+    </div>
 </div>
 
 <script src="../bower_components/angular/angular.js"></script>
-<script src="app.js"></script>
+<script src="Filter.js"></script>
 </body>
 </html>
