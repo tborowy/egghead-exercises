@@ -1,19 +1,12 @@
-##Exercise 47: Unit Testing Directive Scope Binding
-Test  **change** directive which updates the information about the **person** on double click.
+##Exercise 48: Testing a Service
+Test simple service (**CalculatorService**)
 
 ###Requirements
-* to call the events instead of ```browserTrigger(element,'click')``` use ```element.triggerHandler('click')```
-* to use isolate scope instead of ```element.scope()``` use ```element.isolateScope()``` 
-* in **should update person object on double click** case use ```toEqual``` instead of ``toBe```
-* check in each test both cases, for example:
-    * ```element.isolatedScope().ehSimple.message```
-    * ```$scope.data.message```
+* test each function in a separate **describe** (use function name)
+* check that the functions are protected in exceptional cases (such as division by zero return false) - write the appropriate test (if the function does not pass the test, fix it)
 
 ###Result
-* make sure that the persons concerned have been updated correctly: 
-    * first name should be uppercase,
-    * last name should be lowercase, 
-    * age should be equal 18
+You should test the 4 basic mathematical operations and division by zero security.
 
 ### Test Configuration:
 * ```npm install```
@@ -23,6 +16,7 @@ Test  **change** directive which updates the information about the **person** on
 * set Application parameters to ```start test\karma.conf.js```
 
 ###Before you start, please refer to:
-* [angularjs-unit-testing-directive-scope-binding](https://egghead.io/lessons/angularjs-unit-testing-directive-scope-binding)
+* [angularjs-testing-underscores](https://egghead.io/lessons/angularjs-testing-underscores)
+* [angularjs-testing-a-service](https://egghead.io/lessons/angularjs-testing-a-service)
 
 Good luck!
