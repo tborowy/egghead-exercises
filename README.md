@@ -1,11 +1,19 @@
-##Exercise 46: Unit Testing Directive Scope
-Your task is to test the two directives: **enter** and **leave**. Complete test cases.
+##Exercise 47: Unit Testing Directive Scope Binding
+Test  **change** directive which updates the information about the **person** on double click.
 
 ###Requirements
-* check whether the **mouseenter** event add to the **circle** element **bg-danger** class
-* check whether the **mouseleave** event remove class
 * to call the events instead of ```browserTrigger(element,'click')``` use ```element.triggerHandler('click')```
-* to use isolete scope instead of ```element.scope()``` use ```element.isolateScope()``` 
+* to use isolate scope instead of ```element.scope()``` use ```element.isolateScope()``` 
+* in **should update person object on double click** case use ```toEqual``` instead of ``toBe```
+* check in each test both cases, for example:
+    * ```element.isolatedScope().ehSimple.message```
+    * ```$scope.data.message```
+
+###Result
+* make sure that the persons concerned have been updated correctly: 
+    * first name should be uppercase,
+    * last name should be lowercase, 
+    * age should be equal 18
 
 ### Test Configuration:
 * ```npm install```
@@ -15,6 +23,6 @@ Your task is to test the two directives: **enter** and **leave**. Complete test 
 * set Application parameters to ```start test\karma.conf.js```
 
 ###Before you start, please refer to:
-* [angularjs-unit-testing-directive-scope](https://egghead.io/lessons/angularjs-unit-testing-directive-scope)
+* [angularjs-unit-testing-directive-scope-binding](https://egghead.io/lessons/angularjs-unit-testing-directive-scope-binding)
 
 Good luck!
