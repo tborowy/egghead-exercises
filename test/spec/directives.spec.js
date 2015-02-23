@@ -4,16 +4,34 @@ describe("directives", function ()
     var square;
     var $scope;
 
+    beforeEach(module("myApp"));
     beforeEach(inject(function ($compile, $rootScope)
     {
         $scope = $rootScope;
-        square = angular.element('<div click-on="bg-info" class="square center-block"></div>');
-        circle = angular.element('<div enter class="circle center-block"></div>');
+        circle = angular.element('<div enter leave class="circle center-block"></div>');
         circle = $compile(circle)($rootScope);
-        square = $compile(square)($rootScope);
     }));
 
-    <!-- click-on directive test-->
-    <!-- enter directive test-->
+    describe("circle", function ()
+    {
+        it("should add bg-info a class when mouseenter", function ()
+        {
 
+        });
+
+        it("should respond to a mouseenter event", function ()
+        {
+
+        });
+
+        it("should remove bg-info class when mouseleave", function ()
+        {
+
+        });
+
+        it("should respond to a mouseleave event", function ()
+        {
+
+        });
+    });
 });
