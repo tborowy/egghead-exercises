@@ -1,4 +1,6 @@
-describe("filter", function ()
+'use strict';
+
+describe('filter', function ()
 {
 
 });

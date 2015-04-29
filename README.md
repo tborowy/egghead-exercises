@@ -15,7 +15,7 @@ Check that they work correctly using the sample data:
     * 'test test'
 
 ###Result
-![alt text](app/assets/test.jpg)
+![alt text](app/assets/1.png)
 
 ### Test Configuration:
 * ```npm install```

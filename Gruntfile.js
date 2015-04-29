@@ -7,8 +7,7 @@
 // use this if you want to recursively match all subfolders:
 // 'test/spec/**/*.js'
 
-module.exports = function (grunt)
-{
+module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
@@ -38,8 +37,7 @@ module.exports = function (grunt)
             livereload: {
                 options: {
                     open: true,
-                    middleware: function (connect)
-                    {
+                    middleware: function (connect) {
                         return [
                             connect().use('/bower_components', connect.static('./bower_components')), connect.static(config.app)
 
@@ -47,21 +45,10 @@ module.exports = function (grunt)
                     }
                 }
             }
-        },
-        karma: {
-            unit: {
-                configFile: 'test/karma.conf.js',
-                singleRun: true
-            },
-            dev: {
-                configFile: 'test/karma.conf.js',
-                singleRun: false
-            }
         }
     });
 
-    grunt.registerTask('serve', function ()
-    {
+    grunt.registerTask('serve', function () {
         grunt.task.run([
             'connect:livereload', 'watch'
         ]);
