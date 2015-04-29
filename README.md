@@ -8,15 +8,15 @@ Something bad happened to the titles of images. Use angular.copy to updates data
 ###Result
 * you start with
 
-![alt text](app/assets/start.jpg)
+![alt text](app/assets/1.png)
 
-* when you click on the image
+* when you click on the image (for example **Programmer**)
 
-![alt text](app/assets/buttonPressed.jpg)
+![alt text](app/assets/2.png)
 
 * when you click on **Save** button
 
-![alt text](app/assets/afterSave.jpg)
+![alt text](app/assets/3.png)
 
 ###Before you start, please refer to:
 * [angularjs-angular-copy-for-deep-copy](https://egghead.io/lessons/angularjs-angular-copy-for-deep-copy)
