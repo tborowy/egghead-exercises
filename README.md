@@ -16,15 +16,15 @@ You start with ready server side:
 ###Result
 * you start with:
 
-![alt text](app/assets/1.jpg)
+![alt text](app/assets/1.png)
 
 * when get request works:
 
-![alt text](app/assets/2.jpg)
+![alt text](app/assets/2.png)
 
 * add new favourite song
 
-![alt text](app/assets/3.jpg)
+![alt text](app/assets/3.png)
 
 ###To run server
 * ```npm install```
