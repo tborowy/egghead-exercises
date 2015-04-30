@@ -1,6 +1,8 @@
-var myApp = angular.module("myApp", []);
+'use strict';
 
-myApp.service("CalculatorService", function ()
+var myApp = angular.module('myApp', []);
+
+myApp.service('CalculatorService', function ()
 {
     this.addition = function (a, b)
     {
@@ -19,6 +21,6 @@ myApp.service("CalculatorService", function ()
 
     this.division = function (a, b)
     {
-        return a / b;
-    }
+        return 0 !== b ? a / b : false;
+    };
 });
