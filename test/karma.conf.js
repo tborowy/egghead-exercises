@@ -14,15 +14,13 @@ module.exports = function (config)
         frameworks: ['jasmine'],
 
         // list of files / patterns to load in the browser
-        files: [
-            'bower_components/angular/angular.js',
-            'bower_components/angular-mocks/angular-mocks.js',
-            'bower_components/lodash/dist/lodash.js',
-            'bower_components/neosavvy-javascript-core/neosavvy-javascript-core.js',
-            'app/user-api.js',
-            'app/**/*.js',
-            'test/spec/**/*.js'
-        ],
+        files: ['app/bower_components/angular/angular.js',
+                'app/bower_components/angular-mocks/angular-mocks.js',
+                'app/bower_components/lodash/dist/lodash.js',
+                'app/bower_components/neosavvy-javascript-core/neosavvy-javascript-core.js',
+                'app/user-api.js',
+                'app/*.js',
+                'test/spec/*.js'],
 
         // list of files / patterns to exclude
         exclude: [],
@@ -36,8 +34,7 @@ module.exports = function (config)
         },
 
         coverageReporter: {
-            dir: 'target/coverage/',
-            type: 'html'
+            dir: 'target/coverage/', type: 'html'
         },
 
         // web server port
@@ -51,13 +48,10 @@ module.exports = function (config)
         // - Safari (only Mac)
         // - PhantomJS
         // - IE (only Windows)
-        browsers: [
-            'PhantomJS'
-        ],
+        browsers: ['PhantomJS'],
 
         // Which plugins to enable
-        plugins: [
-            'karma-phantomjs-launcher', 'karma-coverage', 'karma-jasmine', 'karma-spec-reporter'
+        plugins: ['karma-phantomjs-launcher', 'karma-coverage', 'karma-jasmine', 'karma-spec-reporter'
 
         ],
 

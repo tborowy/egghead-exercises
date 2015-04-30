@@ -1,3 +1,4 @@
+'use strict';
 angular.module('app.services').factory('services.Api', ['$q', '$http', function ($q, $http)
 {
     return {
@@ -5,8 +6,8 @@ angular.module('app.services').factory('services.Api', ['$q', '$http', function 
         {
             var deferred = $q.defer();
             $http({
-                method: 'GET',
-                url: 'https://api.github.com/users'}).success(function (data)
+                method: 'GET', url: 'https://api.github.com/users'
+            }).success(function (data)
             {
                 deferred.resolve(data);
             });
