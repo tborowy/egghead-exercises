@@ -10,15 +10,15 @@ There you will find information on the different modes of transport departure (b
 ### Result
 * change via stop bus
 
-![alt text](app/assets/1.jpg)
+![alt text](app/assets/1.png)
 
 * add train delay
 
-![alt text](app/assets/2.jpg)
+![alt text](app/assets/2.png)
 
 * cancel flight
 
-![alt text](app/assets/3.jpg)
+![alt text](app/assets/3.png)
 
 ###Before you start:
 * [angularjs-accessing-data-in-html](https://egghead.io/lessons/angularjs-accessing-data-in-html)

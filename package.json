@@ -1,6 +1,6 @@
 {
-  "name": "egghead-exercises",
-  "description": "Angular training",
+  "name": "angular-egghead",
+  "description": "angular training",
   "version": "0.0.0",
   "dependencies": {
     "body-parser": "^1.12.0",
@@ -21,8 +21,12 @@
   "engines": {
     "node": ">=0.10.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/aniaw/angular-egghead.git"
+  },
   "scripts": {
-    "start": "node_modules/karma/bin/karma start test/karma.conf.js",
-    "test": "node_modules/karma/bin/karma start test/karma.conf.js --singleRun true"
+    "start": "grunt karma:dev",
+    "test": "grunt karma"
   }
 }
