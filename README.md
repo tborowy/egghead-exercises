@@ -1,26 +1,35 @@
-#Exercise 10 : Directive restrictions
+#Exercise 9 : Directives 
 
-##Sumamry
-Developers were discussing how to extend application functionality. They decided that not only they need some new elements on the page, but they also need to 
-change behavior of existing elements to meet current requirements. You are given a task to implement four directives that will serve as templates
-for their use. Each of the directives should be restricted to a different property: element, attribute, class and finally comment. Moreover, you should
-provide a working example.
+##Summary
+Application require you to change element behavior based on specific event. You are supposed to write four directives that bind events to two provided canvas. 
+
+When you move your mouse over the provided circle(check comments) bootstrap class should be added, on the other hand when you leave the area it should be 
+removed back. Secondly, when you double click square it should add provided class to the square and when you single click - it should be removed. Please be aware
+that you should be able to pass specified bootstrap class as argument to the directive.
 
 ##Goals
+* ***enter*** directive that return a **function** (check videos) inside and binds **mouseenter** event
+* **enter** directive should add class provided as attribute in **index.html** when **mouseenter** is fired
 
-* ***restrictE*** directive restricted to the element and with template set to the example data as follows: `'{{description.element.name}}: {{description.element.call}}'`
-Please bear in mind that required data is already defined in **AppCtrl** controller
-* ***restrictA*** directive restricted to the attribute and with template pattern exactly like in **restrictE** directive(but use description.attribute property)
-* ***restrictC*** directive restricted to the class and with template pattern exactly like in **restrictE** directive(but use description.class property)
-* ***restrictM*** directive restricted to the comment. Moreover, in the directive body *`alert('directive M: working...");`* should be added.
-* **index.html** should be updated with example directive usages(check comments)
 
-##Before you start, please refer to:
-* [angularjs-directive-restrictions](https://egghead.io/lessons/angularjs-directive-restrictions)
-* [restrictions](https://docs.angularjs.org/guide/directive)
+* ***leave*** directive that return a **function** inside and binds **mouseleave** event
+* **leave** directive should remove class provided as attribute to enter directive in **index.html** when **mouseleave** is fired
+
+
+* ***dblClickOn*** directive that return a **function** inside and binds **dblclick** event
+* **dblClickOn** directive should add class provided as attribute in **index.html** when **dblclick** is fired
+
+
+* ***clickOn*** directive that return a **function** inside and binds **clickOn** event
+* **clickOn** directive should remove class provided as attribute to dblClickOn directive in **index.html** when **clickOn** is fired
+
+
+* **index.html** should be completed to achieve correct behavior for circle and square mentioned before(also check comments)
+* ***bg-danger*** passed as an attribute to enter directive
+* ***bg-info*** passed as an attribute to dblClickOn directive
 
 ##Setup
-You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
+You should have installed `npm`, `bower`, `grunt`  packages to run this example. First, run sequentially
 
 ```
 npm install
@@ -41,5 +50,11 @@ To start unit test, run
 ```
 grunt karma
 ```
+
+###Before you start, please refer to:
+* [angularjs-basic-behaviors](https://egghead.io/lessons/angularjs-basic-behaviors)
+* [angularjs-useful-behaviors](https://egghead.io/lessons/angularjs-useful-behaviors)
+* [jquery/bind](http://api.jquery.com/bind/)
+
 
 Good luck!
