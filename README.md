@@ -1,38 +1,40 @@
-#Exercise 2 : Controller
+#Exercise 3 : Sharing data between controllers
 
 ##Summary
-Applications often need to display value that user have entered. You are provided with simple view containing title, three inputs and display board. Your task is to
-implement functionality that will allow inputs to be displayed along with the information on the title and board.
+Controllers often need to communicate and share data. You are given a task to create functionality to share data between two controllers.
+Modify `index.html` file to share data between `LeftCtrl` and `RightCtrl`.
 
-##Goals
-* application should contain `FruitCtrl` controller
-* on `FruitCtrl` scope there are binded properties: `seller, name, count` with example default values
-* comments in `index.html` are replaced by appropriate values from the inputs
+##Goal
+Add **ng-controller's** and **ng-model's** in appropriate place. Remember that all inputs should be binded to the same property and update when you type something either in left or right input.
+
+| My Value     	| My Value       	|
+|--------------	|----------------	|
+| My Value 	| My Value  	|
 
 ##Before you start, please refer to:
-* [angularjs-controller](https://egghead.io/lessons/angularjs-controllers)
+* [angularjs-the-dot](https://egghead.io/lessons/angularjs-the-dot)
 
 ##Setup
- You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially:
- 
- ```
- npm install
- ```
- 
- ```
- bower install
- ```
- 
- To start the application, run
- 
- ```
- grunt serve
- ```
- 
-To start cucumber tests, run sequentially in separate terminals the application and command
+You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially:
 
- ```
- grunt test
- ```
+```
+npm install
+```
+
+```
+bower install
+```
+
+To start the application, run
+
+```
+grunt serve
+```
+
+To start cucumber tests, run sequentially in separate terminals the application and command
  
+```
+grunt test
+```
+
 Good luck!
