@@ -7,16 +7,20 @@ allow you to create as many heroes as you need.
 ##Goals
 
 * `hero` directive restricted as element and with given template as follows: 
+
 ```
-img src="assets/hero.png" class="hero-position" width="300px"
+< img src="assets/hero.png" class="hero-position" width="300px">
 ```
-* `mask` directive restricted as element and with given template as follows: ```
-img src="assets/mask.png" class="mask-position" width="62px"
+* `mask` directive restricted as element and with given template as follows: 
+
+```
+< img src="assets/mask.png" class="mask-position" width="62px">
 ```
 * `superhero` directive restricted as element with template that use previous directives  - you should put mask after the hero element (use directives inside
  template 
+
  ```
- <div class="relative-position">....</div>
+ < div class="relative-position">
   ```
 * Directives used in correct places at `index.html` (check comments)
 
