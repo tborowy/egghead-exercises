@@ -6,7 +6,7 @@ text inside h3 element(*display board*).
 
 ##Goals
 
-* create `replaceWord()` function inside `NewWordCtrl` - it should take three parameters: ***text, word and newWord*** and replace `word` with a `newWord` 
+* create `replaceWord()` function inside `NewWordCtrl` - it should take three parameters: ***text, word, newWord*** and replace `word` with a `newWord` 
 in specified `text`
 * the upper *display board*(inside *h3* tag) text value should be taken from the textarea below, refactored by a function `replaceWord()`, with a `word` 
 parameter set to the value from *word input* and `newWord` set as *"purr"*
