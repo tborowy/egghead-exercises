@@ -1,24 +1,22 @@
 #Exercise 7 : Angular built in filters
 
 ##Summary
-
 In this application, you are supposed to use ready-made filter options. You start with a ready list of users.
 
 ##Goals
-
 Limit the number of displayed records with the radio choice (default limit should be 15). Afterwards add the ability to sort data by columns names.
 
-Create and use ***reverseSort*** function that sort the data ascending and descending (take a look at **orderBy** documentation).
+Create and use `reverseSort` function that sort the data ascending and descending (take a look at `orderBy` documentation).
   
 Examples of results:
 
-* set limit to **1**
+* set limit to `1`
 
 | Id | User Name | Full Name    | Gender |
 |----|-----------|--------------|--------|
 | 8  | mbanks7   | Martha Banks | Female |
 
-* type **female** into search inputinput
+* type `female` into search input
 
 | Id | User Name  | Full Name        | Gender |
 |----|------------|------------------|--------|
@@ -28,9 +26,12 @@ Examples of results:
 | 14 | aboydd     | Angela Boyd      | Female |
 | 15 | farmstronge|Frances Armstrong | Female |
 
+##Before you start, please refer to:
+* [angularjs-built-in-filters](https://egghead.io/lessons/angularjs-built-in-filters)
+* [orderBy](https://docs.angularjs.org/api/ng/filter/orderBy)
 
 ##Setup
-You should have installed `npm`, `bower`, `grunt`  packages to run this example. First, run sequentially
+You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
 
 ```
 npm install
@@ -57,9 +58,5 @@ To start unit test run
 ```
 grunt karma
 ```
-
-###Before you start, please refer to:
-* [angularjs-built-in-filters](https://egghead.io/lessons/angularjs-built-in-filters)
-* [orderBy](https://docs.angularjs.org/api/ng/filter/orderBy)
 
 Good luck!
