@@ -8,9 +8,10 @@ text inside h3 element(*display board*).
 
 * create `replaceWord()` function inside `NewWordCtrl` - it should take three parameters: ***text, word, newWord*** and replace `word` with a `newWord` 
 in specified `text`
-* the upper *display board*(inside *h3* tag) text value should be taken from the textarea below, refactored by a function `replaceWord()`, with a `word` 
-parameter set to the value from *word input* and `newWord` set as *"purr"*
 * textarea model should default to lyrics from `SongText` factory
+* input for newWord should default to `newWord` from `SongText` factory 
+* the upper *display board*(inside *h3* tag) text value should be taken from the textarea below, refactored by a function `replaceWord()` (with a `newWord` 
+parameter set to the value from *word input* and word set as *"purr"*)
 * *display board* should be updated as values in textarea or input change
 
 ##Before you start, please refer to:
@@ -46,3 +47,4 @@ grunt karma
 ```
 
 Good luck!
+
