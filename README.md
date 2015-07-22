@@ -5,11 +5,18 @@ Controllers often need to communicate and share data. You are given a task to cr
 Modify `index.html` file to share data between `LeftCtrl` and `RightCtrl`.
 
 ##Goal
-Add **ng-controller's** and **ng-model's** in appropriate place. Remember that all inputs should be binded to the same property and update when you type something either in left or right input.
+Your task is to add **ng-controller's** and **ng-model's** in appropriate place so after type something in left or right input update messages below. 
+Remember that all inputs should be binded to the same property. Example result
 
-| My Value     	| My Value       	|
+| some text  	|                  	|
 |--------------	|----------------	|
-| My Value 	| My Value  	|
+| some text  	| some text  	    |
+
+
+
+|              |another text       	|
+|--------------|----------------	|
+| another text | another text       |
 
 ##Before you start, please refer to:
 * [angularjs-the-dot](https://egghead.io/lessons/angularjs-the-dot)
