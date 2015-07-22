@@ -6,15 +6,18 @@ Modify `index.html` file to share data between `LeftCtrl` and `RightCtrl`.
 
 ##Goal
 Your task is to add **ng-controller's** and **ng-model's** in appropriate place so after type something in left or right input update messages below. 
-Remember that all inputs should be binded to the same property. Example result
+Remember that all inputs should be binded to the same property. 
 
-| some text  	|                  	|
+Type text in left input
+
+| some text  	|     -           	|
 |--------------	|----------------	|
 | some text  	| some text  	    |
 
 
+Type text in right input
 
-|              |another text       	|
+|    -         |another text       	|
 |--------------|----------------	|
 | another text | another text       |
 
