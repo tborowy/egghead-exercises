@@ -1,11 +1,5 @@
 Feature: Bind controller
 
-  Scenario: Check type inputs
-    When I browse to the "/"
-    Then The element "inputs.seller" should be type "text"
-    Then The element "inputs.name" should be type "text"
-    Then The element "inputs.count" should be type "number"
-
   Scenario: Check bind value
     When I browse to the "/"
     When I enter "user" into "inputs.seller" field
