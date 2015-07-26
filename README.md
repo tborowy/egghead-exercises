@@ -1,7 +1,7 @@
 #Exercise 1 : Binding
 
 ##Summary
-Application displays three inputs and the artists table. In table, each class attribute of the row is binded to one of the input values by order.
+Application displays three inputs and the artists table. In the table, each row's class attribute is bound to respective input value.
 
 ##Goals
 * **First place** input value updates class of the first row
