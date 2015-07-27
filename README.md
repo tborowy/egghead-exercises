@@ -16,8 +16,8 @@ that you should be able to pass specified bootstrap class as argument to the dir
 * **leave** directive should remove class provided as attribute to enter directive in **index.html** when **mouseleave** is fired
 
 
-* ***dblClickOn*** directive that return a **function** inside and binds **dblclick** event
-* **dblClickOn** directive should add class provided as attribute in **index.html** when **dblclick** is fired
+* ***dbClickOn*** directive that return a **function** inside and binds **dblclick** event
+* **dbClickOn** directive should add class provided as attribute in **index.html** when **dblclick** is fired
 
 
 * ***clickOn*** directive that return a **function** inside and binds **clickOn** event
