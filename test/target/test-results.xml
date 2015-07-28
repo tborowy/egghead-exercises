@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<testsuites>
+  <testsuite name="PhantomJS 1.9.8 (Windows 8)" package="" timestamp="2015-07-27T12:31:03" id="0" hostname="ania-komp">
+    <properties>
+      <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34"/>
+    </properties>
+  </testsuite>
+  <testsuite name="PhantomJS 1.9.8 (Windows 8)" package="" timestamp="2015-07-27T12:31:04" id="0" hostname="ania-komp" tests="4" errors="0" failures="0" time="0.037">
+    <properties>
+      <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34"/>
+    </properties>
+    <testcase name="should add bg-danger a class when mouseenter" time="0.021" classname="PhantomJS 1.9.8 (Windows 8).directives circle"/>
+    <testcase name="should remove bg-info class when mouseleave" time="0.007" classname="PhantomJS 1.9.8 (Windows 8).directives circle"/>
+    <testcase name="should add bg-info a class when click" time="0.004" classname="PhantomJS 1.9.8 (Windows 8).directives square"/>
+    <testcase name="should remove bg-info class when dbclick" time="0.005" classname="PhantomJS 1.9.8 (Windows 8).directives square"/>
+    <system-out><![CDATA[
+]]></system-out>
+    <system-err/>
+  </testsuite>
+</testsuites>

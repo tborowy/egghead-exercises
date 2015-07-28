@@ -1,22 +1,21 @@
 #Exercise 1 : Binding
 
 ##Summary
-Application displays three inputs and the artists table. In the table, each row's class attribute is bound to respective input value.
+Application displays three inputs and an artists table. Each class attribute of the row which is binded to one of the input values by order. By inputting a text will result in a color change of the table row.
 
 ##Goals
-* **First place** input value updates class of the first row
-* **Second place** input value updates class of the second row
-* **Third place** input value updates class of the third row
+You are required to implement a solution that will result in such behavior:
+a value input should be taken as table row class attribute, so after typing 'warning' in the first input then the first table row should be displayed with a class warning. This implies for the other input and rows as well.
 
 ###Before you start, please refer to:
 * [angularjs-binding](https://egghead.io/lessons/angularjs-binding)
-* **bootstrap classes** that will be used for coloring table cells [contextual classes](http://getbootstrap.com/css/#tables)
+* **bootstrap classes** are used for coloring table rows [contextual classes](http://getbootstrap.com/css/#tables)
 
 ### + Bonus task
 Try to connect input fields with columns of the table.
 
 ##Setup
- You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially:
+ You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
  
  ```
  npm install
@@ -26,13 +25,13 @@ Try to connect input fields with columns of the table.
  bower install
  ```
  
- To start the application, run
+ To run the application:
  
  ```
  grunt serve
  ```
  
-To start cucumber tests, run sequentially in separate terminals the application and command
+To run cucumber tests:
 
  ```
  grunt test
