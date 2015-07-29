@@ -29,14 +29,11 @@ Application displays sentence with `color` and `number` set by factory. Your job
  grunt serve
  ```
  
-To run cucumber tests:
+To run unit tests:
 
  ```
- grunt test
+ grunt karma
  ```
  
 Good luck!
 
-
-
-Good luck!
