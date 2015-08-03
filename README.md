@@ -1,19 +1,19 @@
 #Exercise 2 : Controller
 
 ##Summary
-Applications often need to display value that user have entered. You are provided with simple view containing title, three inputs and display board. Your task is to
+Applications often need to display value that user has entered. You are provided with simple view containing title, three inputs and display board. Your task is to
 implement functionality that will allow inputs to be displayed along with the information on the title and board.
 
 ##Goals
-* create **FruitCtrl** file with `FruitCtrl` controller belong to `app` module
-* in controller add three properties: `seller, name, count` with example default values
-* comments in `index.html` are replaced by appropriate values from the inputs
+* create **FruitCtrl** file with `FruitCtrl` controller belonging to `app` module
+* in controller add three properties: `seller, name, count` with some default values
+* comments in `index.html` should be replaced with appropriate values from the inputs
 
 ##Before you start, please refer to:
 * [angularjs-controller](https://egghead.io/lessons/angularjs-controllers)
 
 ##Setup
- You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially:
+ You should have `npm`, `bower`, `grunt-cli` packages installed to run this task. First, run sequentially:
  
  ```
  npm install
