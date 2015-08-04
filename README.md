@@ -1,11 +1,13 @@
 #Exercise 21 : scope vs $scope
 
 ##Summary
-In this application existed two directives on the same view, but in here we encountered the problem - when complement one `input` automatically completes the second input.
+In this application there are two directives working on the same scope. The final working application displays two inputs with different values.
 
 ##Goals
- * don't make any change in the **templates** of directives and  **index.html** view.
- * you should be able to insert two different values for the inputs and display it by clicking the corresponding button.
+
+* a value in the first input also displays in the second one. The desired behavior is to have two separeted inputs.
+* they are using the same model
+* you should edit only  `scope.js` file but not the directive's template
 
 ##Before you start, please refer to
 * [angularjs-scope-vs-scope](https://egghead.io/lessons/angularjs-scope-vs-scope)
