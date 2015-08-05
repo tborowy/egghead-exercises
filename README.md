@@ -1,28 +1,16 @@
 #Exercise 23 : templateCache
 
 ##Summary
-In the application, the same data can be displayed in several different method, depending on the given method is changed template in directive. 
-
-You start with three ready template: 
-   * button - should be use when **button** is entered into template input 
-   * table - should be use when **table** is entered into template input 
-   * default - should be use when template is empty or when is entered text other than template above 
+An application can render same data in several different ways. The displayed templates are changed based on user interaction. To improve user experience template cache is used.
 
 ##Goals
- * add **template** to cache templates and use them into link function.
- * DON'T change **return** in directive.
+Utilise `templateCache` to store templates and render them in the directive. You start with two keywords: button, table - they represent coresponding templates:
+ 
+* button - displays when **button** is entered
+* table - displays when **table** is entered
+* default - displays in any other case
 
-###Results
-* `default template` should display template: order x quantity (e.g. pizza x 12)
-* `button template` should display button - an after clicking - message:  Your order: quantity order (e.g. Your order: 12 pizzas)
-* `table template` should display table with data, e.g.
-
-| order  | quantity |
-|--------|----------|
-| pizza  | 12       | 
-  
-
-###Before you start, please refer to:
+##Before you start, please refer to:
 * [angular templateCache](https://egghead.io/lessons/angularjs-templatecache)
 * [$compile](https://code.angularjs.org/1.2.16/docs/api/ng/service/$compile)
 * [$watch](https://egghead.io/lessons/angularjs-the-basics-of-scope-watch)
