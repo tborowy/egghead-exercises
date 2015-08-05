@@ -6,17 +6,15 @@
 
     // add routing here
 
-    app.controller('appCtrl', function ($scope, $routeParams)
+    app.controller('homeCtrl', function ($scope)
     {
         $scope.$root.condition = true;
-        $scope.brand = $routeParams.brand;
-        $scope.capacity = $routeParams.capacity;
+        $scope.car = {brand: 'Ferrari', capacity: 3.5};
     });
 
     app.controller('routeCtrl', function ($scope, $routeParams)
     {
         $scope.$root.condition = true;
-        $scope.brand = $routeParams.brand;
         $scope.brand = $routeParams.brand;
         $scope.capacity = $routeParams.capacity;
     });
