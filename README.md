@@ -10,6 +10,9 @@ Utilise `templateCache` to store templates and render them in the directive. You
 * table - displays when **table** is entered
 * default - displays in any other case
 
+**Hint**: use `element.html(value)` before compile, to assign templateCache into the DOM
+            
+
 ##Before you start, please refer to:
 * [angular templateCache](https://egghead.io/lessons/angularjs-templatecache)
 * [$compile](https://code.angularjs.org/1.2.16/docs/api/ng/service/$compile)
