@@ -7,8 +7,7 @@ Feature: Products
     And I move mouse on "greenSquare" element
     And I move mouse on "title" element
     And I move mouse on "greenSquare" element
-    Then I should see "*,*,*" in "petals" list
-    And I should see "3" stars
+    And I should see "3" petals
 
   Scenario: Remove petals
     When I browse to the "/"
@@ -21,8 +20,7 @@ Feature: Products
     And I move mouse on "redSquare" element
     And I move mouse on "title" element
     And I move mouse on "redSquare" element
-    Then I should see "*" in "petals" list
     And I move mouse on "greenSquare" element
     And I move mouse on "title" element
-    And I should see "2" stars
+    And I should see "2" petals
 

@@ -28,10 +28,8 @@ var fragments = function (text) {
 
         greenSquare: element.bind(null, by.id('greenSquare')),
         redSquare: element.bind(null, by.id('redSquare')),
-        petals: element.all.bind(null, by.repeater('s in snow')),
-        title: element.bind(null, by.tagName('h1')),
-        star: element.all.bind(null, by.id('petal'))
-
+        petals: element.all.bind(null, by.css('span[ng-repeat]')),
+        title: element.bind(null, by.tagName('h1'))
     };
 
     return byString(mapping, text);

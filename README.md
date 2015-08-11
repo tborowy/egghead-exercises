@@ -8,14 +8,14 @@ Implement functionality that will allow to add (when the mouse hovers over the g
 * **snow.js** file should contain ***enter*** directive which talks to controller ***SnowCtrl***
 * create ***addPetal*** and ***removePetal*** functions to add and remove snowflake form ***snow*** array
 * snowflake is an object `{petal: '*'}`
-* this is your snow pattern petal `id="petal" <span class="glyphicon glyphicon-star"></span>`
+* this is your snow pattern petal `< span id="petal" class="glyphicon glyphicon-star"></ span>`
 * enjoy the stellar snow :)
 
 ###Before you start, please refer to:
 * [angularjs-directives-talking-to-controllers](https://egghead.io/lessons/angularjs-directives-talking-to-controllers)
 
 ##Setup
-You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
+You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
 
 ```
 npm install
@@ -25,13 +25,13 @@ npm install
 bower install
 ```
 
-To start the application run
+To run the application:
 
 ```
 grunt serve
 ```
 
-To start cucumber tests, run sequentially in separate terminals the application and command
+To run cucumber tests:
 
 ```
 grunt test

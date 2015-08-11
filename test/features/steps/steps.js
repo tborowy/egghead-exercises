@@ -20,9 +20,9 @@ module.exports = function () {
         browser.actions().mouseMove(fragments(name)()).perform().then(callback);
     });
 
-    this.Then(/^I should see "(\d+)" stars$/, function (number, callback) {
+    this.Then(/^I should see "(\d+)" petals$/, function (number, callback) {
         number = parseInt(number, 10);
-        expect(fragments('star')().count()).to.eventually.equal(number).and.notify(callback);
+        expect(fragments('petals')().count()).to.eventually.equal(number).and.notify(callback);
     });
 
     this.Then(/^I should see "([^"]*)" in "([^"]*)" list$/, function (array, list, callback) {
@@ -34,6 +34,4 @@ module.exports = function () {
         browser.pause();
         callback();
     });
-
-
 };
