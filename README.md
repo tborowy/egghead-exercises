@@ -6,7 +6,6 @@ Directive **url** has a big template, try resolve this problem by moving it to a
 ##Goals
  * don't change functionality directive or exist properties in directive
  * create `urlTemplate.html` file for `url` directive template
- * after refactoring all tests should pass
 
 ##Before you start, please refer to:
 * [angularjs-templateurl](https://egghead.io/lessons/angularjs-templateurl)
