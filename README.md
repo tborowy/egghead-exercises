@@ -27,6 +27,7 @@ check comments to place them correctly)
 ##Before you start, please refer to:
 * [angularjs-isolate-scope-attribute-binding](https://egghead.io/lessons/angularjs-isolate-scope-attribute-binding)
 * [ngularjs-isolate-scope-two-way-binding](https://egghead.io/lessons/angularjs-isolate-scope-two-way-binding)
+* [ngOptions example](https://docs.angularjs.org/api/ng/directive/ngOptions/#example)
 
 ##Setup
 You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
