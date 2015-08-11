@@ -1,16 +1,17 @@
 #Exercise 25 : $routeProvider
 
 ##Summary
-Use knowledge about elements as **$routeProvider**, **$routeParams** and **redirectTo** to create routing.
-Views and controllers are ready.
+You are provided with templates and controllers. Use your knowledge of services such as `$routeProvider`, `$routeParams` to configure routing.
 
 ##Goals
- * default page is `home.html`
- * `brand` and `capacity` from inputs are used as route params (take a look at home.html `Next step` button)
- * `Next step` button should redirect to `details.html` page (path should start with `details/`), 
- * `Back step` button should redirect to `home.html` page, 
- * entered word `secret` into `brand` or `capacity` field and you should be direct to `secret.html` page
- * **hint** : check that the path of contains the word `secret` (you can split the path)
+
+* set home.html as a default page template
+* brand and engine capacity from inputs should be used as route params (**hint:**  look at `home.html` "Next" button)
+* "Next" button should redirect to details.html page (path should start with details/)
+* "Back" button should redirect to `home.html` page,
+* there is the secret page - your job is to get us there 
+* having entered the word `special` in any of the fields, you should be directed to `secret.html` page  (**hint:** check if the path contains the word `special`)
+
 
 ##Before you start, please refer to:
 * [angularjs-routeprovider-api](https://egghead.io/lessons/angularjs-routeprovider-api)
