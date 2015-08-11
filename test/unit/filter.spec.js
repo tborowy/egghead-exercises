@@ -24,15 +24,30 @@ describe('user', function ()
 
     describe('reverse function', function ()
     {
-        beforeEach(function ()
+        it('should set choice id column', function ()
         {
-            scope.reverseSort('username');
+            scope.reverseSort('id');
+            expect(scope.choice).toEqual('id');
         });
 
-        it('should set choice to the name of the column you clicked', function ()
+        it('should set choice username column', function ()
         {
+            scope.reverseSort('username');
             expect(scope.choice).toEqual('username');
         });
+
+        it('should set choice fullName column', function ()
+        {
+            scope.reverseSort('fullName');
+            expect(scope.choice).toEqual('fullName');
+        });
+
+        it('should set choice gender column', function ()
+        {
+            scope.reverseSort('gender');
+            expect(scope.choice).toEqual('gender');
+        });
+
     });
 
 });

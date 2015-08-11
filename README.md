@@ -6,7 +6,7 @@ In this application, you are supposed to use ready-made filter options. You star
 ##Goals
 Limit the number of displayed records with the radio choice (default limit should be 15). Afterwards add the ability to sort data by columns names.
 
-Create and use `reverseSort` function that sort the data ascending and descending (take a look at `orderBy` documentation).
+Create and use `reverseSort` function that sort the data ascending and descending (column name keep in `$scope.choice`). Take a look at `orderBy` documentation.
   
 Examples of results:
 
@@ -31,32 +31,26 @@ Examples of results:
 * [orderBy](https://docs.angularjs.org/api/ng/filter/orderBy)
 
 ##Setup
-You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
+ You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
+ 
+ ```
+ npm install
+ ```
+ 
+ ```
+ bower install
+ ```
+ 
+ To run the application:
+ 
+ ```
+ grunt serve
+ ```
+ 
+To run unit tests:
 
-```
-npm install
-```
-
-```
-bower install
-```
-
-To start the application run
-
-```
-grunt serve
-```
-
-To start cucumber tests, run sequentially in separate terminals the application and command
-
-```
-grunt test
-```
-
-To start unit test run
-
-```
-grunt karma
-```
-
+ ```
+ grunt karma
+ ```
+ 
 Good luck!
