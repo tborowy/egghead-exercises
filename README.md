@@ -1,7 +1,7 @@
 #Exercise 23 : templateCache
 
 ##Summary
-An application can render same data in several different ways. The displayed templates are changed based on user interaction. To improve user experience template cache is used.
+An application that can render same data in several different ways. The displayed templates are changed based on user interaction. Use template cache to improve user experience.
 
 ##Goals
 Utilise `templateCache` to store templates and render them in the directive. You start with two keywords: button, table - they represent coresponding templates:
@@ -9,9 +9,6 @@ Utilise `templateCache` to store templates and render them in the directive. You
 * button - displays when **button** is entered
 * table - displays when **table** is entered
 * default - displays in any other case
-
-**Hint**: use `element.html(value)` before compile, to assign templateCache into the DOM
-            
 
 ##Before you start, please refer to:
 * [angular templateCache](https://egghead.io/lessons/angularjs-templatecache)
