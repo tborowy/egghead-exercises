@@ -1,4 +1,4 @@
-#Exercise 32 : Components and Containers
+#Exercise 32b : Components and Containers
 
 ##Summary
 You start with ready **my-container** and **my-component** directives. Use them in **container.html** and **components.html** views according to the requirements.
