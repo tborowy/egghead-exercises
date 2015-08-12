@@ -1,5 +1,5 @@
 <div>
-    <select ng-if="country" class="form-control" ng-options="state for state in  stateCtrl.chooseCountry(country)"
+    <select id="stateSelect" ng-if="country" class="form-control" ng-options="state for state in  stateCtrl.chooseCountry(country)"
             ng-model="stateCtrl.chooseState"></select>
 
     <div ng-transclude></div>
