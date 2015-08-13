@@ -1,12 +1,13 @@
 'use strict';
+
 var app = angular.module('app', []);
 
-app.controller('LeftCtrl', function LeftCtrl($scope)
+app.controller('LeftCtrl', function ()
 {
-    $scope.enter = {direction: ''};
+
 });
 
 
-app.controller('RightCtrl', function RightCtrl($scope)
+app.controller('RightCtrl', function ()
 {
 });

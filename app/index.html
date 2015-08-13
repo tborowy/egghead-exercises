@@ -10,22 +10,17 @@
     <div class="page-header">
         <h1>Share data </h1>
     </div>
+    <div ng-init="enter.text='I update both inputs'; text='I update only one input'"></div>
     <div class="row">
-        <div class="col-md-4">
-            <label>
-                <!--add ng-model-->
-                <input id="left" type="text" class="form-control" maxlength="10">
-            </label>
+        <div class="col-md-4" ng-controller="LeftCtrl">
+            <label> <input type="text" id="left" class="form-control"> </label>
 
-            <h3 class="well-sm bg-warning">{{direction || "LEFT"}}</h3>
+            <h3 class="well-sm bg-warning">{{text|| "LEFT"}}</h3>
         </div>
-        <div class="col-md-offset-4 col-md-4">
-            <label>
-                <!--add ng-model-->
-                <input id="right" type="text" class="form-control" maxlength="10">
-            </label>
+        <div class="col-md-offset-4 col-md-4" ng-controller="RightCtrl">
+            <label> <input type="text" id="right" class="form-control"> </label>
 
-            <h3 class="well-sm bg-success">{{direction || "RIGHT"}}</h3>
+            <h3 class="well-sm bg-success">{{text || "RIGHT"}}</h3>
         </div>
     </div>
 </div>
