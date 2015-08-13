@@ -47,10 +47,4 @@ To run cucumber tests:
 grunt test
 ```
 
-To run unit tests:
-
-```
-grunt karma
-```
-
 Good luck!
