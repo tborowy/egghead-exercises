@@ -3,5 +3,5 @@
 .idea
 *node_modules
 *app/bower_components
-tests/target
+*test/target
 target

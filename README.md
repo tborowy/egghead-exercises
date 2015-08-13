@@ -33,7 +33,7 @@ The **superhero** should look as follows:
 * [write-your-first-directive](https://egghead.io/lessons/write-your-first-directive)
 
 ##Setup
-You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
+ You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
 
 ```
 npm install
@@ -43,13 +43,13 @@ npm install
 bower install
 ```
 
-To start the application, run
+To run the application:
 
 ```
 grunt serve
 ```
 
-To start unit test, run
+To run unit tests:
 
 ```
 grunt karma
