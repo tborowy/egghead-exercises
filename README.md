@@ -8,28 +8,25 @@ removed back. Secondly, when you double click square it should add provided clas
 that you should be able to pass specified bootstrap class as argument to the directive.
 
 ##Goals
-* ***enter*** directive that return a **function** (check videos) inside and binds **mouseenter** event
-* **enter** directive should add class provided as attribute in **index.html** when **mouseenter** is fired
-
-
-* ***leave*** directive that return a **function** inside and binds **mouseleave** event
-* **leave** directive should remove class provided as attribute to enter directive in **index.html** when **mouseleave** is fired
-
-
-* ***dbClickOn*** directive that return a **function** inside and binds **dblclick** event
-* **dbClickOn** directive should add class provided as attribute in **index.html** when **dblclick** is fired
-
-
-* ***clickOn*** directive that return a **function** inside and binds **clickOn** event
-* **clickOn** directive should remove class provided as attribute to dblClickOn directive in **index.html** when **clickOn** is fired
-
-
+* `enter` directive should add class provided as attribute in **index.html** when **mouseenter** is fired
+* `leave` directive should remove class provided as attribute to enter directive in **index.html** when **mouseleave** is fired
+* `dbClickOn` directive should add class provided as attribute in **index.html** when **dblclick** is fired
+* `clickOn` directive should remove class provided as attribute to dblClickOn directive in **index.html** when **clickOn** is fired
 * **index.html** should be completed to achieve correct behavior for circle and square mentioned before(also check comments)
-* ***bg-danger*** passed as an attribute to enter directive
-* ***bg-info*** passed as an attribute to dblClickOn directive
+* **bg-danger** passed as an attribute to enter directive
+* **bg-info** passed as an attribute to dblClickOn directive
+
+**Hint**
+`camelCase` directives should be use inside .html files in this way: `camel-case`  
+
+##Before you start, please refer to:
+* [angularjs-basic-behaviors](https://egghead.io/lessons/angularjs-basic-behaviors)
+* [angularjs-useful-behaviors](https://egghead.io/lessons/angularjs-useful-behaviors)
+* [jquery/bind](http://api.jquery.com/bind/)
+
 
 ##Setup
-You should have installed `npm`, `bower`, `grunt`  packages to run this example. First, run sequentially
+ You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
 
 ```
 npm install
@@ -39,22 +36,16 @@ npm install
 bower install
 ```
 
-To start the application, run
+To run the application:
 
 ```
 grunt serve
 ```
 
-To start unit test, run
+To run unit tests:
 
 ```
 grunt karma
 ```
-
-###Before you start, please refer to:
-* [angularjs-basic-behaviors](https://egghead.io/lessons/angularjs-basic-behaviors)
-* [angularjs-useful-behaviors](https://egghead.io/lessons/angularjs-useful-behaviors)
-* [jquery/bind](http://api.jquery.com/bind/)
-
 
 Good luck!
