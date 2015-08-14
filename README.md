@@ -8,12 +8,19 @@ provide a working example.
 
 ##Goals
 
-* ***restrictE*** directive restricted to the element and with template set to the example data as follows: `'{{description.element.name}}: {{description.element.call}}'`
-Please bear in mind that required data is already defined in **AppCtrl** controller
-* ***restrictA*** directive restricted to the attribute and with template pattern exactly like in **restrictE** directive(but use description.attribute property)
-* ***restrictC*** directive restricted to the class and with template pattern exactly like in **restrictE** directive(but use description.class property)
-* ***restrictM*** directive restricted to the comment. Moreover, in the directive body *`alert('directive M: working...");`* should be added.
+* `restrictE` directive restricted to the element and with template set to the example data as follows: **'{{description.element.name}}: {{description.element
+.call}}'**
+* `restrictA` directive restricted to the attribute and with template pattern exactly like in **restrictE** directive(but use description.attribute property)
+* `restrictC` directive restricted to the class and with template pattern exactly like in **restrictE** directive(but use description.class property)
+* `restrictM` directive restricted to the comment. Moreover, in the directive body *`alert('directive M: working...");`* should be added.
+* please bear in mind that required data is already defined in **AppCtrl** controller
 * **index.html** should be updated with example directive usages(check comments)
+
+
+**Hint**
+ 
+ `camelCase` directives should be use inside .html files in this way: `camel-case`  
+
 
 ##Before you start, please refer to:
 * [angularjs-directive-restrictions](https://egghead.io/lessons/angularjs-directive-restrictions)
