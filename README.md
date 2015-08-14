@@ -2,8 +2,11 @@
 
 Discover the true nature of animals with ng-transclude directive. Update **animal** directive to display the content inside animal directives (dog, cat and pig). 
 
+###Before you start, please refer to:
+* [angularjs-transclusion-basics](https://egghead.io/lessons/angularjs-transclusion-basics)
+
 ##Setup
-You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
+ You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
 
 ```
 npm install
@@ -13,19 +16,22 @@ npm install
 bower install
 ```
 
-To start the application, run
+To run the application:
 
 ```
 grunt serve
 ```
 
-To start unit test, run
+To run cucumber tests:
+
+```
+grunt test
+```
+
+To run unit tests:
 
 ```
 grunt karma
 ```
-
-###Before you start, please refer to:
-* [angularjs-transclusion-basics](https://egghead.io/lessons/angularjs-transclusion-basics)
 
 Good luck!
