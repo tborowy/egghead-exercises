@@ -20,7 +20,7 @@ Please bear in mind that required data is already defined in **AppCtrl** control
 * [restrictions](https://docs.angularjs.org/guide/directive)
 
 ##Setup
-You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
+ You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
 
 ```
 npm install
@@ -30,13 +30,19 @@ npm install
 bower install
 ```
 
-To start the application, run
+To run the application:
 
 ```
 grunt serve
 ```
 
-To start unit test, run
+To run cucumber tests:
+
+```
+grunt test
+```
+
+To run unit tests:
 
 ```
 grunt karma
