@@ -27,14 +27,15 @@ var fragments = function (text)
     'use strict';
 
     var mapping = {
-        box: {
-            name: element.all.bind(null, by.id('name')),
-            panelName: element.all.bind(null, by.id('panelName')),
-            color: element.all.bind(null, by.id('color')),
-            size: element.all.bind(null, by.id('size')),
-            square: element.all.bind(null, by.css('.square')),
-            button: element.all.bind(null, by.id('button'))
-        }
+        smallBox: element.bind(null, by.css('box[size="50px"][color][open]')),
+        mediumBox: element.bind(null, by.css('box[size="70px"][color][open]')),
+        bigBox: element.bind(null, by.css('box[size="90px"][color][open]')),
+        name: element.all.bind(null, by.id('name')),
+        panelName: element.all.bind(null, by.id('panelName')),
+        color: element.all.bind(null, by.css('select[ng-model="color"]')),
+        size: element.all.bind(null, by.binding('size')),
+        square: element.all.bind(null, by.css('.square')),
+        button: element.all.bind(null, by.id('button'))
 
     };
     return byString(mapping, text);

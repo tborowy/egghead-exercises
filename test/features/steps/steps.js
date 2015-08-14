@@ -74,7 +74,7 @@ module.exports = function ()
         selectOption(item, fragments(input)().get(selectElement(box))).then(callback);
     });
 
-    this.Then(/^I click "([^"]*)" in "([^"]*)" box$/, function (name, box, callback)
+    this.When(/^I click "([^"]*)" in "([^"]*)" box$/, function (name, box, callback)
     {
         browser.actions().mouseMove(fragments(name)().get(selectElement(box))).perform().then(function ()
         {
@@ -86,32 +86,20 @@ module.exports = function ()
 
                     return alert.dismiss();
 
-                })
+                });
 
             });
         });
     });
 
+    this.Then(/^I should see "([^"]*)"$/, function (element, callback) {
+        expect(fragments(element)().isPresent()).to.become(true).and.notify(callback);
+    });
 
     this.Then(/^I should see "(.*)" into "(.*)" box in "(.*)" field$/, function (text, box, field, callback)
     {
         expect(fragments(field)().get(selectElement(box)).getText()).to.eventually.equal(text).and.notify(callback);
     });
-
-    //this.Then(/^I should see "(.*)" alert message$/, function (text, callback)
-    //{
-    //    browser.switchTo().alert().then(function (alert)
-    //    {
-    //        if (alert) {
-    //            alert.getText(function (alertText)
-    //            {
-    //                expect(alertText).to.eventually.equal('Bla bla');
-    //            });
-    //            return alert.dismiss();
-    //        }
-    //    }).then(callback);
-    //
-    //});
 
     this.Then(/^"(.*)" "(.*)" should change color to "(.*)"$/, function (box, square, color, callback)
     {
@@ -124,63 +112,4 @@ module.exports = function ()
         }
         expect((fragments(square)().get(selectElement(box))).getCssValue('backgroundColor')).to.eventually.equal(color).and.notify(callback);
     });
-
-//this.When(/^I enter "(.*)" into "(.*)" field of "(\d+)" box$/, function (text, name, number, callback)
-//{
-//     //number = parseInt(number, 10);
-//    var webElement = fragments(name)()
-//    clearAndType(webElement, text).then(callback);
-//});
-//
-
-//
-//this.When(/I select option "([^"]*)" for "(\d+)" ship$/, function (item, ship, callback) {
-//    ship = parseInt(ship, 10);
-//    var shipElement = fragments('port.ships')().get(ship).element(by.css('.form-control'));
-//    selectOption(item, shipElement).then(callback);
-//
-//});
-//
-//this.When(/^I click "([^"]*)"/, function (name, callback) {
-//    browser.actions().mouseMove(fragments(name)()).perform().then(function () {
-//        fragments(name)().click().then(function () {
-//            return browser.waitForAngular();
-//        }).then(callback);
-//    });
-//});
-//
-//this.When(/^I click "([^"]*)" for "(\d+)" ship/, function (name, ship, callback) {
-//    ship = parseInt(ship, 10);
-//    browser.actions().mouseMove(fragments(name)().get(ship)).perform().then(function () {
-//        fragments(name)().get(ship).click().then(function () {
-//            return browser.waitForAngular();
-//        }).then(callback);
-//    });
-//});
-//
-//
-//this.Then(/^I should see "([^"]*)"$/, function (image, callback) {
-//    expect(fragments(image)().isPresent()).to.become(true).and.notify(callback);
-//});
-//
-//this.Then(/^I should see "([^"]*)" message for "(\d+)" ship$/, function (text, ship, callback) {
-//    ship = parseInt(ship, 10);
-//    expect(((fragments('port.ships')().get(ship)).element(by.css('.bubble'))).getText()).to.eventually.equal(text).and.notify(callback);
-//});
-//
-//this.Then(/^I should not see message for "([^"]*)" ship$/, function (ship, callback) {
-//    ship = parseInt(ship, 10);
-//    expect((fragments('port.ships')().get(ship)).element(by.css('.bubble')).isPresent()).to.become(false).and.notify(callback);
-//});
-//
-//this.Then(/^the css element "([^"]*)" should contain the text "(.*)"$/, function (cssClass, text, callback) {
-//    expect(element(by.css(cssClass)).getText()).to.eventually.equal(text).and.notify(callback);
-//});
-//
-//this.Then(/^pause$/, function (callback)
-//{
-//    browser.pause();
-//    callback();
-//});
-
 };
