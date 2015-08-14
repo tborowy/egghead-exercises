@@ -30,7 +30,7 @@ app.directive('shipSender', function ()
 {
     return {
         template: '<div class="ship relative">' +
-                '<div class="bubble" ng-if="answer">Set sails!</div>' + //        value from the select element below should be used by captain to set boat model and passed as argument to correct function
+                '<div class="bubble" ng-if="answer">Set sails!</div>' + //value from the select element below should be used to set boat model and passed as argument to correct function
                 '<div class="col-md-offset-1 col-md-10 align-bottom"><select class="form-control" ng-options="item for item in [\'Sloop\', \'Ship\', \'Towboat\', \'Brig\']"></select>' +
                 '<div id="checkButton" class="btn btn-info voffset">Check<!--check button--></div></div></div>'
     };

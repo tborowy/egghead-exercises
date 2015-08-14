@@ -4,8 +4,10 @@ Feature: Sea of directives
     When I browse to the "/"
     And I select option "stormy" in "docks.availableConditions"
     And I click "docks.updateButton"
+    Then I should see "docks.stormyImg"
     And I select option "heavy rain" in "docks.availableConditions"
     And I click "docks.updateButton"
+    Then I should see "docks.HeavyRainImg"
 
   Scenario: Central sloop by cloudy weather can put the sails
     When I browse to the "/"
@@ -29,3 +31,4 @@ Feature: Sea of directives
     Then I should see "Set sails!" message for "0" ship
     And I should see "Set sails!" message for "1" ship
     And I should not see message for "2" ship
+

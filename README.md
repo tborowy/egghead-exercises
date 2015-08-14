@@ -11,20 +11,21 @@ Every boat captain should also be able to set their boat type, because some boat
 
 ##Goals
 
-* **shipSender** directive in **Port.js**:
-	* Should be expecting to receive two attributes passed to it's isolate scope: a ***customCheck*** function and ***conditions*** string
-	* In **Check** element (check comments) ng-click directive should be added and invoke **customCheck** (with **boat** model and **conditions** passed as parameters)
-	* Template should assign returning value from **customCheck** to **answer** variable ( ***Hint***: you can assign variable in ng-click directive)
+* `shipSender` directive in **port.js**:
+	* should be expecting to receive two attributes passed to it's isolate scope: a `customCheck` function and `conditions` string
+	* in **Check** button ng-click directive should be added and invoke `customCheck`(with **boat** model and **conditions** passed as 
+	parameters)
+	* template should assign returning value from **customCheck** to **answer** variable ( ***Hint***: you can assign variable in ng-click directive)
 * **weatherConditions** (use correct method as indicated in comment) and **checkMyBoat** function should be passed to **shipSender** directive
-* Three **shipSender** directive instances added to correct place and with proper parameters to **index.html**(check comments)
+* three **shipSender** directive instances added to correct place and with proper parameters to **index.html**(check comments)
 
 
 ###Before you start, please refer to:
 * [angularjs-understanding-isolate-scope](https://egghead.io/lessons/angularjs-understanding-isolate-scope)
-* [angularjs-isolate-scope-expression-binding](https://egghead.io/lessons/angularjs-isolate-scope-expression-binding)
+* [angularjs-isolate-scope-attribute-binding](https://egghead.io/lessons/angularjs-isolate-scope-attribute-binding)
 
 ##Setup
-You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
+ You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
 
 ```
 npm install
@@ -34,13 +35,13 @@ npm install
 bower install
 ```
 
-To start the application run
+To run the application:
 
 ```
 grunt serve
 ```
 
-To start cucumber tests, run sequentially in separate terminals the application and command
+To run cucumber tests:
 
 ```
 grunt test
