@@ -7,14 +7,16 @@ to the regulations below.
 ##Goals
 
 * `Calc.js` should contain `SumCtrl` and `SubCtrl` controllers
-* `SumCtrl` should has `add` function assigned to itself, which requires two params and assigns the result to `sum` variable
+* `SumCtrl` should has `addition` function assigned to itself, which requires two params and assigns the result to `sum` variable
 * similarly `SubCtrl` but should assigns the result to `sub` variable
 * each controller should have two variables (`firstNumber`, `secondNumber`) initialized values **12** and **1**
-* use `add`  and `subtraction` function and display the result in correct header (check comments)
+* use `addition`  and `subtraction` function and display the result in correct header (check comments)
 
+##Before you start, please refer to:
+* [angularjs-an-alternative-approach-to-controllers](https://egghead.io/lessons/angularjs-an-alternative-approach-to-controllers)
 
 ##Setup
-You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
+ You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
 
 ```
 npm install
@@ -24,20 +26,16 @@ npm install
 bower install
 ```
 
-To start the application, run
+To run the application:
 
 ```
 grunt serve
 ```
 
-To start unit test, run
+To run unit tests:
 
 ```
 grunt karma
 ```
-
-##Before you start, please refer to:
-* [angularjs-an-alternative-approach-to-controllers](https://egghead.io/lessons/angularjs-an-alternative-approach-to-controllers)
-
 
 Good luck!
