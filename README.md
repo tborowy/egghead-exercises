@@ -1,4 +1,4 @@
-#Exercise 12 : Isolate Scope "@", "="
+#Exercise 12 : Isolate Scope "@", "&"
 
 ##Summary
 Application that you are provided with is used for handling simple orders from customers. It includes simple list of products available for ordering
@@ -25,12 +25,12 @@ check comments to place them correctly)
 * Both **orderComponent** instances in **index.html** should use **buyProduct** function(already included on **appCtrl** scope, expects product as argument)
 
 ##Before you start, please refer to:
-* [angularjs-isolate-scope-attribute-binding](https://egghead.io/lessons/angularjs-isolate-scope-attribute-binding)
+* [angularjs-isolate-scope-expression-binding](https://egghead.io/lessons/angularjs-isolate-scope-expression-binding)
 * [ngularjs-isolate-scope-two-way-binding](https://egghead.io/lessons/angularjs-isolate-scope-two-way-binding)
 * [ngOptions example](https://docs.angularjs.org/api/ng/directive/ngOptions/#example)
 
 ##Setup
-You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
+ You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
 
 ```
 npm install
@@ -40,13 +40,13 @@ npm install
 bower install
 ```
 
-To start the application run
+To run the application:
 
 ```
 grunt serve
 ```
 
-To start cucumber tests, run sequentially in separate terminals the application and command
+To run cucumber tests:
 
 ```
 grunt test
