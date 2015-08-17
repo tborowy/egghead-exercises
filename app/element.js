@@ -5,7 +5,7 @@ var element = angular.module('elementApp', []);
 element.directive('findElement', function ()
 {
 
-    //create link function
+    //complete link function
     var link = function (scope)
     {
         //watch changes on input
