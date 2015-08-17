@@ -5,11 +5,13 @@ When in application exist many controllers, directives and filters it needs to b
 
 ##Goals
   * take a look at ready application and run tests,
-  * organizing controllers and directives by collecting them into objects,
-  * after refactoring all the tests should pass. 
+  * organizing controllers and directives by collecting them into objects `calcAppElements`,
+
+##Before you start, please refer to:
+ * [angularjs-thinking-differently-about-organization](https://egghead.io/lessons/angularjs-thinking-differently-about-organization)
 
 ##Setup
-You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
+ You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
 
 ```
 npm install
@@ -19,20 +21,22 @@ npm install
 bower install
 ```
 
-To start the application, run
+To run the application:
 
 ```
 grunt serve
 ```
 
-To start cucumber tests, run sequentially in separate terminals the application and command
+To run cucumber tests:
 
 ```
 grunt test
 ```
 
+To run unit tests:
 
-##Before you start, please refer to:
- * [angularjs-thinking-differently-about-organization](https://egghead.io/lessons/angularjs-thinking-differently-about-organization)
+```
+grunt karma
+```
 
 Good luck!

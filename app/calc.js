@@ -1,74 +1,72 @@
-(function ()
+'use strict';
+
+var calcApp = angular.module('calcApp', []);
+
+calcApp.controller('SumCtrl', function ($scope)
 {
-    'use strict';
+    this.firstNumberSum = 5;
+    this.secondNumberSum = 2;
 
-    var calcApp = angular.module('calcApp', []);
-
-    calcApp.controller('SumCtrl', function ($scope)
+    this.addition = function (a, b)
     {
-        this.firstNumberSum = 5;
-        this.secondNumberSum = 2;
+        this.sum = a + b;
+    };
 
-        this.addition = function (a, b)
-        {
-            this.sum = a + b;
-        };
+    $scope.SumCtrl = this;
 
-        $scope.SumCtrl = this;
+});
 
-    });
+calcApp.controller('SubCtrl', function ($scope)
+{
+    this.firstNumberSub = 12;
+    this.secondNumberSub = 1;
 
-    calcApp.controller('SubCtrl', function ($scope)
+    this.subtraction = function (a, b)
     {
-        this.firstNumberSub = 12;
-        this.secondNumberSub = 1;
+        this.sub = a - b;
+    };
+    $scope.SubCtrl = this;
 
-        this.subtraction = function (a, b)
-        {
-            this.sub = a - b;
-        };
-        $scope.SubCtrl = this;
+});
 
-    });
+calcApp.controller('MultiCtrl', function ($scope)
+{
+    $scope.firstNumberMult = 12;
+    $scope.secondNumberMult = 2;
 
-    calcApp.controller('MultiCtrl', function ($scope)
+    $scope.multiplication = function (a, b)
     {
-        $scope.firstNumberMult = 12;
-        $scope.secondNumberMult = 2;
+        $scope.multi = a * b;
+    };
+});
 
-        $scope.multiplication = function (a, b)
-        {
-            $scope.multi = a * b;
-        };
-    });
+calcApp.controller('DivideCtrl', function ($scope)
+{
+    $scope.firstNumberDiv = 15;
+    $scope.secondNumberDiv = 5;
 
-    calcApp.controller('DivideCtrl', function ($scope)
+    $scope.divide = function (a, b)
     {
-        $scope.firstNumberDiv = 15;
-        $scope.secondNumberDiv = 5;
+        $scope.divid = (a / b).toFixed(2);
+    };
+});
 
-        $scope.divide = function (a, b)
-        {
-            $scope.divid = (a / b).toFixed(2);
-        };
-    });
+calcApp.directive('multi', function ()
+{
+    return {
+        restrict: 'E', scope: {
+            a: '@', b: '@', solve: '&'
+        }, template: ' <div id="multiButton" class="btn btn-info" ng-click="solve({a : a, b: b})">Multiple</div>'
 
-    calcApp.directive('multi', function ()
-    {
-        return {
-            restrict: 'E', scope: {
-                a: '@', b: '@', solve: '&'
-            }, template: ' <div id="multiButton" class="btn btn-info" ng-click="solve({a : a, b: b})">Multiple</div>'
+    };
+});
 
-        };
-    });
+calcApp.directive('divide', function ()
+{
+    return {
+        restrict: 'A', scope: {
+            a: '@', b: '@', solve: '&'
+        }, template: '<div id="divideButton" class="btn btn-default" ng-click="solve({a : a, b: b})">Divide</div>'
+    };
+});
 
-    calcApp.directive('divide', function ()
-    {
-        return {
-            restrict: 'A', scope: {
-                a: '@', b: '@', solve: '&'
-            }, template: '<div id="divideButton" class="btn btn-default" ng-click="solve({a : a, b: b})">Divide</div>'
-        };
-    });
-})();
