@@ -27,10 +27,11 @@ var fragments = function (text)
     'use strict';
 
     var mapping = {
+        money: element.bind(null, by.css('money[how-many="proposal"][for-what]')),
+        toggleButton: element.bind(null, by.css('button[ng-click="toggleContent()"]')),
         name: element.bind(null, by.id('name')),
         forWhat: element.bind(null, by.id('forWhat')),
         devote: element.bind(null, by.id('devote')),
-        toggleButton: element.bind(null, by.id('toggle')),
         proposal: element.bind(null, by.id('proposal')),
         message: element.bind(null, by.id('message'))
     };

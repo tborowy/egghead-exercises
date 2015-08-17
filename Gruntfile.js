@@ -41,8 +41,7 @@ module.exports = function (grunt)
             }
         }, protractor_webdriver: {
             driver: {
-                options: {
-                }
+                options: {}
             }
         }, protractor: {
             options: {

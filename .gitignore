@@ -4,5 +4,4 @@
 *node_modules
 *app/bower_components
 test/target
-app/target
-target
+

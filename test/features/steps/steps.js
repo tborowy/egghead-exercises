@@ -62,7 +62,6 @@ module.exports = function ()
 
     });
 
-
     this.When(/^I enter "(.*)" into "(.*)" field$/, function (text, name, callback)
     {
         var webElement = fragments(name)();
@@ -90,6 +89,10 @@ module.exports = function ()
         expect(fragments(message)().isPresent()).to.become(false).and.notify(callback);
     });
 
+    this.Then(/^I should see "([^"]*)"$/, function (element, callback)
+    {
+        expect(fragments(element)().isPresent()).to.become(true).and.notify(callback);
+    });
 
     this.Then(/^pause$/, function (callback)
     {
