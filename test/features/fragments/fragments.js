@@ -28,7 +28,6 @@ var fragments = function (text)
 
     var mapping = {
         leftButton: element.bind(null, by.id('left')),
-        middleButton: element.bind(null, by.id('middle')),
         rightButton: element.bind(null, by.id('right')),
         alertDanger: element.bind(null, by.css('.alert-danger')),
         alertSuccess: element.bind(null, by.css('.alert-success'))
