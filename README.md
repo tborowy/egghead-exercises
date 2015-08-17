@@ -16,7 +16,7 @@ Utilise `templateCache` to store templates and render them in the directive. You
 * [$watch](https://egghead.io/lessons/angularjs-the-basics-of-scope-watch)
 
 ##Setup
-You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
+ You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
 
 ```
 npm install
@@ -26,16 +26,17 @@ npm install
 bower install
 ```
 
-To start the application, run
+To run the application:
 
 ```
 grunt serve
 ```
 
-To start cucumber tests, run sequentially in separate terminals the application and command
+To run cucumber tests:
 
 ```
 grunt test
 ```
+
 
 Good luck!

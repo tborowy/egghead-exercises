@@ -5,6 +5,7 @@
 
     app.run(function ()
     {
+        //put templates to $templateCache
         var template = [];
         template[0] = '<div id="default"><div>Default template:</div><h3 id="templateContent">{{order}} x {{quantity}}</h3></div>';
         template[1] =
@@ -21,9 +22,9 @@
     });
     app.directive('url', function ($compile)
     {
-
         var link = function (scope, element)
         {
+            //watch input change
             scope.$watch(function ()
             {
 
