@@ -8,6 +8,7 @@ element.directive('findElement', function ()
     //create link function
     var link = function (scope)
     {
+        //watch changes on input
 
     };
 
@@ -17,6 +18,7 @@ element.directive('findElement', function ()
         compile: function (templateElement)
         {
 
+            //return link function
         }
     };
 });

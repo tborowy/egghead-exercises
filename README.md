@@ -14,13 +14,12 @@ You have to complete the directive `findElement`:
  
 To add class to element use **addClass('className')** function, to remove class use **removeClass('className')** and to add text use **text(''someText')**.
 
-###Before you start, please refer to:
+##Before you start, please refer to:
 * [angularjs-angular-element](https://egghead.io/lessons/angularjs-angular-element)
 * [angularjs-the-basics-of-scope-watch](https://egghead.io/lessons/angularjs-the-basics-of-scope-watch)
 
-
 ##Setup
-You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
+ You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
 
 ```
 npm install
@@ -30,16 +29,17 @@ npm install
 bower install
 ```
 
-To start the application, run
+To run the application:
 
 ```
 grunt serve
 ```
 
-To start cucumber tests, run sequentially in separate terminals the application and command
+To run cucumber tests:
 
 ```
 grunt test
 ```
 
 Good luck!
+
