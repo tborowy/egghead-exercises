@@ -4,7 +4,16 @@
 
     var app = angular.module('app', ['ngRoute']);
 
-    // add routing here
+    // complete routing
+
+    app.config(function ($routeProvider)
+    {
+
+        $routeProvider.when('/inputs/:brand?/:capacity?', {
+
+        });
+
+    });
 
     app.controller('homeCtrl', function ($scope)
     {

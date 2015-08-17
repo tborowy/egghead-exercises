@@ -20,14 +20,14 @@ Feature: Details routing
 
   Scenario: Route to secret.html from brand
     When I browse to the "/"
-    And I enter "special" into "brand" field
+    And I enter "secret" into "brand" field
     When I click "nextButton"
     Then I should be directed to "secret"
     And I should see "secret" image
 
   Scenario: Route to secret.html from capacity
     When I browse to the "/"
-    And I enter "special" into "capacity" field
+    And I enter "secret" into "capacity" field
     When I click "nextButton"
     Then I should be directed to "secret"
     And I should see "secret" image
