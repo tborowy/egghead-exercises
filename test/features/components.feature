@@ -18,6 +18,7 @@ Feature: Components And Containers
     And I click "containerButton"
     Then I should be directed to "/container"
     And I should see "myContainer"
+    And I should see "I have many components" text in "myContainerName"
     And I should see "myContainerContent"
     And I click "addComponentToContainerButton"
     Then I should see "2" components in "containerComponents"

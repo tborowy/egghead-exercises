@@ -28,6 +28,7 @@ var fragments = function (text)
 
     var mapping = {
         myContainer: element.bind(null, by.css('my-container')),
+        myContainerName: element.bind(null, by.css('my-container div div')),
         myContainerContent: element.bind(null, by.css('my-container my-component')),
         myComponent: element.bind(null, by.css('my-component')),
         containerButton: element.bind(null, by.id('containerButton')),

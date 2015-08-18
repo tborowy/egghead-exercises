@@ -20,7 +20,6 @@ app.config(function ($routeProvider)
 app.controller('chooseCtrl', function ($scope)
 {
     $scope.name = {};
-    $scope.$root.view = true;
     var index = 2;
     $scope.list = [1];
     $scope.add = function ()
@@ -34,8 +33,8 @@ app.directive('myContainer', function ()
 {
     return {
         restrict: 'E', transclude: true, scope: {
-            title: '@'
-        }, template: '<div class="my-container text-center">\n    <div class="alert-info"> {{title}}</div>\n    <div ng-transclude></div>\n</div>'
+            name: '@'
+        }, template: '<div class="my-container text-center">\n    <div class="alert-info"> {{name}}</div>\n    <div ng-transclude></div>\n</div>'
     };
 });
 app.directive('myComponent', function ()
