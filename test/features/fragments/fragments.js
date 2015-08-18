@@ -27,11 +27,11 @@ var fragments = function (text)
     'use strict';
 
     var mapping = {
-        bookTitle: element.bind(null, by.css('book book-title')),
+        bookTitle: element.bind(null, by.css('book book-title:first-child')),
         bookTitleContent: element.bind(null, by.css('book book-title strong')),
-        bookDescription: element.bind(null, by.css('book book-description')),
+        bookDescription: element.bind(null, by.css('book book-description:nth-child(2)')),
         bookDescriptionContent: element.bind(null, by.css('book book-description div')),
-        bookPages: element.bind(null, by.css('book book-pages')),
+        bookPages: element.bind(null, by.css('book book-pages:nth-child(3)')),
         bookPagesContent: element.bind(null, by.css('book book-pages span'))
     };
 
