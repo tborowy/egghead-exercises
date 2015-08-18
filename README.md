@@ -28,10 +28,10 @@ Application displays sentence with `color` and `number` set by the factory. Your
  grunt serve
  ```
  
-To run cucumber tests:
+To run unit tests:
 
  ```
- grunt test
+ grunt karma
  ```
  
 Good luck!

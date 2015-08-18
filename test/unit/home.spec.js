@@ -1,19 +1,25 @@
 describe('home', function ()
 {
     'use strict';
-    
+
     var homeCtrl;
     var homeProvider;
 
-    beforeEach(function () {
+    beforeEach(function ()
+    {
 
-        var fakeModule = angular.module('test.homeApp', function () {});
-        fakeModule.config( function (HomeProvider) {
+        var fakeModule = angular.module('test.homeApp', function ()
+        {
+        });
+        fakeModule.config(function (HomeProvider)
+        {
             homeProvider = HomeProvider;
         });
         module('homeApp', 'test.homeApp');
 
-        inject(function () {});
+        inject(function ()
+        {
+        });
     });
 
     beforeEach(inject(function ($rootScope, $controller, Home)
@@ -33,12 +39,16 @@ describe('home', function ()
 
     describe('color', function ()
     {
-        it('should set default color value to yellow', function ()
+
+        it('should use setColor to set "yellow" color', function ()
         {
-            expect(homeCtrl.color).toEqual('yellow');
+            expect(homeProvider).not.toBeUndefined();
+            homeProvider.setColor('yellow');
+
+            expect(homeProvider.$get().color).toEqual('yellow');
         });
 
-        it('should use setColor set the color', function ()
+        it('should use setColor to set "green" color', function ()
         {
             expect(homeProvider).not.toBeUndefined();
             homeProvider.setColor('green');
@@ -50,25 +60,44 @@ describe('home', function ()
 
     describe('number', function ()
     {
-        it('should set default number to odd and return 100', function ()
+        describe('even argument', function ()
         {
-            expect(homeCtrl.number).toEqual(100);
+            it('should set number to 99 when argument is 24', function ()
+            {
+                expect(homeProvider).not.toBeUndefined();
+                homeProvider.setNumber('24');
+
+                expect(homeProvider.$get().number).toEqual(99);
+            });
+            it('should set number to 99 when argument is 12', function ()
+            {
+                expect(homeProvider).not.toBeUndefined();
+                homeProvider.setNumber('12');
+
+                expect(homeProvider.$get().number).toEqual(99);
+            });
+
         });
 
-        it('should set even Number set to 100', function ()
+        describe('odd argument', function ()
         {
-            expect(homeProvider).not.toBeUndefined();
-            homeProvider.setNumber('24');
+            it('should set number to 100 when argument is 11', function ()
+            {
+                expect(homeProvider).not.toBeUndefined();
+                homeProvider.setNumber('11');
 
-            expect(homeProvider.$get().number).toEqual(99);
-        });
+                expect(homeProvider.$get().number).toEqual(100);
+            });
 
-        it('should set odd number to 99', function ()
-        {
-            expect(homeProvider).not.toBeUndefined();
-            homeProvider.setNumber('11');
+            it('should set number to 100 when argument is 45', function ()
+            {
+                expect(homeProvider).not.toBeUndefined();
+                homeProvider.setNumber('45');
 
-            expect(homeProvider.$get().number).toEqual(100);
+                expect(homeProvider.$get().number).toEqual(100);
+            });
+
+
         });
 
     });
