@@ -1,11 +1,11 @@
 ##Exercise 31 : Injectors
 
 ##Summary
-Application displays song details with two modes o **sing** and **fake**. After clicking **sing** you should see `But you did not have to cut
- me off... But you treat me like a stranger ...` fragment. In the second case, you should see `Buuuuuuuuuuuuuut you niah niah blah bla ...`
- 
+Application should display song details and two buttons `Sing` and `Fake`. The application at this moment is not working correctly, the song is not displayed and the buttons are not working. Your job is to bind values from the `Song` factory to the proper models in the view using the `$injector`.
+
 ##Goals
-Your task is to remove `Song` attribute from `SongCtrl` and use injector so that the application behaves in the same way.
+* use $injector to get the data from `Song` factory.
+* bind `author`, `title`, `sing` and `fake` factory properties to the relevant controller fields.
 
 ##Before you start, please refer to:
 * [angularjs-injectors](https://egghead.io/lessons/angularjs-injectors)

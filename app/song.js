@@ -12,7 +12,7 @@ songApp.factory('Song', function ()
     };
 });
 
-songApp.controller('SongCtrl', function (Song)
+songApp.controller('SongCtrl', function ()
 {
     var ctrl = this;
     ctrl.showSongText = function ()
@@ -27,9 +27,4 @@ songApp.controller('SongCtrl', function (Song)
         ctrl.showFake = true;
     };
 
-
-    ctrl.author = Song.author;
-    ctrl.title = Song.title;
-    ctrl.sing = Song.sing;
-    ctrl.fake = Song.fake;
 });
