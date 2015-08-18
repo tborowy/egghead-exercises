@@ -12,39 +12,30 @@ module.exports = function (config)
         autoWatch: true,
 
         // base path, that will be used to resolve files and exclude
-        basePath: '',
+        basePath: '../',
 
         // testing framework to use (jasmine/mocha/qunit/...)
         frameworks: ['jasmine'],
 
         // list of files / patterns to load in the browser
-        files: ['../app/bower_components/angular/angular.js',
-                '../app/bower_components/angular-mocks/angular-mocks.js',
-                '../app/mouse.js',
-                'unit/**/*spec.js'],
+        files: ['app/bower_components/angular/angular.js', 'app/bower_components/angular-mocks/angular-mocks.js', 'app/mouse.js', 'test/unit/**/*spec.js'],
 
         // list of files / patterns to exclude
         exclude: [],
 
-        reporters: ['spec', 'junit', 'coverage'],
+        reporters: ['spec', 'coverage', 'progress', 'junit'],
 
         preprocessors: {
-            'app/modules/common/patchModel.service.js': 'coverage'
+            'app/**/*.js': 'coverage'
         },
 
         coverageReporter: {
-            dir: 'target/', reporters: [{
-                type: 'html'
-            }, {
-                type: 'cobertura', file: 'coverage.xml'
-            }]
-
+            dir: 'test/target/', type: 'cobertura', file: 'coverage.xml'
         },
 
         junitReporter: {
-            outputFile: 'target/test-results.xml'
+            outputFile: 'test/target/test-results.xml'
         },
-
 
         // web server port
         port: 8080,
@@ -60,6 +51,7 @@ module.exports = function (config)
         browsers: ['PhantomJS'],
 
         // Which plugins to enable
+
         plugins: ['karma-phantomjs-launcher', 'karma-jasmine', 'karma-spec-reporter', 'karma-junit-reporter', 'karma-coverage'],
 
         // Continuous Integration mode
@@ -82,3 +74,4 @@ module.exports = function (config)
         // urlRoot: '_karma_'
     });
 };
+

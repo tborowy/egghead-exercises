@@ -11,7 +11,7 @@ describe('directives', function ()
     {
         $scope = $rootScope;
         circle = angular.element('<div enter="bg-danger" leave class="circle center-block"></div>');
-        square = angular.element('<div db-click-on="bg-info" click-on class="square center-block"></div>');
+        square = angular.element('<div click-on="bg-info" db-click-on class="square center-block"></div>');
         circle = $compile(circle)($rootScope);
         square = $compile(square)($rootScope);
     }));
