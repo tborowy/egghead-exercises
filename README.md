@@ -12,25 +12,25 @@ You would like to know **Where is Poland?** and what is a type of event when you
 
 ##Setup
  You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
- 
- ```
- npm install
- ```
- 
- ```
- bower install
- ```
- 
- To run the application:
- 
- ```
- grunt serve
- ```
- 
+
+```
+npm install
+```
+
+```
+bower install
+```
+
+To run the application:
+
+```
+grunt serve
+```
+
 To run cucumber tests:
 
- ```
- grunt test
- ```
- 
+```
+grunt test
+```
+
 Good luck!
