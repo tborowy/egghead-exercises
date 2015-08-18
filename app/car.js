@@ -37,6 +37,7 @@ app.provider('partsList', function ()
         });
         return tmp.enable;
     };
+
     return {
         $get: function ()
         {
@@ -47,7 +48,7 @@ app.provider('partsList', function ()
     };
 });
 
-app.controller('CarCtrl', function (partsList, $timeout)
+app.controller('CarCtrl', function ($timeout, partsList)
 {
     var ctrl = this;
     ctrl.lists = partsList.lists;
@@ -67,8 +68,12 @@ app.controller('CarCtrl', function (partsList, $timeout)
     {
         $timeout(function ()
         {
-            //complete function
-
+            //here you should use partsList.set()
+            if (partsList.set(ctrl.carPart)) {
+                ctrl.returnMessage = 'This part is available and is very cheap';
+            } else {
+                ctrl.returnMessage = 'This part is NOT available and is very expensive...';
+            }
             ctrl.result = true;
         }, 10);
     };
@@ -76,8 +81,10 @@ app.controller('CarCtrl', function (partsList, $timeout)
     {
         $timeout(function ()
         {
-            //complete function
-
+            //here you should use partsList.setToTrue()
+            if (partsList.setToTrue(ctrl.carPart)) {
+                ctrl.returnMessage = 'This part is available and is very cheap';
+            }
             ctrl.result = true;
         }, 1800);
     };
