@@ -12,30 +12,31 @@ module.exports = function (config)
         autoWatch: true,
 
         // base path, that will be used to resolve files and exclude
-        basePath: '',
+        basePath: '../app',
 
         // testing framework to use (jasmine/mocha/qunit/...)
-        frameworks: ['jasmine'], proxies: {
-            '/assets/': '/app/assets/'
+        frameworks: ['jasmine'],
+
+
+        preprocessors: {
+            '*.html': ['ng-html2js']
         },
 
         // list of files / patterns to load in the browser
-        files: ['../app/bower_components/angular/angular.js',
-                '../app/bower_components/angular-mocks/angular-mocks.js',
-                '../app/song.js',
-                'unit/**/*spec.js'],
+        files: ['bower_components/angular/angular.js',
+                '*.html',
+                'bower_components/angular-mocks/angular-mocks.js',
+                'box.js',
+                '../test/unit/**/*spec.js'],
 
         // list of files / patterns to exclude
         exclude: [],
 
-
         reporters: ['spec', 'junit', 'coverage'],
 
-        preprocessors: {
-            'app/modules/common/patchModel.service.js': 'coverage'
-        },
-
-        coverageReporter: {
+        ngHtml2JsPreprocessor: {
+            moduleName: 'templates'
+        }, coverageReporter: {
             dir: 'target/', reporters: [{
                 type: 'html'
             }, {
@@ -63,7 +64,12 @@ module.exports = function (config)
         browsers: ['PhantomJS'],
 
         // Which plugins to enable
-        plugins: ['karma-phantomjs-launcher', 'karma-jasmine', 'karma-spec-reporter', 'karma-junit-reporter', 'karma-coverage'],
+        plugins: ['karma-ng-html2js-preprocessor',
+                  'karma-phantomjs-launcher',
+                  'karma-jasmine',
+                  'karma-spec-reporter',
+                  'karma-junit-reporter',
+                  'karma-coverage'],
 
         // Continuous Integration mode
         // if true, it capture browsers, run tests and exit

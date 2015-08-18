@@ -2,9 +2,8 @@
 
 ##Summary
 Application displays song details with two modes o **sing** and **fake**. After clicking **sing** you should see `But you did not have to cut
- me off... But you treat me like a stranger ...` message. In the second case, you should see `Buuuuuuuuuuuuuut you niah niah blah bla ...`
+ me off... But you treat me like a stranger ...` fragment. In the second case, you should see `Buuuuuuuuuuuuuut you niah niah blah bla ...`
  
-
 ##Goals
 Your task is to remove `Song` attribute from `SongCtrl` and use injector so that the application behaves in the same way.
 
@@ -13,25 +12,31 @@ Your task is to remove `Song` attribute from `SongCtrl` and use injector so that
 
 ##Setup
  You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
- 
- ```
- npm install
- ```
- 
- ```
- bower install
- ```
- 
- To run the application:
- 
- ```
- grunt serve
- ```
- 
+
+```
+npm install
+```
+
+```
+bower install
+```
+
+To run the application:
+
+```
+grunt serve
+```
+
+To run cucumber tests:
+
+```
+grunt test
+```
+
 To run unit tests:
 
- ```
- grunt karma
- ```
- 
+```
+grunt karma
+```
+
 Good luck!

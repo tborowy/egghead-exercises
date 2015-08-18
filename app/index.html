@@ -17,10 +17,10 @@
 
         <h4 class="panel-heading"><strong>Title:</strong> {{song.title}}</h4>
 
-        <button class="btn btn-default" ng-click="showSing=true; showFake=false">Sing</button>
-        <button class="btn btn-default" ng-click="showFake=true; showSing=false">Fake</button>
-        <h4 class="alert alert-success" ng-show="showSing">{{song.sing}}</h4>
-        <h4 class="alert alert-danger" ng-show="showFake">{{song.fake}}</h4>
+        <button class="btn btn-default" ng-click="song.showSongText()">Sing</button>
+        <button class="btn btn-default" ng-click="song.showFakeText()">Fake</button>
+        <h4 class="alert alert-success" ng-show="song.showSing">{{song.sing}}</h4>
+        <h4 class="alert alert-danger" ng-show="song.showFake">{{song.fake}}</h4>
     </div>
 
 </div>
