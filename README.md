@@ -4,9 +4,9 @@
 In this application, you are supposed to use $rootScope within an `error` directive to detect route change errors and display it with `alertMessage`.
 
 ##Goals
-* when it detects route change error, you should see a message `No, no, no. That is not good way!` above than buttons, inside red alert (use `alert 
+* when it detects route change error, you should see a message `You went in the wrong direction!` above than buttons, inside red alert (use `alert 
 alert-danger` bootstrap class)
-* use `ng-if` directive to display the error alarm only when you need it.
+* use `ng-if` to display the error alarm only when you need it.
 
 ##Before you start, please refer to:
 * [angularjs-directive-for-route-handling](https://egghead.io/lessons/angularjs-directive-for-route-handling)
