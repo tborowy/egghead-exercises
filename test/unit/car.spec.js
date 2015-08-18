@@ -6,10 +6,10 @@ describe('car', function ()
     var spyInjector;
 
     beforeEach(module('app'));
-    beforeEach(inject(function ($controller, $timeout, partsList)
+    beforeEach(inject(function ($controller, $timeout)
     {
         spyInjector = jasmine.createSpyObj('$injector', ['invoke']);
-        carCtrl = $controller('CarCtrl', {partsList: partsList, $timeout: $timeout, $injector: spyInjector});
+        carCtrl = $controller('CarCtrl', {$timeout: $timeout, $injector: spyInjector});
 
     }));
 

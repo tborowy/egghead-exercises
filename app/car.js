@@ -52,7 +52,6 @@ app.controller('CarCtrl', function ($timeout, partsList)
 {
     var ctrl = this;
     ctrl.lists = partsList.lists;
-    ctrl.data = {lists: ctrl.lists[0].name};
     ctrl.result = false;
 
     ctrl.chooseCarPart = function ()
@@ -68,7 +67,6 @@ app.controller('CarCtrl', function ($timeout, partsList)
     {
         $timeout(function ()
         {
-            //here you should use partsList.set()
             if (partsList.set(ctrl.carPart)) {
                 ctrl.returnMessage = 'This part is available and is very cheap';
             } else {
@@ -81,7 +79,6 @@ app.controller('CarCtrl', function ($timeout, partsList)
     {
         $timeout(function ()
         {
-            //here you should use partsList.setToTrue()
             if (partsList.setToTrue(ctrl.carPart)) {
                 ctrl.returnMessage = 'This part is available and is very cheap';
             }
