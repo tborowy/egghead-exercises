@@ -12,25 +12,31 @@ Setting data on scope is dangerous because it makes available everywhere, wheref
 
 ##Setup
  You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
- 
- ```
- npm install
- ```
- 
- ```
- bower install
- ```
- 
- To run the application:
- 
- ```
- grunt serve
- ```
- 
+
+```
+npm install
+```
+
+```
+bower install
+```
+
+To run the application:
+
+```
+grunt serve
+```
+
 To run cucumber tests:
 
- ```
- grunt test
- ```
- 
+```
+grunt test
+```
+
+To run unit tests:
+
+```
+grunt karma
+```
+
 Good luck!
