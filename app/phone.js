@@ -24,7 +24,7 @@
 
         $scope.showPhone = function ()
         {
-            $scope.isShow = $scope.isShow ? false : true;
+            $scope.isShow = !$scope.isShow;
         };
 
         $scope.call = function ()
