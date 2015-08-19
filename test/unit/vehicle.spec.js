@@ -19,9 +19,7 @@ describe('restrict', function ()
     {
         window = $window;
         scope = $rootScope.$new();
-
     }));
-
 
     beforeEach(inject(function ()
     {
@@ -58,8 +56,15 @@ describe('restrict', function ()
                 buttons[0].click();
                 expect(audi.find('audi').find('h3').text()).toBe('I am fast car! 80 km/h! Whoa!');
             });
-        });
 
+            it('should display "Click" alert message after click on "Seat belts!" button', function ()
+            {
+                spyOn(window, 'alert');
+                buttons[1].click();
+                expect(window.alert).toHaveBeenCalledWith('Click!');
+            });
+
+        });
 
 
         describe('incorrectly used', function ()
@@ -102,7 +107,7 @@ describe('restrict', function ()
                 expect(jelcz.find('jelcz').find('h3').text()).toBe('I am fast bus! 12 km/h! Whoa!');
             });
 
-            it('should display "Beeeep" alert message after click on "Drive" button', function ()
+            it('should display "Beeeep" alert message after click on "Emergency brake!" button', function ()
             {
                 spyOn(window, 'alert');
                 buttons[1].click();
