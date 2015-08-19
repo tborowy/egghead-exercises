@@ -1,21 +1,27 @@
 #Exercise 33b: ng-repeat and $index, $event, $log
 
 ##Summary
-Your job is to practise **ng-repeat** directive with $index, $event and $log.
+This exercise is about **ng-repeat** directive with `$index`, `$event` and `$log`. Application should display a numbered list of buttons. Third and 
+seventh button should be highlighted and after pressing redirect
 
 ##Goals
-* display all elements from the **list** as button 
-* list items should be numbered from 1
-* use **$index** as **id** 
-* add appropriate class to buttons (use **addClass()** function)
-* after pressing the **'Do nothing** button, you should see the message with coordinates
-* after pressing the **'Show log** button, you should be redirected to **checkLog.html** page
-* on **checkLog.html** page you should see **log** in console (update **display** function, don't use **console.log**)
+* display all elements from the `list` as  numbered from 1 buttons list
+* set `id` button attribute to appropriate `$index` value
+* add appropriate class to buttons 1
+* after pressing the `Do nothing` button, you should see the message with coordinates
+* after pressing the `Show log` button, you should be redirected to `checkLog.html` page
+* on `checkLog.html` page you should see `log` in console (don't use **console.log**)
+
+`addClass()` returns the class based on the parameters we send it. You can use it with ng-class directive based on example:
+
+```
+< div ng-class="getClass(key)" >
+```
 
 ##Before you start, please refer to:
 * [angularjs-index-event-log](https://egghead.io/lessons/angularjs-index-event-log)
 
-##Setup
+##Setup 
  You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
  
  ```
