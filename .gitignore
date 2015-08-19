@@ -4,3 +4,4 @@
 *.iml
 *app/bower_components
 *node_modules
+*test/target
