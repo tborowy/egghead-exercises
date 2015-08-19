@@ -6,8 +6,8 @@ Application simulates a phone book. Check out how it works, then use the control
 ##Before you start, please refer to:
 * [angularjs-experimental-controller-as-syntax](https://egghead.io/lessons/angularjs-experimental-controller-as-syntax)
 
-##Setup
- You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
+###Setup
+  You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
  
  ```
  npm install
@@ -23,10 +23,10 @@ Application simulates a phone book. Check out how it works, then use the control
  grunt serve
  ```
  
-To run unit tests:
-
- ```
- grunt karma
- ```
+ To run cucumber tests:
  
-Good luck!
+ ```
+ grunt test
+ ```
+  
+ Good luck!
