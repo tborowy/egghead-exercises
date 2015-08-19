@@ -14,35 +14,38 @@ seventh button should be highlighted and after pressing redirect
 
 `addClass()` returns the class based on the parameters we send it. You can use it with ng-class directive based on example:
 
-```
-< div ng-class="getClass(key)" >
-```
+`< div ng-class="getClass(key)" >`
 
 ##Before you start, please refer to:
 * [angularjs-index-event-log](https://egghead.io/lessons/angularjs-index-event-log)
 
-##Setup 
+##Setup
  You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
- 
- ```
- npm install
- ```
- 
- ```
- bower install
- ```
- 
- To run the application:
- 
- ```
- grunt serve
- ```
- 
+
+```
+npm install
+```
+
+```
+bower install
+```
+
+To run the application:
+
+```
+grunt serve
+```
+
 To run cucumber tests:
 
- ```
- grunt test
- ```
- 
-Good luck!
+```
+grunt test
+```
 
+To run unit tests:
+
+```
+grunt karma
+```
+
+Good luck!
