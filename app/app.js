@@ -35,12 +35,13 @@ app.config(function ($routeProvider, $provide)
     });
 });
 
-app.controller('SetCtrl', function ($scope, promises)
+app.controller('SetCtrl', function ($scope, promises, $location)
 {
     $scope.set = function (value)
     {
         if (value && value.success && value.unSuccess) {
             promises.set(value.success, value.unSuccess);
+            $location.path('/display');
         }
     };
 });
@@ -74,6 +75,6 @@ app.directive('resolveSuccessPromise', function ()
         scope: {},
         restrict: 'E',
         controller: 'UnSuccessCtrl as unSuccessCtrl',
-        template: '<div class="form-group">\n    <button class="btn btn-danger" ng-click="getUnSuccess()"> Get un success value from directive</button>\n    <span ng-if="unSuccess">\n        <p class="form-group">\n            Your un success value is: <span class="text-danger">{{unSuccess}}</span>\n        </p>\n    </span>\n</div>'
+        template: '<div class="form-group">\n    <button id="unSuccessButton" class="btn btn-danger" ng-click="getUnSuccess()"> Get un success value from directive</button>\n    <span ng-if="unSuccess">\n        <p class="form-group">\n            Your un success value is: <span class="text-danger">{{unSuccess}}</span>\n        </p>\n    </span>\n</div>'
     };
 });
