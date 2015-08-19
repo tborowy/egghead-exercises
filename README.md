@@ -10,7 +10,7 @@ seventh button should be highlighted and after pressing redirect
 * add appropriate class to buttons 1
 * after pressing the `Do nothing` button, you should see the message with coordinates
 * after pressing the `Show log` button, you should be redirected to `checkLog.html` page
-* on `checkLog.html` page you should see `log` in console (don't use **console.log**)
+* on `checkLog.html` page you should see `log` in console (don't use **console.log**. use `debug` mode)
 
 `addClass()` returns the class based on the parameters we send it. You can use it with ng-class directive based on example:
 
