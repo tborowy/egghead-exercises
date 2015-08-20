@@ -11,9 +11,8 @@ Use the angular-animate to create a really scary ghosts. Complete three **.css**
 ##Result
 * button pressed
 
-![Button clicked](https://github.com/aniaw/angular-egghead/blob/answer37/app/assets/img/buttonClicked.jpg)
-
-![Result](ahttps://github.com/aniaw/angular-egghead/blob/answer37/app/assets/img/result.jpg)
+![Button clicked](app/assets/img/buttonClicked.jpg)
+![Result](app/assets/img/result.jpg)
 
 ##Before you start, please refer to:
 * [angularjs-animation-basics](https://egghead.io/lessons/angularjs-animation-basics)
