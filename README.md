@@ -7,7 +7,7 @@ You start work with three "book-about" ready directives : `bookTitle`, `bookDesc
 * `book` component should be used as a container 
 * set book title component with the following text **The Da Vinci Code**
 * the number of pages should be **454** 
-* **remember!** you are not supposed to put the book title etc. components inside the `book` directive template
+* **remember!** you are not supposed to put the book title etc. inside the `book` directive template
 
 
 ##Before you start, please refer to:
