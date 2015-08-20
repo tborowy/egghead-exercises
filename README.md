@@ -1,13 +1,14 @@
 #Exercise 32 : Components And Containers
 
 ##Summary
-You start work with three "book-about" ready directives : `bookTitle`, `bookDescription` and `bookPages` . Use them to create a book consisting of
-title, description and number of pages (in this order).
+You start work with three "book-about" ready directives : `bookTitle`, `bookDescription` and `bookPages`. Use them to create a book consisting of a title, description and number of pages (in this order).
 
 ##Goals
-* `book` directive should be used as a container
-* example book's title: `The Da Vinci Code`
-* book should have **454** pages
+* `book` component should be used as a container 
+* set book title component with the following text **The Da Vinci Code**
+* the number of pages should be **454** 
+* **remember!** you are not supposed to put the book title etc. components inside the `book` directive template
+
 
 ##Before you start, please refer to:
 * [angularjs-components-and-containers](https://egghead.io/lessons/angularjs-components-and-containers)
