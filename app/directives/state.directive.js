@@ -2,6 +2,7 @@
     'use strict';
     angular.module('countryStateCity').directive('state', function () {
         return {
+            //complete state directive
             restrict: 'E',
             scope: {},
             replace: true,
