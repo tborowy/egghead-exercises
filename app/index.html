@@ -3,32 +3,34 @@
 <head lang="en">
     <title>AngularJS Tutorials</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="assets/style2.css">
-    <link rel="stylesheet" href="assets/style3.css">
+    <link rel="stylesheet" href="assets/ghost.css">
+    <link rel="stylesheet" href="assets/ghost2.css">
+    <link rel="stylesheet" href="assets/ghost3.css">
 </head>
 
-<body ng-app="scaryApp" ng-controller="GhostCtrl as ctrl">
+<body ng-app="scaryApp" ng-controller="GhostCtrl as ghost">
 <div class="container">
     <div class="page-header">
         <h1>Buuuuuuu!!!
             <small>Are you scared?</small>
         </h1>
     </div>
-    <div class="panel-heading text-center">
-        <button class="col-md-12 alert alert-info" ng-click="ctrl.change=!ctrl.change">Scare!</button>
+    <div class="col-md-12 panel-heading text-center btn-group" role="group">
+        <button type="button" class="col-md-4 btn alert-danger" ng-click="ghost.showGhost('first')">Scare!</button>
+        <button type="button" class="col-md-4 btn alert-info" ng-click="ghost.showGhost('second')">Scare!</button>
+        <button type="button" class="col-md-4 btn alert-success" ng-click="ghost.showGhost('third')">Scare!</button>
     </div>
     <div class="text-center">
         <div class="col-md-4">
-            <img ng-if="ctrl.change" src="assets/ghost.jpg">
+            <img ng-if="ghost.isShownGhost.first" src="assets/img/ghost.jpg">
 
         </div>
         <div class="col-md-4">
-            <img ng-if="ctrl.change" src="assets/ghost2.png">
+            <img ng-if="ghost.isShownGhost.second" src="assets/img/ghost2.png">
 
         </div>
         <div class="col-md-4">
-            <img ng-if="ctrl.change" src="assets/ghost3.png">
+            <img ng-if="ghost.isShownGhost.third" src="assets/img/ghost3.png">
         </div>
     </div>
 </div>
