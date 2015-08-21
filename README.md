@@ -16,7 +16,7 @@ You are provided with two directives (`myContainer`,`myComponent`) and template 
 	* should see a list of components inside the container
 	* container **name** should be `CONTAINER BOX`
 	* names of the components should be displayed as in the `component` view
-     * **remember!** you are not supposed to put the components inside the `myContainer` directive **template**
+    * **remember!** you are not supposed to put the components inside the `myContainer` directive **template**
       
 ##Before you start, please refer to:
 * [angularjs-components-and-containers](https://egghead.io/lessons/angularjs-components-and-containers)
