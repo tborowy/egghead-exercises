@@ -32,9 +32,9 @@ app.controller('chooseCtrl', function ($scope)
 app.directive('myContainer', function ()
 {
     return {
-        restrict: 'E', transclude: true, scope: {
+        restrict: 'E', scope: {
             name: '@'
-        }, template: '<div class="my-container text-center">\n    <div class="alert-info"> {{name}}</div>\n    <div ng-transclude></div>\n</div>'
+        }, template: '<div class="my-container text-center">\n    <div class="alert-info"> {{name}}</div>\n    <div><!--Components should be displayed here --></div>\n</div>'
     };
 });
 app.directive('myComponent', function ()
