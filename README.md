@@ -1,9 +1,7 @@
 #Exercise 8 : Angular first directive
 
 ##Summary
-The world need more heroes. You are given a hard task to create at least two heroes and one superhero. Implement three simple directives that will
-allow you to create as many heroes as you need.
-
+The world needs more heroes. You are given a hard task to create at least two heroes and one superhero. Implement three simple directives that will allow you to create as many heroes as you need.
 ##Goals
 
 * `hero` directive restricted as element and with given template as follows: 
