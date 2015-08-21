@@ -5,6 +5,8 @@ var reqApp = angular.module('reqApp', []);
 reqApp.controller('ReqCtrl', function ()
 {
     this.updateTitle = false;
+    this.selectedReq = null;
+    this.requirementCopy = null;
 
     this.reqCollection = [{
         title: 'Programmer', url: 'assets/customer.png', description: 'How the customer explained it'
