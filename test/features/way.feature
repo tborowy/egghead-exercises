@@ -8,7 +8,7 @@ Feature: Detect route change error
   Scenario: Error message - left button
     When I browse to the "/"
     When I click "leftButton"
-    Then I should see "No, no, no. That is not good way!" text in "alertDanger"
+    Then I should see "You went in the wrong direction!" text in "alertDanger"
 
   Scenario: Success message - right button
     When I browse to the "/"
