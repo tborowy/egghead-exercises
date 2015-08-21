@@ -5,15 +5,18 @@ You are provided with two directives (`myContainer`,`myComponent`) and template 
  but they should be inside a `myContainer`.
 
 ##Goals
+
 * when user chooses `component` view:
-		* should see a list of components
-		* the **name** of the next component should be `This directive is simple component <number>'` where number is the next index of the list.
+
+    * should see a list of components
+	* the **name** of the next component should be `This directive is simple component <number>'` where number is the next index of the list.
 
 * when user chooses `container` view:
-		* should see a list of components inside the container
-		* container **name** should be `CONTAINER BOX`
-		* names of the components should be displayed as in the `component` view
-      * **remember!** you are not supposed to put the components inside the `myContainer` directive **template**
+
+	* should see a list of components inside the container
+	* container **name** should be `CONTAINER BOX`
+	* names of the components should be displayed as in the `component` view
+     * **remember!** you are not supposed to put the components inside the `myContainer` directive **template**
       
 ##Before you start, please refer to:
 * [angularjs-components-and-containers](https://egghead.io/lessons/angularjs-components-and-containers)
