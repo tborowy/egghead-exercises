@@ -1,7 +1,7 @@
 <div class="row form-group">
-    <div class="col-xs-4" ng-repeat="p in paintingList | filter : {frame: 'v'}">
-        <a class="list-group-item text-center" ng-class="{disable: p.selected}" ng-click="selectPainting(p)"><img
-                ng-src="{{p.url}}"></a>
+    <div class="col-xs-4" ng-repeat="vPainting in paintingList | filter : {frame: 'v'}">
+        <a class="list-group-item text-center" ng-class="{disable: vPainting.selected}" ng-click="selectPainting(vPainting)">
+            <img ng-src="{{vPainting.url}}"></a>
     </div>
 </div>
-<div></div>
+<div id="verticalDetails"></div>
