@@ -10,7 +10,7 @@ When you leave the area it should be removed back (use `leave` directive to remo
 
 
 Secondly, when you click the square it should add a provided class to the square (using `clickOn` directive) and when you double click - it should be removed
- (using dbClickOn` directive).
+ (using `dbClickOn` directive).
 
  
  Please be aware that you should be able to pass specified bootstrap class as an argument to the directive.
