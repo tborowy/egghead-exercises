@@ -1,8 +1,13 @@
 #Exercise 16 : Transclusion basics
 
-Discover the true nature of animals with ng-transclude directive. Update **animal** directive to display the content inside animal directives (dog, cat and pig). 
+##Summary
+Discover the true nature of animals with ng-transclude directive. Update **animal** directive to display the content 
+inside animal directives (dog, cat and pig).
+ 
+##Goals
+Use ng-transclude in `animal` directive.
 
-###Before you start, please refer to:
+##Before you start, please refer to:
 * [angularjs-transclusion-basics](https://egghead.io/lessons/angularjs-transclusion-basics)
 
 ##Setup
