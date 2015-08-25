@@ -2,15 +2,17 @@
 
 ##Summary
 In this exercise, your challenge is to share information between the controller and the directive. 
-Implement functionality that will allow to add (when the mouse hovers over the green square) and remove (when the mouse hovers over the green square) snowflake.
+Implement a functionality that will allow you to add (when the mouse hovers over the green square) and remove (when the mouse hovers over the green square) 
+snowflake. Snowflakes should be displayed in `Let it snow` section.
 
 ##Goals
-* **snow.js** file should contain ***enter*** directive which talks to controller ***SnowCtrl***
-* create ***addPetal*** and ***removePetal*** functions to add and remove snowflake form ***snow*** array
-* first part of snowflake is an object `{petal: '*'}` you put and remove from array
-* second part of snowflake is a star pattern `< span id="petal" class="glyphicon glyphicon-star"></ span>` 
-* use ng-repeat directive and combine them together into one petal
+* **snow.js** file should contain ***enter*** directive which talks to the `SnowCtrl` controller 
+* create ***addPetal*** and ***removePetal*** functions to add and remove a snowflake from  the `snow` array
+* the snowflake consist of a star `< span id="petal" class="glyphicon glyphicon-star"></ span>` and flake `*`
 * enjoy the stellar snow :)
+
+**Hint**
+You can use ng-repeat directive and combine them together into one petal.
 
 ###Before you start, please refer to:
 * [angularjs-directives-talking-to-controllers](https://egghead.io/lessons/angularjs-directives-talking-to-controllers)
