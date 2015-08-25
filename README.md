@@ -1,16 +1,16 @@
 #Exercise 17: An alternative approach to controllers
 
 ##Summary
-An alternative approach to controllers assumes that function should be assigned to controller, not to the $scope. You task is to implement functionality according
-to the regulations below.
+An alternative approach to controllers assumes that the function should be assigned to the controller, not to the $scope.
+Create `SumCtrl` and `SubCtrl` providing the basic math sum (`addition`)and subtract (`subtraction`) functions according to the requirements.
 
 ##Goals
-
 * `Calc.js` should contain `SumCtrl` and `SubCtrl` controllers
-* `SumCtrl` should has `addition` function assigned to itself, which requires two params and assigns the result to `sum` variable
-* similarly `SubCtrl` but should assigns the result to `sub` variable
-* each controller should have two variables (`firstNumber`, `secondNumber`) initialized values **12** and **1**
-* use `addition`  and `subtraction` function and display the result in correct header (check comments)
+* `SumCtrl` should have the `addition` function assigned to itself
+* `addition` should consume two arguments and assign the result to `sum` variable
+* `SubCtrl` should be like `SumCtrl` but should have `subtraction` function and assign the result to `sub` variable instead
+* each controller should have two variables (`firstNumber`, `secondNumber`) initialized with values **12** and **1**
+* use `addition`  and `subtraction` function to display the result in correct header (check comments)
 
 ##Before you start, please refer to:
 * [angularjs-an-alternative-approach-to-controllers](https://egghead.io/lessons/angularjs-an-alternative-approach-to-controllers)
