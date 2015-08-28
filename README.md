@@ -1,37 +1,66 @@
 ##Exercise 51 : $http
-Your task is to use $http service for making requests and handling responses from external web services.
-You start with ready server side:
-* ```get('/songs'...)``` - return list of songs
-* ```get('/favourite_songs'...)``` - return list of favourite songs
-* ```post('/favourite_songs'...)``` - add new favourite song to  **favouriteSongsList**
-* ```delete('/favourite_songs'...)``` - clear list of favourite songs
 
+##Summary
+You are provided with a simple application that manages songs. The application should displayed songs list, be able to add new favourite song and cleared the favourites songs list.
+Complete `refreshSongs`, `addFavouriteSong`,`removeFavouriteSongs` functions using $http service for making requests and handling responses from external web service.
 
-###Requirements
-* don't forget to add to the controller $http service 
-* implement support for queries GET (both) - put data into **songs** and **favouriteSongs** variable
-* complete **addFavouriteSong** and **removeFavouriteSongs** functions
-* when clear button is pressed a list of your favorite songs should be removed
+##Goals
+* `song` list should be automatically initialized when app starts, also it should display "Songs were uploaded" `message` inside ***notification*** row
+* `addFavouriteSong` function (after saving a new song) should 
+    * update `favouriteSongsList`, 
+    * set notification to "I just add **"title"** to your favourite songs list!" 
+    * clean the artist and title inputs fields 
+* `Clear list` button (after removing all favourites songs) should clear the `favouriteSongsList` and set notification `message` to message from server
 
-###Result
-* you start with:
+##API
 
-![alt text](app/assets/1.png)
+###Get songs list
 
-* when get request works:
+`GET /songs` - returns songs
 
-![alt text](app/assets/2.png)
+###Save favourite song
 
-* add new favourite song
+`POST /favourites` - returns saved song
 
-![alt text](app/assets/3.png)
+###Clear favourite songs list
 
-###To run server
-* ```npm install```
-* ```cd angular-egghead\app```
-* ```node express.js```
+`DELETE /favourites` - returns a confirmation message
 
-###Before you start, please refer to:
+##Before you start, please refer to:
 * [angularjs-http](https://egghead.io/lessons/angularjs-http)
+
+##Setup
+ You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
+
+```
+npm install
+```
+
+```
+bower install
+```
+
+To run the application:
+
+```
+grunt serve
+```
+To run the server:
+
+```
+nodemon server.js
+```
+
+To run cucumber tests:
+
+```
+grunt test
+```
+
+To run unit tests:
+
+```
+grunt karma
+```
 
 Good luck!

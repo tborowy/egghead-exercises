@@ -8,11 +8,13 @@
 <body ng-app="app" ng-controller="AppCtrl as ctrl">
 <div class="container">
     <div class="page-header">
-        <h1>Requirements analysis</h1>
+        <h1>Songs
+            <small>list</small>
+        </h1>
     </div>
     <div class="col-md-4">
-        <div class="alert alert-info text-center">You might want to listen to:</div>
-        <table class="table table-bordered">
+        <div class="alert bg-info text-center">You might want to listen to:</div>
+        <table id="songs" class="table table-bordered">
             <thead>
             <tr>
                 <th>Artist</th>
@@ -33,27 +35,29 @@
         <form class="form-inline alert alert-info">
             <div class="form-group">
                 <label class="sr-only" for="artist">Artist</label>
-                <input id="artist" type="text" class="form-control" ng-model="ctrl.favouriteSong.artist"
-                       placeholder="Artist"/>
+                <input id="artist" type="text" class="form-control" ng-model="ctrl.favouriteSong.artist" placeholder="Artist"/>
             </div>
             <div class="form-group">
                 <label class="sr-only" for="title">Title</label>
-                <input id='title' type="text" class="form-control" ng-model="ctrl.favouriteSong.title"
-                       placeholder="Title"/>
+                <input id='title' type="text" class="form-control" ng-model="ctrl.favouriteSong.title" placeholder="Title"/>
             </div>
-            <div class="btn btn-success" ng-click="ctrl.addFavouriteSong(ctrl.favouriteSong)">Add favourite song</div>
-            <div class="btn btn-danger" ng-click="ctrl.removeFavouriteSongs()">Clear list</div>
+            <div id="add" class="btn btn-success" ng-click="ctrl.addFavouriteSong(ctrl.favouriteSong)">Add favourite song</div>
+            <div id="clear" class="btn btn-danger" ng-click="ctrl.removeFavouriteSongs()">Clear list</div>
         </form>
 
-        <table class="table table-bordered">
+        <table id="favouriteSongs" class="table table-bordered">
             <thead>
+            <tr class="warning text-center">
+                <!--------------------------------------NOTIFICATION--------------------------------------->
+                <td colspan="2" id="notification"><strong>{{ctrl.message || 'no new messages'}}</strong></td>
+            </tr>
             <tr>
                 <th>Artist</th>
                 <th>Title</th>
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="song in ctrl.favouriteSongs">
+            <tr ng-repeat="song in ctrl.favouriteSongsList">
                 <td>{{song.artist}}</td>
                 <td>{{song.title}}</td>
             </tr>
