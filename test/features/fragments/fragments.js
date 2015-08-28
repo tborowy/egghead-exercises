@@ -27,10 +27,13 @@ var fragments = function (text)
     'use strict';
 
     var mapping = {
-        leftButton: element.bind(null, by.id('left')),
-        rightButton: element.bind(null, by.id('right')),
-        alertDanger: element.bind(null, by.css('.alert-danger')),
-        alertSuccess: element.bind(null, by.css('.alert-success'))
+        button: {
+            left: element.bind(null, by.id('left')), right: element.bind(null, by.id('right'))
+        }, alert: {
+            info: element.bind(null, by.css('.alert-info')),
+            danger: element.bind(null, by.css('.alert-danger')),
+            success: element.bind(null, by.css('.alert-success'))
+        }, error: element.bind(null, by.css('error'))
     };
 
     return byString(mapping, text);

@@ -9,9 +9,11 @@
 
 module.exports = function (grunt)
 {
+
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-protractor-webdriver');
+    grunt.loadNpmTasks('grunt-karma');
 
     require('load-grunt-tasks')(grunt);
 
@@ -41,8 +43,7 @@ module.exports = function (grunt)
             }
         }, protractor_webdriver: {
             driver: {
-                options: {
-                }
+                options: {}
             }
         }, protractor: {
             options: {
@@ -65,6 +66,10 @@ module.exports = function (grunt)
                         browser: 'phantomjs'
                     }
                 }
+            }
+        }, karma: {
+            unit: {
+                configFile: 'test/karma.conf.js'
             }
         }
     });
