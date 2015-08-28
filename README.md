@@ -20,7 +20,7 @@ Complete `refreshSongs`, `addFavouriteSong`,`removeFavouriteSongs` functions usi
 
 ###Save favourite song
 
-`POST /favourites` - returns saved song
+`POST /favourites` - returns saved favourite song
 
 ###Clear favourite songs list
 
