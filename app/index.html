@@ -6,7 +6,7 @@
 </head>
 
 <body ng-app="app">
-<div class="container" ng-controller="controllers.User">
+<div class="container" ng-controller="UserCtrl">
     <div class="page-header">
         <h1>GitHub Users</h1>
     </div>
@@ -21,20 +21,10 @@
         </thead>
         <tbody>
         <tr class="text-center" ng-repeat="user in users">
-            <td>
-                <img ng-src="{{user.avatarUrl}}" width="100"/>
-            </td>
-            <td>
-                <strong>{{user.login}}</strong>
-
-            </td>
-            <td>
-                <a ng-href="{{user.url}}">{{user.url}}</a>
-
-            </td>
-            <td>
-                <span>{{user.type}}</span>
-            </td>
+            <td><img ng-src="{{user.avatarUrl}}" width="100"/></td>
+            <td><strong>{{user.login}}</strong></td>
+            <td><a ng-href="{{user.url}}">{{user.url}}</a></td>
+            <td><span>{{user.type}}</span></td>
         </tr>
         </tbody>
     </table>
@@ -42,9 +32,9 @@
 <script type="text/javascript" src="bower_components/angular/angular.js"></script>
 <script type="text/javascript" src="bower_components/lodash/dist/lodash.js"></script>
 <script type="text/javascript" src="bower_components/neosavvy-javascript-core/neosavvy-javascript-core.js"></script>
-<script type="text/javascript" src="user-api.js"></script>
+<script type="text/javascript" src="app.js"></script>
 <script type="text/javascript" src="services/api.js"></script>
-<script type="text/javascript" src="services/api-response.js"></script>
+<script type="text/javascript" src="services/apiResponse.js"></script>
 <script type="text/javascript" src="controllers/user.js"></script>
 </body>
 </html>

@@ -1,4 +1,8 @@
-/*global module*/
+// Karma configuration
+// http://karma-runner.github.io/0.12/config/configuration-file.html
+// Generated on 2014-09-07 using
+// generator-karma 0.8.3
+
 module.exports = function (config)
 {
     'use strict';
@@ -8,34 +12,46 @@ module.exports = function (config)
         autoWatch: true,
 
         // base path, that will be used to resolve files and exclude
-        basePath: '../',
+        basePath: '',
 
         // testing framework to use (jasmine/mocha/qunit/...)
-        frameworks: ['jasmine'],
+        frameworks: ['jasmine'], proxies: {
+            '/assets/': '/app/assets/'
+        },
 
         // list of files / patterns to load in the browser
-        files: ['app/bower_components/angular/angular.js',
-                'app/bower_components/angular-mocks/angular-mocks.js',
-                'app/bower_components/lodash/dist/lodash.js',
-                'app/bower_components/neosavvy-javascript-core/neosavvy-javascript-core.js',
-                'app/user-api.js',
-                'app/*.js',
-                'test/spec/*.js'],
+        files: ['../app/bower_components/angular/angular.js',
+                '../app/bower_components/angular-mocks/angular-mocks.js',
+                '../app/bower_components/lodash/dist/lodash.js',
+                '../app/bower_components/neosavvy-javascript-core/neosavvy-javascript-core.js',
+                '../app/app.js',
+                '../app/controllers/*.js',
+                '../app/services/*.js',
+                'unit/*.js'],
 
         // list of files / patterns to exclude
         exclude: [],
 
-        // test results reporter to use
-        // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-        reporters: ['spec', 'coverage'],
+
+        reporters: ['spec', 'junit', 'coverage'],
 
         preprocessors: {
-            'app/**/*.js': 'coverage'
+            'app/modules/common/patchModel.service.js': 'coverage'
         },
 
         coverageReporter: {
-            dir: 'target/coverage/', type: 'html'
+            dir: 'target/', reporters: [{
+                type: 'html'
+            }, {
+                type: 'cobertura', file: 'coverage.xml'
+            }]
+
         },
+
+        junitReporter: {
+            outputFile: 'target/test-results.xml'
+        },
+
 
         // web server port
         port: 8080,
@@ -51,9 +67,7 @@ module.exports = function (config)
         browsers: ['PhantomJS'],
 
         // Which plugins to enable
-        plugins: ['karma-phantomjs-launcher', 'karma-coverage', 'karma-jasmine', 'karma-spec-reporter'
-
-        ],
+        plugins: ['karma-phantomjs-launcher', 'karma-jasmine', 'karma-spec-reporter', 'karma-junit-reporter', 'karma-coverage'],
 
         // Continuous Integration mode
         // if true, it capture browsers, run tests and exit
@@ -67,7 +81,6 @@ module.exports = function (config)
 
         //https://github.com/karma-runner/karma/issues/895
         usePolling: true
-
         // Uncomment the following lines if you are using grunt's server to run the tests
         // proxies: {
         //   '/': 'http://localhost:9000/'

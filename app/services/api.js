@@ -1,5 +1,5 @@
 'use strict';
-angular.module('app.services').factory('services.Api', ['$q', '$http', function ($q, $http)
+angular.module('services').factory('Api', ['$q', '$http', function ($q, $http)
 {
     return {
         getUsers: function ()
