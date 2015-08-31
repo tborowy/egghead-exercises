@@ -1,4 +1,4 @@
-g##Exercise 52: transformResponse
+##Exercise 52: transformResponse
 
 ##Summary
 You start with broken application that should displayed list of GitHub users (with avatar, login, url repository and GitHub user type). All you need to do is
