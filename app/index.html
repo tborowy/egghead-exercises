@@ -13,7 +13,7 @@
         <div class="page-header">
             <h4>Bus Timetable </h4>
         </div>
-        <table class="table table-condensed">
+        <table id="busTable" class="table table-condensed">
             <thead>
             <tr class="info">
                 <th>Initial Stop</th>
@@ -30,7 +30,7 @@
                 <td>{{bus.stop}}</td>
                 <td>{{bus.departure}}</td>
                 <td>
-                    <div class="btn btn-default btn-sm" ng-click="bus.via = viaStop">Change Via Stop</div>
+                    <div id="viaButton" class="btn btn-default btn-sm" ng-click="bus.via = viaStop">Change Via Stop</div>
                 </td>
             </tr>
             </tbody>
@@ -45,7 +45,7 @@
         <div class="page-header">
             <h4>Train Timetable </h4>
         </div>
-        <table class="table table-condensed">
+        <table id="trainTable" class="table table-condensed">
             <thead>
             <tr class="success">
                 <th>Initial Stop</th>
@@ -56,19 +56,19 @@
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="train in TrainService.trainTimetable">
+            <tr ng-repeat="train in Train.trainTimetable">
                 <td>{{train.start}}</td>
                 <td>{{train.stop}}</td>
                 <td>{{train.departure}}</td>
-                <td> {{train.delay}}</td>
+                <td> {{train.delay || 0}}</td>
                 <td>
-                    <div class="btn btn-default btn-sm" ng-click="TrainService.addDelay(train)"> Add Delay</div>
+                    <div id="delayButton" class="btn btn-default btn-sm" ng-click="Train.addDelay(train)"> Add Delay</div>
                 </td>
             </tr>
             </tbody>
         </table>
         <label for='delay' class="label label-default"> Delay </label>
-        <input id='delay' class="form-control" type="text" ng-model="TrainService.delay">
+        <input id='delay' class="form-control" type="text" ng-model="Train.delay">
     </div>
 
     <!--Flight Schedule-->
@@ -76,7 +76,7 @@
         <div class="page-header">
             <h4>Flight Schedule </h4>
         </div>
-        <table class="table table-condensed">
+        <table id="flightTable" class="table table-condensed">
             <thead>
             <tr class="active">
                 <th>Airline</th>
@@ -91,7 +91,7 @@
                 <td>{{flight.destination}}</td>
                 <td>{{flight.scheduled}}</td>
                 <td>
-                    <div class="btn btn-default btn-sm" ng-click="toggleClass($index)"> Cancel</div>
+                    <div id="cancelButton" class="btn btn-default btn-sm" ng-click="toggleClass($index)"> Cancel</div>
                 </td>
             </tr>
             </tbody>
