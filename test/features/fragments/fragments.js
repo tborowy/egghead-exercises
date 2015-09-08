@@ -27,11 +27,10 @@ var fragments = function (text)
     'use strict';
 
     var mapping = {
-        inputs: {
-            seller: element.bind(null, by.id('seller')),
-            name: element.bind(null, by.id('name')),
-            count: element.bind(null, by.id('count'))
-        }
+        input: {
+            seller: element.bind(null, by.id('seller')), name: element.bind(null, by.id('name')), count: element.bind(null, by.id('count'))
+        }, welcomeSeller: element.bind(null, by.id('welcomeSeller')), order: element.bind(null, by.id('order')), heading: element.bind(null, by.css('h1'))
+
     };
 
     return byString(mapping, text);

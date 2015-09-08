@@ -13,26 +13,46 @@ implement functionality that will allow inputs to be displayed along with the in
 * [angularjs-controller](https://egghead.io/lessons/angularjs-controllers)
 
 ##Setup
- You should have `npm`, `bower`, `grunt-cli` packages installed to run this task. First, run sequentially:
+ You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
  
- ```
- npm install
- ```
- 
- ```
- bower install
- ```
- 
- To start the application, run
- 
- ```
- grunt serve
- ```
- 
-To start cucumber tests, run sequentially in separate terminals the application and command
+###To resolve dependencies run:
 
- ```
- grunt test
- ```
- 
+```
+npm install
+```
+
+```
+bower install
+```
+
+###To run the application:
+
+```
+grunt serve
+```
+
+###To test the application:
+
+You must install protractor as an admin: 
+
+```
+npm install -g protractor
+```
+
+```
+webdriver-manager update --standalone
+```
+        
+In order to test the application you must have `webdriver-manager` running in background.
+
+```
+webdriver-manager start
+```
+
+To run protractor tests:
+
+```
+npm run protractor
+```
+
 Good luck!

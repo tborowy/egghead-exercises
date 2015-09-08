@@ -12,12 +12,13 @@ module.exports.config = {
         'browserName': 'chrome'
     },
 
-    baseUrl: 'http://localhost:9000',
+    baseUrl: 'http://127.0.0.1:9001',
 
     allScriptsTimeout: 40000,
 
     cucumberOpts: {
-        require: 'features/**/*.js',
+        tags: ['~@ignore'],
+        require: 'features/steps/*.js',
         format: 'pretty',
         timeout: 20000
     }
