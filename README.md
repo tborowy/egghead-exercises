@@ -15,26 +15,46 @@ a value input should be taken as table row class attribute, so after typing 'war
 Try to connect input fields with columns of the table.
 
 ##Setup
- You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
+ You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
  
- ```
- npm install
- ```
- 
- ```
- bower install
- ```
- 
- To run the application:
- 
- ```
- grunt serve
- ```
- 
-To run cucumber tests:
+###To resolve dependencies run:
 
- ```
- grunt test
- ```
- 
+```
+npm install
+```
+
+```
+bower install
+```
+
+###To run the application:
+
+```
+grunt serve
+```
+
+###To test the application:
+
+You must install protractor as an admin: 
+
+```
+npm install -g protractor
+```
+
+```
+webdriver-manager update --standalone
+```
+        
+In order to test the application you must have `webdriver-manager` running in background.
+
+```
+webdriver-manager start
+```
+
+To run protractor tests:
+
+```
+npm run protractor
+```
+
 Good luck!
