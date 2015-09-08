@@ -27,7 +27,7 @@ var fragments = function (text)
     'use strict';
 
     var mapping = {
-        inputs: {
+        input: {
             mainText: element.bind(null, by.id('mainText')),
             word: element.bind(null, by.id('word'))
         }

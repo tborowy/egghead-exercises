@@ -2,8 +2,7 @@
 
 ##Summary
 You are provided with a simple application with two input fields that are not bound. You are supposed to replace **purr** 
-in the textarea, with a word specified in the text input below and display the resulting  
-text inside h3 element(`display board`).
+in the textarea, with a word specified in the text input below and display the resulting text inside h3 element(`display board`).
 
 ##Goals
 
@@ -21,7 +20,9 @@ text inside h3 element(`display board`).
 * [angularjs-defining-a-method-on-the-scope](https://egghead.io/lessons/angularjs-defining-a-method-on-the-scope)
 
 ##Setup
- You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
+ You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
+ 
+###To resolve dependencies run:
 
 ```
 npm install
@@ -31,22 +32,45 @@ npm install
 bower install
 ```
 
-To run the application:
+###To run the application:
 
 ```
 grunt serve
 ```
 
-To run cucumber tests:
+###To test the application:
+
+You must install protractor as an admin: 
 
 ```
-grunt test
+npm install -g protractor
 ```
 
-To run unit tests:
+```
+webdriver-manager update --standalone
+```
+        
+In order to test the application you must have `webdriver-manager` running in background.
 
 ```
-grunt karma
+webdriver-manager start
+```
+
+To run all the tests:
+
+```
+npm test
+```
+
+To run only karma unit tests:
+
+```
+npm run karma
+```
+To run only protractor tests:
+
+```
+npm run protractor
 ```
 
 Good luck!
