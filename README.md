@@ -9,6 +9,9 @@ Limit the number of displayed records with the radio button (default limit shoul
 
 Create and use `reverseSort` function that sort the data ascending and descending (column name keep in `$scope.choice`). Take a look at `orderBy` documentation.
   
+**Hint!**
+The order of `orderBy` and `limitTo` is relevant.
+  
 Examples of results:
 
 * set limit to `1`
