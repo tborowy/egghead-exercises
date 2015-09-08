@@ -38,10 +38,10 @@ bower install
 ```
 
 ###To run the application:
- 
- ```
- grunt serve
- ```
+
+```
+grunt serve
+```
 
 ###To test the application:
 
