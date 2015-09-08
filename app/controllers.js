@@ -1,13 +1,15 @@
-'use strict';
-
-var app = angular.module('app', []);
-
-app.controller('LeftCtrl', function ()
+(function ()
 {
+    'use strict';
 
-});
+    var app = angular.module('app', []);
 
+    app.controller('LeftCtrl', function ()
+    {
 
-app.controller('RightCtrl', function ()
-{
-});
+    });
+
+    app.controller('RightCtrl', function ()
+    {
+    });
+})();
