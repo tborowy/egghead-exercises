@@ -1,8 +1,3 @@
-// Karma configuration
-// http://karma-runner.github.io/0.12/config/configuration-file.html
-// Generated on 2014-09-07 using
-// generator-karma 0.8.3
-
 module.exports = function (config)
 {
     'use strict';
@@ -12,39 +7,36 @@ module.exports = function (config)
         autoWatch: true,
 
         // base path, that will be used to resolve files and exclude
-        basePath: '',
+        basePath: '../',
 
         // testing framework to use (jasmine/mocha/qunit/...)
         frameworks: ['jasmine'],
 
         // list of files / patterns to load in the browser
-        files: ['../app/bower_components/angular/angular.js',
-                '../app/bower_components/angular-mocks/angular-mocks.js',
-                '../app/filter.js',
-                'unit/**/*spec.js'],
+        files: ['app/bower_components/angular/angular.js',
+                'app/bower_components/angular-mocks/angular-mocks.js',
+                'app/filter.js',
+                'test/unit/**/*spec.js'],
 
         // list of files / patterns to exclude
         exclude: [],
 
-        reporters: ['spec', 'junit', 'coverage'],
+        reporters: ['spec', 'coverage', 'progress', 'junit'],
 
         preprocessors: {
-            'app/modules/common/patchModel.service.js': 'coverage'
+            'app/**/*.js': 'coverage'
         },
 
-        coverageReporter: {
-            dir: 'target/', reporters: [{
-                type: 'html'
-            }, {
-                type: 'cobertura', file: 'coverage.xml'
-            }]
-
+        coverageReporter:{
+            dir: 'test/target/',
+            type: 'cobertura',
+            file: 'coverage.xml'
         },
+
 
         junitReporter: {
-            outputFile: 'target/test-results.xml'
+            outputFile: 'test/target/test-results.xml'
         },
-
 
         // web server port
         port: 8080,
