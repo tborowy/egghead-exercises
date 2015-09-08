@@ -1,10 +1,11 @@
 #Exercise 7 : Angular built in filters
 
 ##Summary
-In this application, you are supposed to use ready-made filter options. You start with a ready list of users.
+In this application, you are supposed to use existing AngularJS filters. You start with a provided list of users that is supposed to be sortable and you 
+could limit the number of results. 
 
 ##Goals
-Limit the number of displayed records with the radio choice (default limit should be 15). Afterwards add the ability to sort data by columns names.
+Limit the number of displayed records with the radio button (default limit should be 15). Afterwards add the ability to sort data by column names.
 
 Create and use `reverseSort` function that sort the data ascending and descending (column name keep in `$scope.choice`). Take a look at `orderBy` documentation.
   
@@ -31,26 +32,57 @@ Examples of results:
 * [orderBy](https://docs.angularjs.org/api/ng/filter/orderBy)
 
 ##Setup
- You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
+ You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
  
- ```
- npm install
- ```
- 
- ```
- bower install
- ```
- 
- To run the application:
- 
- ```
- grunt serve
- ```
- 
-To run unit tests:
+###To resolve dependencies run:
 
- ```
- grunt karma
- ```
- 
+```
+npm install
+```
+
+```
+bower install
+```
+
+###To run the application:
+
+```
+grunt serve
+```
+
+###To test the application:
+
+You must install protractor as an admin: 
+
+```
+npm install -g protractor
+```
+
+```
+webdriver-manager update --standalone
+```
+        
+In order to test the application you must have `webdriver-manager` running in background.
+
+```
+webdriver-manager start
+```
+
+To run all the tests:
+
+```
+npm test
+```
+
+To run only karma unit tests:
+
+```
+npm run karma
+```
+To run only protractor tests:
+
+```
+npm run protractor
+```
+
 Good luck!

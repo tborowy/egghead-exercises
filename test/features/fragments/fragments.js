@@ -27,12 +27,12 @@ var fragments = function (text)
     'use strict';
 
     var mapping = {
-        inputs: {
+        input: {
             search: element.bind(null, by.id('search')),
             one: element.bind(null, by.id('one')),
             two: element.bind(null, by.id('two')),
             three: element.bind(null, by.id('three'))
-        }, users: {
+        }, user: {
             table: element.bind(null, by.id('users')),
             id: element.bind(null, by.css('td:nth-of-type(1)')),
             username: element.bind(null, by.css('td:nth-of-type(2)')),
