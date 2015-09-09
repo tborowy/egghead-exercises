@@ -19,9 +19,9 @@ describe('box', function ()
         scope = $rootScope.$new();
         $controller('BoxCtrl', {$scope: scope});
 
-        smallBox = angular.element('<box size="50px" color="color" open="showInside(size,message,color)"></box>');
-        mediumBox = angular.element('<box size="70px" color="color" open="showInside(size,message,color)"></box>');
-        bigBox = angular.element('<box size="90px" color="color" open="showInside(size,message,color)"></box>');
+        smallBox = angular.element('<box size="50px" color="color" open="showInside(size,name,color)"></box>');
+        mediumBox = angular.element('<box size="70px" color="color" open="showInside(size,name,color)"></box>');
+        bigBox = angular.element('<box size="90px" color="color" open="showInside(size,name,color)"></box>');
 
         $compile(smallBox)(scope);
         $compile(mediumBox)(scope);
