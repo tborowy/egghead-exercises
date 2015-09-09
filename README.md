@@ -17,7 +17,9 @@ display information about the box.
 * [angularjs-isolate-scope-review](https://egghead.io/lessons/angularjs-isolate-scope-review)
 
 ##Setup
-You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
+ You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
+ 
+###To resolve dependencies run:
 
 ```
 npm install
@@ -27,22 +29,45 @@ npm install
 bower install
 ```
 
-To start the application, run
+###To run the application:
 
 ```
 grunt serve
 ```
 
-To start cucumber tests, run sequentially in separate terminals the application and command
+###To test the application:
+
+You must install protractor as an admin: 
 
 ```
-grunt test
+npm install -g protractor
 ```
 
-To start unit test, run
+```
+webdriver-manager update --standalone
+```
+        
+In order to test the application you must have `webdriver-manager` running in background.
 
 ```
-grunt karma
+webdriver-manager start
+```
+
+To run all the tests:
+
+```
+npm test
+```
+
+To run only karma unit tests:
+
+```
+npm run karma
+```
+To run only protractor tests:
+
+```
+npm run protractor
 ```
 
 Good luck!

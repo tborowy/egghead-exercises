@@ -1,8 +1,3 @@
-// Karma configuration
-// http://karma-runner.github.io/0.12/config/configuration-file.html
-// Generated on 2014-09-07 using
-// generator-karma 0.8.3
-
 module.exports = function (config)
 {
     'use strict';
@@ -12,43 +7,42 @@ module.exports = function (config)
         autoWatch: true,
 
         // base path, that will be used to resolve files and exclude
-        basePath: '../app',
+        basePath: '../',
 
         // testing framework to use (jasmine/mocha/qunit/...)
         frameworks: ['jasmine'],
 
-
-        preprocessors: {
-            '*.html': ['ng-html2js']
-        },
-
         // list of files / patterns to load in the browser
-        files: ['bower_components/angular/angular.js',
-                '*.html',
-                'bower_components/angular-mocks/angular-mocks.js',
-                'box.js',
-                '../test/unit/**/*spec.js'],
+        files: ['app/bower_components/angular/angular.js',
+                'app/bower_components/angular-mocks/angular-mocks.js',
+                'app/*.html',
+                'app/box.js',
+                'test/unit/**/*spec.js'],
 
         // list of files / patterns to exclude
         exclude: [],
 
-        reporters: ['spec', 'junit', 'coverage'],
+        reporters: ['spec', 'coverage', 'progress', 'junit'],
+
+        preprocessors: {
+            'app/**/*.js': 'coverage',
+            'app/*.html': ['ng-html2js']
+        },
 
         ngHtml2JsPreprocessor: {
+            stripPrefix: 'app/',
             moduleName: 'templates'
-        }, coverageReporter: {
-            dir: 'target/', reporters: [{
-                type: 'html'
-            }, {
-                type: 'cobertura', file: 'coverage.xml'
-            }]
-
         },
+        coverageReporter:{
+            dir: 'test/target/',
+            type: 'cobertura',
+            file: 'coverage.xml'
+        },
+
 
         junitReporter: {
-            outputFile: 'target/test-results.xml'
+            outputFile: 'test/target/test-results.xml'
         },
-
 
         // web server port
         port: 8080,
@@ -64,12 +58,7 @@ module.exports = function (config)
         browsers: ['PhantomJS'],
 
         // Which plugins to enable
-        plugins: ['karma-ng-html2js-preprocessor',
-                  'karma-phantomjs-launcher',
-                  'karma-jasmine',
-                  'karma-spec-reporter',
-                  'karma-junit-reporter',
-                  'karma-coverage'],
+        plugins: ['karma-ng-html2js-preprocessor','karma-phantomjs-launcher', 'karma-jasmine', 'karma-spec-reporter', 'karma-junit-reporter', 'karma-coverage'],
 
         // Continuous Integration mode
         // if true, it capture browsers, run tests and exit
