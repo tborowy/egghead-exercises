@@ -1,8 +1,3 @@
-// Karma configuration
-// http://karma-runner.github.io/0.12/config/configuration-file.html
-// Generated on 2014-09-07 using
-// generator-karma 0.8.3
-
 module.exports = function (config)
 {
     'use strict';
@@ -18,7 +13,10 @@ module.exports = function (config)
         frameworks: ['jasmine'],
 
         // list of files / patterns to load in the browser
-        files: ['app/bower_components/angular/angular.js', 'app/bower_components/angular-mocks/angular-mocks.js', 'app/mouse.js', 'test/unit/**/*spec.js'],
+        files: ['app/bower_components/angular/angular.js',
+                'app/bower_components/angular-mocks/angular-mocks.js',
+                'app/mouse.js',
+                'test/unit/**/*spec.js'],
 
         // list of files / patterns to exclude
         exclude: [],
@@ -29,9 +27,12 @@ module.exports = function (config)
             'app/**/*.js': 'coverage'
         },
 
-        coverageReporter: {
-            dir: 'test/target/', type: 'cobertura', file: 'coverage.xml'
+        coverageReporter:{
+            dir: 'test/target/',
+            type: 'cobertura',
+            file: 'coverage.xml'
         },
+
 
         junitReporter: {
             outputFile: 'test/target/test-results.xml'
@@ -51,7 +52,6 @@ module.exports = function (config)
         browsers: ['PhantomJS'],
 
         // Which plugins to enable
-
         plugins: ['karma-phantomjs-launcher', 'karma-jasmine', 'karma-spec-reporter', 'karma-junit-reporter', 'karma-coverage'],
 
         // Continuous Integration mode
@@ -74,4 +74,3 @@ module.exports = function (config)
         // urlRoot: '_karma_'
     });
 };
-
