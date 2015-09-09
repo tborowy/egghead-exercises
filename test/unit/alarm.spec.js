@@ -34,6 +34,7 @@ describe('alarm', function () {
             expect(window.alert).toHaveBeenCalledWith('Red alarm!');
         });
     });
+
     describe('yellow alarm', function () {
         beforeEach(function () {
             spyOn(window, 'alert');

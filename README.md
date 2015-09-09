@@ -18,7 +18,9 @@ green circle.
  * [angularjs-directive-to-directive-communication](https://egghead.io/lessons/angularjs-directive-to-directive-communication)
 
 ##Setup
- You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
+ You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
+ 
+###To resolve dependencies run:
 
 ```
 npm install
@@ -28,16 +30,17 @@ npm install
 bower install
 ```
 
-To run the application:
+###To run the application:
 
 ```
 grunt serve
 ```
 
-To run unit tests:
+###To test the application:
+
 
 ```
-grunt karma
+npm run karma
 ```
 
 Good luck!
