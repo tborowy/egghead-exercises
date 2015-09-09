@@ -28,7 +28,9 @@ property)
 * [restrictions](https://docs.angularjs.org/guide/directive)
 
 ##Setup
- You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
+ You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
+ 
+###To resolve dependencies run:
 
 ```
 npm install
@@ -38,22 +40,45 @@ npm install
 bower install
 ```
 
-To run the application:
+###To run the application:
 
 ```
 grunt serve
 ```
 
-To run cucumber tests:
+###To test the application:
+
+You must install protractor as an admin: 
 
 ```
-grunt test
+npm install -g protractor
 ```
 
-To run unit tests:
+```
+webdriver-manager update --standalone
+```
+        
+In order to test the application you must have `webdriver-manager` running in background.
 
 ```
-grunt karma
+webdriver-manager start
+```
+
+To run all the tests:
+
+```
+npm test
+```
+
+To run only karma unit tests:
+
+```
+npm run karma
+```
+To run only protractor tests:
+
+```
+npm run protractor
 ```
 
 Good luck!

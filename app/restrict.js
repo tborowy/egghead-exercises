@@ -1,21 +1,19 @@
-'use strict';
-
-var app = angular.module('app', []);
-
-app.controller('AppCtrl', ['$scope', function ($scope)
+(function ()
 {
-    $scope.description = {
-        element: {
-            name: 'restrict E',
-            call: '<this element is using restrict E directive>'
-        },
-        attribute: {
-            name: 'restrict A',
-            call: '<this element is using restrict A directive>'
-        },
-        class: {
-            name: 'restrict C',
-            call: '<this element is using restrict C directive>'
-        }
-    };
-}]);
+    'use strict';
+
+    var app = angular.module('app', []);
+
+    app.controller('AppCtrl', ['$scope', function ($scope)
+    {
+        $scope.description = {
+            element: {
+                name: 'E', call: 'this directive use restrict E'
+            }, attribute: {
+                name: 'A', call: 'this directive use restrict A'
+            }, class: {
+                name: 'C', call: 'this directive use restrict C'
+            }
+        };
+    }]);
+})();
