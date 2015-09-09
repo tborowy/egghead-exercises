@@ -2,6 +2,7 @@
 
 ##Summary
 The world needs more heroes. You are given a hard task to create at least two heroes and one superhero. Implement three simple directives that will allow you to create as many heroes as you need.
+
 ##Goals
 
 * `hero` directive restricted as element and with given template as follows: 
@@ -31,7 +32,9 @@ The **superhero** should look as follows:
 * [write-your-first-directive](https://egghead.io/lessons/write-your-first-directive)
 
 ##Setup
- You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
+ You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
+ 
+###To resolve dependencies run:
 
 ```
 npm install
@@ -41,16 +44,17 @@ npm install
 bower install
 ```
 
-To run the application:
+###To run the application:
 
 ```
 grunt serve
 ```
 
-To run unit tests:
+###To test the application:
+
 
 ```
-grunt karma
+npm run karma
 ```
 
 Good luck!

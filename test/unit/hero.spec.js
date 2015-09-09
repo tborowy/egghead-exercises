@@ -1,4 +1,4 @@
-describe('user', function ()
+describe('hero', function ()
 {
     'use strict';
 
