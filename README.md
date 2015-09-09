@@ -18,7 +18,9 @@ You can use ng-repeat directive and combine them together into one petal.
 * [angularjs-directives-talking-to-controllers](https://egghead.io/lessons/angularjs-directives-talking-to-controllers)
 
 ##Setup
-You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
+ You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
+ 
+###To resolve dependencies run:
 
 ```
 npm install
@@ -28,16 +30,34 @@ npm install
 bower install
 ```
 
-To run the application:
+###To run the application:
 
 ```
 grunt serve
 ```
 
-To run cucumber tests:
+###To test the application:
+
+You must install protractor as an admin: 
 
 ```
-grunt test
+npm install -g protractor
+```
+
+```
+webdriver-manager update --standalone
+```
+        
+In order to test the application you must have `webdriver-manager` running in background.
+
+```
+webdriver-manager start
+```
+
+To run protractor tests:
+
+```
+npm run protractor
 ```
 
 Good luck!

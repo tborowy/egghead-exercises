@@ -20,7 +20,7 @@ module.exports = function () {
         browser.actions().mouseMove(fragments(name)()).perform().then(callback);
     });
 
-    this.Then(/^I should see "(\d+)" petals$/, function (number, callback) {
+    this.Then(/^I should see "(\d+)" stars$/, function (number, callback) {
         number = parseInt(number, 10);
         expect(fragments('petals')().count()).to.eventually.equal(number).and.notify(callback);
     });
