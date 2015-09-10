@@ -1,30 +1,52 @@
 ##Exercise 43 : Unit Testing AngularJS
-Test **quote, withoutH, firstLetterUp** filters. 
 
-###Requirements
-Check that they work correctly using the sample data:
-* **quote** : 
-    * 'To be, or not to be...'
-    * 'Test test'
-* **withoutH** : 
-    * 'TestH test'
-    * 'Test testh'
-    * 'Testh testH'
-* **firstLetterUpp** :
-    * 'the Hobbit: the Battle of the five Armies'
-    * 'test test'
+##Summary
+In this application, you are supposed to create tests to three simple filters `star`, `withoutSpace` and `onlyFirstLetterUp`.
 
-###Result
-![alt text](app/assets/1.png)
+##Goals
+* write unit tests to test:
+    * `star` filter that wraps the text with stars
+    * `withoutSpace` filter that removes all spaces
+    * `onlyFirstLetterUp` filter that converts the first letter of the sentence to the large ones
+    
+* complete `filter` describe with three describes that correspond to the filter's name 
+* don't forget about adding the model before test cases
 
-### Test Configuration:
-* ```npm install```
-* ```bower install```
-* Run -> Edit Configuration -> Press plus button -> Pick up Node.js
-* set JavaScript file to ```node_modules\karma\bin\karma```
-* set Application parameters to ```start test\karma.conf.js```
-
-###Before you start, please refer to:
+##Before you start, please refer to:
 * [angularjs-testing-overview](https://egghead.io/lessons/angularjs-testing-overview)
+
+##Setup
+ You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
+ 
+###To resolve dependencies run:
+
+```
+npm install
+```
+
+```
+bower install
+```
+
+###To run the application:
+
+```
+grunt serve
+```
+
+###To test the application:
+
+
+To run karma unit tests:
+
+```
+npm run karma
+```
+
+To run mutation tests:
+
+```
+npm run mutation
+```
 
 Good luck!
