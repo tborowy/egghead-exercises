@@ -1,7 +1,7 @@
 #Exercise 48: Testing a Service
 
 ##Summary
-In this application, you are supposed to create tests `Calculator` service. Create unit tests that cover 4 basic mathematical operations.
+In this application, you are supposed to create tests to `Calculator` service that cover 4 basic mathematical operations.
 
 ##Goals
 * each function of `Calculator` service should be test in a separate **describe** (use function name)
