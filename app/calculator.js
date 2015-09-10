@@ -1,26 +1,29 @@
-'use strict';
-
-var myApp = angular.module('myApp', []);
-
-myApp.service('CalculatorService', function ()
+(function ()
 {
-    this.addition = function (a, b)
-    {
-        return a + b;
-    };
+    'use strict';
 
-    this.subtraction = function (a, b)
-    {
-        return a - b;
-    };
+    var app = angular.module('app', []);
 
-    this.multiplication = function (a, b)
+    app.service('Calculator', function ()
     {
-        return a * b;
-    };
+        this.addition = function (a, b)
+        {
+            return a + b;
+        };
 
-    this.division = function (a, b)
-    {
-        return 0 !== b ? a / b : false;
-    };
-});
+        this.subtraction = function (a, b)
+        {
+            return a - b;
+        };
+
+        this.multiplication = function (a, b)
+        {
+            return a * b;
+        };
+
+        this.division = function (a, b)
+        {
+            return 0 !== b ? a / b : false;
+        };
+    });
+})();

@@ -1,22 +1,47 @@
-##Exercise 48: Testing a Service
-Test simple service (**CalculatorService**)
+#Exercise 48: Testing a Service
 
-###Requirements
-* test each function in a separate **describe** (use function name)
-* check that the functions are protected in exceptional cases (such as division by zero return false) - write the appropriate test (if the function does not pass the test, fix it)
+##Summary
+In this application, you are supposed to create tests `Calculator` service. Create unit tests that cover 4 basic mathematical operations.
 
-###Result
-You should test the 4 basic mathematical operations and division by zero security.
+##Goals
+* each function of `Calculator` service should be test in a separate **describe** (use function name)
 
-### Test Configuration:
-* ```npm install```
-* ```bower install```
-* Run -> Edit Configuration -> Press plus button -> Pick up Node.js
-* set JavaScript file to ```node_modules\karma\bin\karma```
-* set Application parameters to ```start test\karma.conf.js```
-
-###Before you start, please refer to:
+##Before you start, please refer to:
 * [angularjs-testing-underscores](https://egghead.io/lessons/angularjs-testing-underscores)
 * [angularjs-testing-a-service](https://egghead.io/lessons/angularjs-testing-a-service)
+
+##Setup
+ You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
+ 
+###To resolve dependencies run:
+
+```
+npm install
+```
+
+```
+bower install
+```
+
+###To run the application:
+
+```
+grunt serve
+```
+
+###To test the application:
+
+
+To run karma unit tests:
+
+```
+npm run karma
+```
+
+To run mutation tests:
+
+```
+npm run mutation
+```
 
 Good luck!
