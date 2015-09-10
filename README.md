@@ -1,4 +1,4 @@
-##Exercise 43 : Unit Testing AngularJS
+#Exercise 43 : Unit Testing AngularJS
 
 ##Summary
 In this application, you are supposed to create tests to three simple filters `star`, `withoutSpace` and `onlyFirstLetterUp`.
