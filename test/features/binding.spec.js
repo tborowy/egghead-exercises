@@ -13,26 +13,17 @@ describe('Binding application', function ()
     {
         it('should have first input empty on startup', function ()
         {
-            return bindingApplication.isFirstTextInputEmpty().then(function (result)
-            {
-                expect(result).toBe('');
-            });
+            expect(bindingApplication.getFirstTextInput()).toBe('');
         });
 
         it('should have second input empty on startup', function ()
         {
-            return bindingApplication.isSecondTextInputEmpty().then(function (result)
-            {
-                expect(result).toBe('');
-            });
+            expect(bindingApplication.getSecondTextInput()).toBe('');
         });
 
         it('should have third input empty on startup', function ()
         {
-            return bindingApplication.isThirdTextInputEmpty().then(function (result)
-            {
-                expect(result).toBe('');
-            });
+            expect(bindingApplication.getThirdTextInput()).toBe('');
         });
 
     });
