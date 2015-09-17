@@ -6,7 +6,7 @@ implement functionality that will allow inputs to be displayed along with the in
 
 ##Goals
 * create **FruitCtrl** file with `FruitCtrl` controller belonging to `app` module
-* in controller add three properties: `seller, name, count` with some default values
+* in controller add three properties: `seller, name, count` with default values set to : **"Mr. John"**, **"apple"** and **3**.
 * comments in `index.html` should be replaced with appropriate values from the inputs
 
 ##Before you start, please refer to:
@@ -31,28 +31,16 @@ bower install
 grunt serve
 ```
 
+###To detect errors and potential problems in your code:
+
+```
+grunt jshint
+```
+
 ###To test the application:
 
-You must install protractor as an admin: 
-
 ```
-npm install -g protractor
-```
-
-```
-webdriver-manager update --standalone
-```
-        
-In order to test the application you must have `webdriver-manager` running in background.
-
-```
-webdriver-manager start
-```
-
-To run protractor tests:
-
-```
-npm run protractor
+npm test
 ```
 
 Good luck!
