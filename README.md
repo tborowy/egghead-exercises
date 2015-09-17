@@ -8,6 +8,8 @@ Modify `index.html` file to share data between `LeftCtrl` and `RightCtrl`.
 Use **ng-model** in indicated places to ensure that after typing something in left or right input, both message holders are updated. Remember that all inputs 
 should be bound to the same property.
 
+**Hint**
+Take a look at `ng-init` directive in `index.html` file
 
 Type text in left input
 
@@ -46,26 +48,8 @@ grunt serve
 
 ###To test the application:
 
-You must install protractor as an admin: 
-
 ```
-npm install -g protractor
-```
-
-```
-webdriver-manager update --standalone
-```
-        
-In order to test the application you must have `webdriver-manager` running in background.
-
-```
-webdriver-manager start
-```
-
-To run protractor tests:
-
-```
-npm run protractor
+npm test
 ```
 
 Good luck!
