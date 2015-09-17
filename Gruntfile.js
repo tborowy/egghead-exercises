@@ -14,7 +14,6 @@ module.exports = function (grunt)
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-protractor-webdriver');
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-karma');
 
     require('load-grunt-tasks')(grunt);
 
@@ -57,27 +56,40 @@ module.exports = function (grunt)
         }, protractor: {
             options: {
                 configFile: 'test/config.js', keepAlive: false, noColor: false
-
+            }, chrome: {
+                options: {
+                    args: {
+                        browser: 'chrome'
+                    }
+                }
+            }, firefox: {
+                options: {
+                    args: {
+                        browser: 'firefox'
+                    }
+                }
+            }, phantomjs: {
+                options: {
+                    args: {
+                        browser: 'phantomjs'
+                    }
+                }
             }, continuous: {
                 options: {
                     keepAlive: true
                 }
             }
-        }, karma: {
-            unit: {
-                configFile: 'test/karma.conf.js'
-            }
         },
         jshint: {
-            all: ['app/**/*.js']
+            options: {
+                jshintrc: true
+            },
+            all: ['app/*.js']
         }
     });
 
-    grunt.registerTask('serve', function ()
-    {
-        grunt.task.run(['connect:livereload', 'watch']);
-    });
-    grunt.registerTask('test', ['connect:test', 'protractor']);
+    grunt.registerTask('serve', ['connect:livereload', 'watch']);
+    grunt.registerTask('test', ['connect:test', 'protractor_webdriver', 'protractor:chrome']);
 
     grunt.registerTask('default', ['serve']);
 };
