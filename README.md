@@ -39,15 +39,15 @@ bower install
 
 ###To run the application:
  
- ```
- grunt serve
- ```
+```
+grunt serve
+```
  
 ###To detect errors and potential problems in your code:
  
- ```
- grunt jshint
- ```
+```
+grunt jshint
+```
  
 ###To test the application:
 
