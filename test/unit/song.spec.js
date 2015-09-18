@@ -6,16 +6,17 @@ describe('song', function ()
     var song;
     var oldWord;
     var newWord;
+    var songTextMock = {song: 'Soft Kitty, Warm Kitty, little ball of fur. Happy Kitty, Sleepy Kitty, purr, purr, purr...', newWord: 'purr'};
 
     beforeEach(module('app'));
 
-    beforeEach(inject(function ($controller, $rootScope, SongText)
+    beforeEach(inject(function ($controller, $rootScope)
     {
         scope = $rootScope.$new();
-        song = SongText.song;
-        newWord = SongText.newWord;
+        song = songTextMock.song;
+        newWord = songTextMock.newWord;
 
-        $controller('NewWordCtrl', {$scope: scope, SongText: SongText});
+        $controller('NewWordCtrl', {$scope: scope, SongText: songTextMock});
     }));
 
     describe('replaceWord function', function ()
@@ -49,7 +50,7 @@ describe('song', function ()
         {
             song = 'I sing some song: la, la';
             oldWord = 'la';
-            newWord= 'trlalala';
+            newWord = 'trlalala';
 
             expect(scope.replaceWord(song, oldWord, newWord)).toEqual('I sing some song: trlalala, trlalala');
         });
