@@ -55,22 +55,6 @@ grunt serve
 
 ###To test the application:
 
-You must install protractor as an admin: 
-
-```
-npm install -g protractor
-```
-
-```
-webdriver-manager update --standalone
-```
-        
-In order to test the application you must have `webdriver-manager` running in background.
-
-```
-webdriver-manager start
-```
-
 To run all the tests:
 
 ```
