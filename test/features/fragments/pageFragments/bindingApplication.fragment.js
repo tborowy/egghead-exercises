@@ -1,125 +1,129 @@
-'use strict';
-
-function TextInput(e)
+(function ()
 {
-    if (null == e) {
-        throw new Error('element must not be null');
-    }
-    this.element = e;
-}
+    'use strict';
 
-function Row(e)
-{
-    if (null == e) {
-        throw new Error('element must not be null');
-    }
-    this.element = e;
-}
-
-
-TextInput.prototype.getValue = function ()
-{
-    return this.element.getAttribute('value');
-};
-
-TextInput.prototype.clearValue = function ()
-{
-    return this.element.clear();
-};
-
-TextInput.prototype.setValue = function (text)
-{
-    return this.element.sendKeys(text);
-};
-
-Row.prototype.getClass = function ()
-{
-    return this.element.getAttribute('class');
-};
-
-var helper = {
-    input: function (e)
+    function TextInput(e)
     {
-        return new TextInput(e);
-    },
-    row: function (e)
-    {
-        return new Row(e);
+        if (null == e) {
+            throw new Error('element must not be null');
+        }
+        this.element = e;
     }
-};
 
-var elements = {
-    input: {
-        first: element.bind(null, by.id('first')),
-        second: element.bind(null, by.id('second')),
-        third: element.bind(null, by.id('third'))
-    },
-    row: {
-        first: element.bind(null, by.id('firstRecord')),
-        second: element.bind(null, by.id('secondRecord')),
-        third: element.bind(null, by.id('thirdRecord'))
+    function Row(e)
+    {
+        if (null == e) {
+            throw new Error('element must not be null');
+        }
+        this.element = e;
     }
-};
-function PageFragment()
-{
-}
+
+
+    TextInput.prototype.getValue = function ()
+    {
+        return this.element.getAttribute('value');
+    };
+
+    TextInput.prototype.clearValue = function ()
+    {
+        return this.element.clear();
+    };
+
+    TextInput.prototype.setValue = function (text)
+    {
+        return this.element.sendKeys(text);
+    };
+
+    Row.prototype.getClass = function ()
+    {
+        return this.element.getAttribute('class');
+    };
+
+    var helper = {
+        input: function (e)
+        {
+            return new TextInput(e);
+        },
+        row: function (e)
+        {
+            return new Row(e);
+        }
+    };
+
+    var elements = {
+        input: {
+            first: element.bind(null, by.id('first')),
+            second: element.bind(null, by.id('second')),
+            third: element.bind(null, by.id('third'))
+        },
+        row: {
+            first: element.bind(null, by.id('firstRecord')),
+            second: element.bind(null, by.id('secondRecord')),
+            third: element.bind(null, by.id('thirdRecord'))
+        }
+    };
+
+    function PageFragment()
+    {
+    }
 
 // get text input
-PageFragment.prototype.getFirstTextInput = function ()
-{
-    return helper.input(elements.input.first()).getValue();
-};
-PageFragment.prototype.getSecondTextInput = function ()
-{
-    return helper.input(elements.input.second()).getValue();
-};
-PageFragment.prototype.getThirdTextInput = function ()
-{
-    return helper.input(elements.input.third()).getValue();
-};
+    PageFragment.prototype.getFirstTextInput = function ()
+    {
+        return helper.input(elements.input.first()).getValue();
+    };
+    PageFragment.prototype.getSecondTextInput = function ()
+    {
+        return helper.input(elements.input.second()).getValue();
+    };
+    PageFragment.prototype.getThirdTextInput = function ()
+    {
+        return helper.input(elements.input.third()).getValue();
+    };
 
 // set input value
-PageFragment.prototype.setFirstInputText = function (text)
-{
-    return helper.input(elements.input.first()).setValue(text);
-};
-PageFragment.prototype.setSecondInputText = function (text)
-{
-    return helper.input(elements.input.second()).setValue(text);
-};
-PageFragment.prototype.setThirdInputText = function (text)
-{
-    return helper.input(elements.input.third()).setValue(text);
-};
+    PageFragment.prototype.setFirstInputText = function (text)
+    {
+        return helper.input(elements.input.first()).setValue(text);
+    };
+    PageFragment.prototype.setSecondInputText = function (text)
+    {
+        return helper.input(elements.input.second()).setValue(text);
+    };
+    PageFragment.prototype.setThirdInputText = function (text)
+    {
+        return helper.input(elements.input.third()).setValue(text);
+    };
 
 //clear input value
 
-PageFragment.prototype.clearFirstInputText = function ()
-{
-    return helper.input(elements.input.first()).clearValue();
-};
-PageFragment.prototype.clearSecondInputText = function ()
-{
-    return helper.input(elements.input.second()).clearValue();
-};
-PageFragment.prototype.clearThirdInputText = function ()
-{
-    return helper.input(elements.input.third()).clearValue();
-};
+    PageFragment.prototype.clearFirstInputText = function ()
+    {
+        return helper.input(elements.input.first()).clearValue();
+    };
+    PageFragment.prototype.clearSecondInputText = function ()
+    {
+        return helper.input(elements.input.second()).clearValue();
+    };
+    PageFragment.prototype.clearThirdInputText = function ()
+    {
+        return helper.input(elements.input.third()).clearValue();
+    };
 
 
 //get row class
-PageFragment.prototype.getFirstRowClass = function (text)
-{
-    return helper.row(elements.row.first()).getClass(text);
-};
-PageFragment.prototype.getSecondRowClass = function (text)
-{
-    return helper.row(elements.row.second()).getClass(text);
-};
-PageFragment.prototype.getThirdRowClass = function (text)
-{
-    return helper.row(elements.row.third()).getClass(text);
-};
+    PageFragment.prototype.getFirstRowClass = function (text)
+    {
+        return helper.row(elements.row.first()).getClass(text);
+    };
+    PageFragment.prototype.getSecondRowClass = function (text)
+    {
+        return helper.row(elements.row.second()).getClass(text);
+    };
+    PageFragment.prototype.getThirdRowClass = function (text)
+    {
+        return helper.row(elements.row.third()).getClass(text);
+    };
 
-module.exports = PageFragment;
+    module.exports = PageFragment;
+})();

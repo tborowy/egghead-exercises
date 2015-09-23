@@ -17,26 +17,28 @@ Try to connect input fields with columns of the table.
 ##Setup
  You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
  
-###To resolve dependencies run:
+###To install dependencies: 
 
-```
-npm install
-```
+    npm install && bower install
 
-```
-bower install
-```
 
-###To run the application:
+###To start application in live reload mode:
 
-```
-grunt serve
-```
+    grunt serve
+    
+###Jshint
+To run verify jshint:
+    
+    grunt jshint
 
-###To test the application:
+###Run tests
 
-```
-npm test
-```
+To run e2e tests in development mode:
+
+    grunt test:e2e
+
+To run verify jshint, tests and coverage:
+
+    npm test
 
 Good luck!
