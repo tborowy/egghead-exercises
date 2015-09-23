@@ -1,10 +1,10 @@
-'use strict';
-
 var FruitApplication = require('./pageFragments/fruitApplication.fragment.js');
 var fruitApplication = new FruitApplication();
 
 describe('Fruit application', function ()
 {
+    'use strict';
+
     beforeAll(function ()
     {
         browser.get('/');

@@ -15,32 +15,28 @@ implement functionality that will allow inputs to be displayed along with the in
 ##Setup
  You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
  
-###To resolve dependencies run:
+###To install dependencies: 
 
-```
-npm install
-```
+    npm install && bower install
 
-```
-bower install
-```
 
-###To run the application:
+###To start application in live reload mode:
 
-```
-grunt serve
-```
+    grunt serve
+    
+###Jshint
+To run verify jshint:
+    
+    grunt jshint:default
 
-###To detect errors and potential problems in your code:
+###Run tests
 
-```
-grunt jshint
-```
+To run e2e tests in development mode:
 
-###To test the application:
+    grunt test:e2e
 
-```
-npm test
-```
+To run verify jshint, tests and coverage:
+
+    npm test
 
 Good luck!
