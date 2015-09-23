@@ -29,7 +29,7 @@ Try to connect input fields with columns of the table.
 ###Jshint
 To run verify jshint:
     
-    grunt jshint
+    grunt jshint:default
 
 ###Run tests
 
