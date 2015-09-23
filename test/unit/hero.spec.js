@@ -12,6 +12,7 @@ describe('hero', function ()
 
     beforeEach(inject(function ($rootScope, $compile)
     {
+
         element =
                 angular.element('<div class="col-sm-offset-2 col-sm-2">' +
                         '<hero></hero></div><div class="col-sm-2"><superhero></superhero></div><div class="col-sm-2"><hero></hero></div>');
