@@ -1,10 +1,10 @@
-'use strict';
-
 var FilterApplication = require('./pageFragments/filterApplication.fragment.js');
 var filterApplication = new FilterApplication();
 
 describe('Filter application', function ()
 {
+    'use strict';
+
     beforeAll(function ()
     {
         browser.get('/');
@@ -24,8 +24,8 @@ describe('Filter application', function ()
             });
             it('should display the text with firstLetterUp filter', function ()
             {
-                expect(filterApplication.getThirdRowWithoutFilterColumn())
-                        .toEqual('Visit Bbc News For Up-To-The-Minute News, Breaking News, Video, Audio And Stories.');
+                expect(filterApplication.getThirdRowWithoutFilterColumn()).
+                        toEqual('Visit Bbc News For Up-To-The-Minute News, Breaking News, Video, Audio And Stories.');
             });
         });
 
