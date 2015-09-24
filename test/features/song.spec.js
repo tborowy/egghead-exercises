@@ -1,10 +1,9 @@
-'use strict';
-
 var SongApplication = require('./pageFragments/songApplication.fragment.js');
 var songApplication = new SongApplication();
 
 describe('Song application', function ()
 {
+    'use strict';
     beforeAll(function ()
     {
         browser.get('/');
