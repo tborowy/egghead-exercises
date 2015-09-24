@@ -1,10 +1,10 @@
-'use strict';
-
 var ControllerApplication = require('./pageFragments/controllerApplication.fragment.js');
 var controllerApplication = new ControllerApplication();
 
 describe('Controller application', function ()
 {
+    'use strict';
+
     beforeAll(function ()
     {
         browser.get('/');
