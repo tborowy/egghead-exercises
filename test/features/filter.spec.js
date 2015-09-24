@@ -353,18 +353,18 @@
                     filterApplication.sortByGender();
                     expect(filterApplication.getTableContent()).toEqual([usersList[0],
                                                                          usersList[2],
-                                                                         usersList[12],
-                                                                         usersList[11],
                                                                          usersList[3],
-                                                                         usersList[9],
-                                                                         usersList[8],
-                                                                         usersList[1],
-                                                                         usersList[6],
                                                                          usersList[5],
-                                                                         usersList[4],
+                                                                         usersList[6],
+                                                                         usersList[1],
+                                                                         usersList[8],
+                                                                         usersList[9],
+                                                                         usersList[11],
+                                                                         usersList[12],
                                                                          usersList[10],
-                                                                         usersList[13],
+                                                                         usersList[4],
                                                                          usersList[14],
+                                                                         usersList[13],
                                                                          usersList[7]]);
                 });
             });
@@ -390,7 +390,7 @@
                 filterApplication.setSearchInputValue('er');
                 filterApplication.sortById();
                 filterApplication.sortById();
-                expect(filterApplication.getTableContent()).toEqual([usersList[12],usersList[11],usersList[10],usersList[8],usersList[5],usersList[1]]);
+                expect(filterApplication.getTableContent()).toEqual([usersList[12], usersList[11], usersList[10], usersList[8], usersList[5], usersList[1]]);
             });
         });
     });

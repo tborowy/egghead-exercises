@@ -37,39 +37,32 @@ Examples of results:
 ##Setup
  You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
  
-###To resolve dependencies run:
+###To install dependencies 
 
-```
-npm install
-```
+    npm install && bower install
 
-```
-bower install
-```
 
-###To run the application:
+###To start application in live reload mode:
 
-```
-grunt serve
-```
+    grunt serve
+    
+###Jshint
+To run verify jshint:
+    
+    grunt jshint:default
 
-###To test the application:
+###Run tests
 
-To run all the tests:
+To unit tests in development mode:
+    
+    grunt test:dev
+    
+To run e2e tests in development mode:
 
-```
-npm test
-```
+    grunt test:e2e
 
-To run only karma unit tests:
+To run verify jshint, tests and coverage:
 
-```
-npm run karma
-```
-To run only protractor tests:
-
-```
-npm run protractor
-```
+    npm test
 
 Good luck!
