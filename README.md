@@ -11,7 +11,7 @@ Furthermore, you plan to share your application with others so you need to creat
 
 * `shipSender` directive in **port.js**:
 	* should expect to receive two attributes passed to it's isolated scope: a `customCheck` function and `conditions` string
-	* in **Check** button ng-click directive should be added and invoke `customCheck`(with **boat** model and **conditions** passed as 	parameters)
+	* in **Check** button ng-click directive should be added and invoke `customCheck`(with **boat** model and **currentConditions** passed as 	parameters)
 	* template should assign a returning value from **customCheck** to **answer** variable ( ***Hint***: you can assign the variable in ng-click directive)
 * **weatherConditions** (use correct method as indicated in comment) and **checkMyBoat** function should be passed to **shipSender** directive
 * three **shipSender** directives should be added in the correct place and with proper parameters to **index.html**(check comments)
@@ -25,42 +25,28 @@ Furthermore, you plan to share your application with others so you need to creat
  
 ###To resolve dependencies run:
 
-```
-npm install
-```
+###To install dependencies: 
 
-```
-bower install
-```
+    npm install && bower install
 
-###To run the application:
 
-```
-grunt serve
-```
+###To start application in live reload mode:
 
-###To test the application:
+    grunt serve
+    
+###Jshint
+To run verify jshint:
+    
+    grunt jshint:default
 
-You must install protractor as an admin: 
+###Run tests
 
-```
-npm install -g protractor
-```
+To run e2e tests in development mode:
 
-```
-webdriver-manager update --standalone
-```
-        
-In order to test the application you must have `webdriver-manager` running in background.
+    grunt test:e2e
 
-```
-webdriver-manager start
-```
+To run verify jshint, tests and coverage:
 
-To run protractor tests:
-
-```
-npm run protractor
-```
+    npm test
 
 Good luck!
