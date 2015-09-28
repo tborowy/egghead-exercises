@@ -23,7 +23,9 @@
 
         $scope.buyProduct = function (product)
         {
-            product != null ? $scope.cart.push({name: product}) : false;
+            if (product != null) {
+                $scope.cart.push({name: product});
+            }
         };
     });
 
