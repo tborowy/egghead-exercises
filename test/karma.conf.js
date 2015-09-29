@@ -13,10 +13,7 @@ module.exports = function (config)
         frameworks: ['jasmine'],
 
         // list of files / patterns to load in the browser
-        files: ['app/bower_components/angular/angular.js',
-                'app/bower_components/angular-mocks/angular-mocks.js',
-                'app/*.js',
-                'app/!(bower_components)/**/*.js',
+        files: ['app/bower_components/angular/angular.js', 'app/bower_components/angular-mocks/angular-mocks.js', 'app/*.js', 'app/!(bower_components)/**/*.js',
                 'test/unit/**/*.spec.js'],
 
         // list of files / patterns to exclude
@@ -25,7 +22,8 @@ module.exports = function (config)
         reporters: ['spec', 'coverage', 'junit'],
 
         preprocessors: {
-            'app/(!bower_components)/**/*.js': 'coverage'
+            'app/*.js': 'coverage',
+            'app/!(bower_components)/**/*.js': 'coverage'
         },
 
         coverageReporter: {
@@ -66,11 +64,11 @@ module.exports = function (config)
         logLevel: config.LOG_INFO,
 
         //https://github.com/karma-runner/karma/issues/895
-        usePolling: true,
+        usePolling: true
         // Uncomment the following lines if you are using grunt's server to run the tests
-         proxies: {
-           '/': 'http://localhost:9000/'
-         }
+        // proxies: {
+        //   '/': 'http://localhost:9000/'
+        // },
         // URL root prevent conflicts with the site root
         // urlRoot: '_karma_'
     });
