@@ -7,7 +7,7 @@ module.exports = function (config)
         autoWatch: true,
 
         // base path, that will be used to resolve files and exclude
-        basePath: '../',
+        basePath: '../../',
 
         // testing framework to use (jasmine/mocha/qunit/...)
         frameworks: ['jasmine'],
@@ -22,7 +22,8 @@ module.exports = function (config)
         reporters: ['spec', 'coverage', 'junit'],
 
         preprocessors: {
-            'app/(!bower_components)/**/*.js': 'coverage'
+            'app/*.js': 'coverage',
+            'app/!(bower_components)/**/*.js': 'coverage'
         },
 
         coverageReporter: {
