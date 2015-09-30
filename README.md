@@ -20,27 +20,32 @@ green circle.
 ##Setup
  You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
  
-###To resolve dependencies run:
+###To install dependencies 
 
-```
-npm install
-```
-
-```
-bower install
-```
-
-###To run the application:
-
-```
-grunt serve
-```
-
-###To test the application:
+    npm install && bower install
 
 
-```
-npm run karma
-```
+###To start application in live reload mode:
+
+    grunt serve
+    
+###Jshint
+To run verify jshint:
+    
+    grunt jshint:default
+
+###Run tests
+
+To unit tests in development mode:
+    
+    grunt test:dev
+    
+To run e2e tests in development mode:
+
+    grunt test:e2e
+
+To run verify jshint, tests and coverage:
+
+    npm test
 
 Good luck!

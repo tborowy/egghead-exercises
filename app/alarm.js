@@ -1,7 +1,7 @@
 (function ()
 {
     'use strict';
-    var app = angular.module('app', []);
+    angular.module('app', []);
 
     //add alarm directive
     //add red directive

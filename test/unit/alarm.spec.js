@@ -1,4 +1,5 @@
-describe('alarm', function () {
+describe('alarm', function ()
+{
     'use strict';
 
     var window;
@@ -9,7 +10,8 @@ describe('alarm', function () {
 
     beforeEach(module('app'));
 
-    beforeEach(inject(function ($rootScope, $compile, $window) {
+    beforeEach(inject(function ($rootScope, $compile, $window)
+    {
 
         window = $window;
         scope = $rootScope.$new();
@@ -25,31 +27,40 @@ describe('alarm', function () {
 
     }));
 
-    describe('red alarm', function () {
-        beforeEach(function () {
+    describe('red alarm', function ()
+    {
+        beforeEach(function ()
+        {
             spyOn(window, 'alert');
             redAlarm.triggerHandler('click');
         });
-        it('should display "Red alarm!" alert message.', function () {
+        it('should display "Red alarm!" alert message.', function ()
+        {
             expect(window.alert).toHaveBeenCalledWith('Red alarm!');
         });
     });
 
-    describe('yellow alarm', function () {
-        beforeEach(function () {
+    describe('yellow alarm', function ()
+    {
+        beforeEach(function ()
+        {
             spyOn(window, 'alert');
             yellowAlarm.triggerHandler('dblclick');
         });
-        it('should display "Yellow alarm!" alert message.', function () {
+        it('should display "Yellow alarm!" alert message.', function ()
+        {
             expect(window.alert).toHaveBeenCalledWith('Yellow alarm!');
         });
     });
-    describe('green alarm', function () {
-        beforeEach(function () {
+    describe('green alarm', function ()
+    {
+        beforeEach(function ()
+        {
             spyOn(window, 'alert');
             greenAlarm.triggerHandler('mouseenter');
         });
-        it('should display "Green alarm!" alert message.', function () {
+        it('should display "Green alarm!" alert message.', function ()
+        {
             expect(window.alert).toHaveBeenCalledWith('Green alarm!');
         });
     });
