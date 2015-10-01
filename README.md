@@ -16,26 +16,32 @@ Create `SumCtrl` and `SubCtrl` providing the basic math sum (`addition`)and subt
 * [angularjs-an-alternative-approach-to-controllers](https://egghead.io/lessons/angularjs-an-alternative-approach-to-controllers)
 
 ##Setup
- You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
+ You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example.
 
-```
-npm install
-```
+###To install dependencies 
 
-```
-bower install
-```
+    npm install && bower install
 
-To run the application:
 
-```
-grunt serve
-```
+###To start application in live reload mode:
 
-To run unit tests:
+    grunt serve
+    
+###Jshint
+To run verify jshint:
+    
+    grunt jshint:default
 
-```
-grunt karma
-```
+###Run tests
+
+To unit tests in development mode:
+    
+    grunt test:dev
+    
+
+To run verify jshint, tests and coverage:
+
+    npm test
+
 
 Good luck!

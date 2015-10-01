@@ -1,6 +1,10 @@
-'use strict';
+(function ()
+{
+    'use strict';
 
-var calcApp = angular.module('calcApp', []);
+    angular.module('calcApp', []);
 
-//SumCtrl
-//SubCtrl
+    // SumCtrl
+    // SubCtrl
+
+})();
