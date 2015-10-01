@@ -1,42 +1,45 @@
 #Exercise 18: Thinking differently about organization.
 
 ##Summary
-When in application exist many controllers, directives and filters it needs to be divided to context object, this application have one topic.
+You are provided with an application that has many controllers, directives and filters. Reorder and group the entries to make them easier to read.
 
 ##Goals
-  * take a look at ready application and run tests,
-  * organizing controllers and directives by collecting them into objects `calcAppElements`,
+* move all the controllers to the object `calcAppElements.controllers`
+* move all the directives to the object `calcAppElements.directives`
 
 ##Before you start, please refer to:
  * [angularjs-thinking-differently-about-organization](https://egghead.io/lessons/angularjs-thinking-differently-about-organization)
 
 ##Setup
- You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
+ You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example.
 
-```
-npm install
-```
+###To install dependencies 
 
-```
-bower install
-```
+    npm install && bower install
 
-To run the application:
 
-```
-grunt serve
-```
+###To start application in live reload mode:
 
-To run cucumber tests:
+    grunt serve
+    
+###Jshint
+To run verify jshint:
+    
+    grunt jshint:default
 
-```
-grunt test
-```
+###Run tests
 
-To run unit tests:
+To unit tests in development mode:
+    
+    grunt test:dev
+    
+To run e2e tests in development mode:
 
-```
-grunt karma
-```
+    grunt test:e2e
+
+To run verify jshint, tests and coverage:
+
+    npm test
+
 
 Good luck!

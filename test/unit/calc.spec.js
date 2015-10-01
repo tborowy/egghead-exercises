@@ -5,7 +5,7 @@ describe('restrict', function ()
 
     beforeEach(module('calcApp'));
 
-    beforeEach(inject(function ($rootScope, $compile, $controller, $window)
+    beforeEach(inject(function ()
     {
         /*jshint -W117*/
         calcElements = calcAppElements;
