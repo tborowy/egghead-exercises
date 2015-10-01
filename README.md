@@ -13,30 +13,32 @@ Use ng-transclude in `animal` directive.
 ##Setup
  You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
 
-```
-npm install
-```
+###To install dependencies 
 
-```
-bower install
-```
+    npm install && bower install
 
-To run the application:
 
-```
-grunt serve
-```
+###To start application in live reload mode:
 
-To run cucumber tests:
+    grunt serve
+    
+###Jshint
+To run verify jshint:
+    
+    grunt jshint:default
 
-```
-grunt test
-```
+###Run tests
 
-To run unit tests:
+To unit tests in development mode:
+    
+    grunt test:dev
+    
+To run e2e tests in development mode:
 
-```
-grunt karma
-```
+    grunt test:e2e
+
+To run verify jshint, tests and coverage:
+
+    npm test
 
 Good luck!
