@@ -19,55 +19,32 @@ display information about the box.
 ##Setup
  You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
  
-###To resolve dependencies run:
+###To install dependencies 
 
-```
-npm install
-```
+    npm install && bower install
 
-```
-bower install
-```
 
-###To run the application:
+###To start application in live reload mode:
 
-```
-grunt serve
-```
+    grunt serve
+    
+###Jshint
+To run verify jshint:
+    
+    grunt jshint:default
 
-###To test the application:
+###Run tests
 
-You must install protractor as an admin: 
+To unit tests in development mode:
+    
+    grunt test:dev
+    
+To run e2e tests in development mode:
 
-```
-npm install -g protractor
-```
+    grunt test:e2e
 
-```
-webdriver-manager update --standalone
-```
-        
-In order to test the application you must have `webdriver-manager` running in background.
+To run verify jshint, tests and coverage:
 
-```
-webdriver-manager start
-```
-
-To run all the tests:
-
-```
-npm test
-```
-
-To run only karma unit tests:
-
-```
-npm run karma
-```
-To run only protractor tests:
-
-```
-npm run protractor
-```
-
+    npm test
+    
 Good luck!

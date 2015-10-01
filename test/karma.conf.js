@@ -16,16 +16,18 @@ module.exports = function (config)
         files: ['app/bower_components/angular/angular.js',
                 'app/bower_components/angular-mocks/angular-mocks.js',
                 'app/*.html',
-                'app/box.js',
-                'test/unit/**/*spec.js'],
+                'app/*.js',
+                'app/!(bower_components)/**/*.js',
+                'test/unit/**/*.spec.js'],
 
         // list of files / patterns to exclude
         exclude: [],
 
-        reporters: ['spec', 'coverage', 'progress', 'junit'],
+        reporters: ['spec', 'coverage', 'junit'],
 
         preprocessors: {
-            'app/**/*.js': 'coverage',
+            'app/*.js': 'coverage',
+            'app/!(bower_components)/**/*.js': 'coverage',
             'app/*.html': ['ng-html2js']
         },
 
@@ -33,15 +35,16 @@ module.exports = function (config)
             stripPrefix: 'app/',
             moduleName: 'templates'
         },
-        coverageReporter:{
-            dir: 'test/target/',
+
+        coverageReporter: {
+            dir: 'target/',
             type: 'cobertura',
             file: 'coverage.xml'
         },
 
 
         junitReporter: {
-            outputFile: 'test/target/test-results.xml'
+            outputFile: 'target/test-results.xml'
         },
 
         // web server port
@@ -58,11 +61,16 @@ module.exports = function (config)
         browsers: ['PhantomJS'],
 
         // Which plugins to enable
-        plugins: ['karma-ng-html2js-preprocessor','karma-phantomjs-launcher', 'karma-jasmine', 'karma-spec-reporter', 'karma-junit-reporter', 'karma-coverage'],
+        plugins: ['karma-ng-html2js-preprocessor',
+                  'karma-phantomjs-launcher',
+                  'karma-jasmine',
+                  'karma-spec-reporter',
+                  'karma-junit-reporter',
+                  'karma-coverage'],
 
         // Continuous Integration mode
         // if true, it capture browsers, run tests and exit
-        singleRun: false,
+        singleRun: true,
 
         colors: true,
 

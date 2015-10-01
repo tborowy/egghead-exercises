@@ -42,7 +42,7 @@ describe('box', function ()
         it('should display "My name is : Box. I am 50px and red" alert message', function ()
         {
             button.triggerHandler('click');
-            expect(window.alert).toHaveBeenCalledWith( 'My name is : Box. I am 50px and red');
+            expect(window.alert).toHaveBeenCalledWith('My name is : Box. I am 50px and red');
         });
     });
 
@@ -71,7 +71,7 @@ describe('box', function ()
         it('should display "My name is : Box. I am 90px and red" alert message', function ()
         {
             button.triggerHandler('click');
-            expect(window.alert).toHaveBeenCalledWith( 'My name is : Box. I am 90px and red');
+            expect(window.alert).toHaveBeenCalledWith('My name is : Box. I am 90px and red');
         });
     });
 

@@ -14,8 +14,8 @@
     app.directive('box', function ()
     {
         return {
-            restrict: 'E', scope: {
-            },
+            restrict: 'E',
+            scope: {},
 
             templateUrl: 'boxTemplate.html',
 
