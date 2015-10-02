@@ -93,21 +93,7 @@
 
             it('should display table of students', function ()
             {
-                expect(filterApplication.getTableContent()).toEqual([usersList[7],
-                                                                     usersList[0],
-                                                                     usersList[2],
-                                                                     usersList[3],
-                                                                     usersList[4],
-                                                                     usersList[5],
-                                                                     usersList[6],
-                                                                     usersList[1],
-                                                                     usersList[8],
-                                                                     usersList[9],
-                                                                     usersList[10],
-                                                                     usersList[11],
-                                                                     usersList[12],
-                                                                     usersList[13],
-                                                                     usersList[14]]);
+                expect(filterApplication.getTableContent()).toEqual(usersList);
             });
             it('should display 10 rows', function ()
             {
@@ -149,40 +135,41 @@
             it('should display one row of the table', function ()
             {
                 filterApplication.setRowsLimitToOne();
-                expect(filterApplication.getTableContent()).toEqual([usersList[7]]);
+                expect(filterApplication.getTableContent()).toEqual([usersList[0]]);
             });
             it('should display teen rows of the table', function ()
             {
                 filterApplication.setRowsLimitToTeen();
-                expect(filterApplication.getTableContent()).toEqual([usersList[7],
-                                                                     usersList[0],
+                expect(filterApplication.getTableContent()).toEqual([usersList[0],
+                                                                     usersList[1],
                                                                      usersList[2],
                                                                      usersList[3],
                                                                      usersList[4],
                                                                      usersList[5],
                                                                      usersList[6],
-                                                                     usersList[1],
+                                                                     usersList[7],
                                                                      usersList[8],
                                                                      usersList[9]]);
             });
             it('should display fifteen rows of the table', function ()
             {
                 filterApplication.setRowsLimitToFifteen();
-                expect(filterApplication.getTableContent()).toEqual([usersList[7],
-                                                                     usersList[0],
+                expect(filterApplication.getTableContent()).toEqual([usersList[0],
+                                                                     usersList[1],
                                                                      usersList[2],
                                                                      usersList[3],
                                                                      usersList[4],
                                                                      usersList[5],
                                                                      usersList[6],
-                                                                     usersList[1],
+                                                                     usersList[7],
                                                                      usersList[8],
                                                                      usersList[9],
                                                                      usersList[10],
                                                                      usersList[11],
                                                                      usersList[12],
                                                                      usersList[13],
-                                                                     usersList[14]]);
+                                                                     usersList[14]
+                ]);
             });
         });
 
@@ -201,11 +188,6 @@
                 });
                 it('should sort data ascending by id', function ()
                 {
-                    expect(filterApplication.getTableContent()).toEqual(usersList);
-                });
-                it('should sort data descending by id', function ()
-                {
-                    filterApplication.sortById();
                     expect(filterApplication.getTableContent()).toEqual([usersList[14],
                                                                          usersList[13],
                                                                          usersList[12],
@@ -221,6 +203,11 @@
                                                                          usersList[2],
                                                                          usersList[1],
                                                                          usersList[0]]);
+                });
+                it('should sort data descending by id', function ()
+                {
+                    filterApplication.sortById();
+                    expect(filterApplication.getTableContent()).toEqual(usersList);
                 });
             });
 

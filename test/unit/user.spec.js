@@ -14,11 +14,18 @@ describe('user', function ()
     }));
 
 
-    describe('limit rows', function ()
+    describe('default limit rows', function ()
     {
-        it('default limit should be 15', function ()
+        it('should be set to 15', function ()
         {
             expect(scope.limit).toEqual(15);
+        });
+    });
+    describe('default sort', function ()
+    {
+        it('should be set to id', function ()
+        {
+            expect(scope.choice).toEqual('id');
         });
     });
 

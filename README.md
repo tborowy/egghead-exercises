@@ -5,9 +5,12 @@ In this application, you are supposed to use existing AngularJS filters. You sta
 could limit the number of results. 
 
 ##Goals
-Limit the number of displayed records with the radio button (default limit should be 15). Afterwards add the ability to sort data by column names.
+Limit the number of displayed records with the radio button (default limit should be 15). Afterwards please update the ability to sort data by column names 
+by creating `reverseSort` function that sort the data ascending and descending. The table should be sort default by **id** (column name keep in `$scope
+.choice`).
+ 
+Take a look at `orderBy` documentation to see examples.
 
-Create and use `reverseSort` function that sort the data ascending and descending (column name keep in `$scope.choice`). Take a look at `orderBy` documentation.
   
 **Hint!**
 The order of `orderBy` and `limitTo` is relevant.
