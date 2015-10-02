@@ -1,25 +1,27 @@
-'use strict';
-
-var element = angular.module('elementApp', []);
-
-element.directive('findElement', function ()
+(function ()
 {
+    'use strict';
 
-    //complete link function
-    var link = function (scope)
+    var element = angular.module('elementApp', []);
+
+    element.directive('findElement', function ()
     {
-        //watch changes on input
 
-    };
-
-    return {
-        replace: true,
-        template: '<div> <input class="form-control" type="text" ng-model="input" placeholder="Write circle or square"></div>',
-        compile: function (templateElement)
+        //complete link function
+        var link = function (scope)
         {
+            //watch changes on input
 
-            //return link function
-        }
-    };
-});
+        };
 
+        return {
+            replace: true,
+            template: '<div> <input class="form-control" type="text" ng-model="input" placeholder="Write circle or square"></div>',
+            compile: function (templateElement)
+            {
+
+                //return link function
+            }
+        };
+    });
+})();
