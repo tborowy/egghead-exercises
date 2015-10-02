@@ -14,14 +14,9 @@
         </h1>
     </div>
     <div class="col-md-offset-4 col-md-4">
-        <label for="name" class="label label-default">Name</label>
-        <input type="text" class="form-control" id="name" ng-model="name" placeholder="Name">
-
         <label for="forWhat" class="label label-default">For what</label>
-        <input type="text" class="form-control" id="forWhat" ng-model="forWhat" placeholder="For poor pets">
+        <input id="forWhat" type="text" class="form-control" ng-model="forWhat" placeholder="For poor pets">
         <money>
-            <h3 ng-show="name">I'm {{name}}</h3>
-
             <p id="proposal">I want to devote: {{proposal | currency}}</p>
         </money>
     </div>
