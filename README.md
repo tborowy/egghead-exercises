@@ -10,8 +10,8 @@ in the textarea, with a word specified in the text input below and display the r
 * `replaceWord()` should :
     * accept three arguments: ***text, word, newWord*** 
     * replace `word` with a `newWord` in specified `text` (you can use `split()` and `join()` functions)
-* textarea model should default to lyrics from `SongText` factory
-* input for newWord should default to `newWord` from `SongText` factory 
+* textarea model should be set default to lyrics from `SongText` factory
+* input for newWord should be set default to `newWord` from `SongText` factory 
 * the upper `display board` text value should be taken from the textarea below, refactored by a function `replaceWord()` 
 * set `word` argument to *"purr"*
 * `display board` should be updated as values in textarea or input change
