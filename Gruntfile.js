@@ -112,11 +112,11 @@ module.exports = function (grunt)
                     },
                     verify: {
                         options: {
-                            jshintrc: true,
-                            reporter: 'checkstyle',
-                            reporterOutput: 'target/jshint.xml'
+                            jshintrc: true
                         },
-                        files: {src: ['app/**/*.js', 'test/**/*.js', '!app/bower_components/**/*.js']}
+                        files: {src: ['app/**/*.js', 'test/**/*.js', '!app/bower_components/**/*.js']},
+                        reporter: 'checkstyle',
+                        reporterOutput: 'target/jshint.xml'
                     }
                 }
             }
