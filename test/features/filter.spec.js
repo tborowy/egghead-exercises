@@ -376,7 +376,6 @@
             {
                 filterApplication.setSearchInputValue('er');
                 filterApplication.sortById();
-                filterApplication.sortById();
                 expect(filterApplication.getTableContent()).toEqual([usersList[12], usersList[11], usersList[10], usersList[8], usersList[5], usersList[1]]);
             });
         });

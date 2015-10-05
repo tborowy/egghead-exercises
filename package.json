@@ -1,5 +1,6 @@
 {
-  "name": "angular-exercise",
+  "name": "angular-egghead",
+  "version": "0.0.0",
   "private": true,
   "dependencies": {},
   "devDependencies": {
@@ -28,3 +29,4 @@
     "test": "grunt verify --force"
   }
 }
+
