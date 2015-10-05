@@ -15,8 +15,8 @@ Secondly, when you click the square it should add a provided class to the square
  
  Please be aware that you should be able to pass specified bootstrap class as an argument to the directive.
 * **index.html** should be fixed to achieve the correct behavior for the circle and square mentioned before(also check comments)
-* **bg-danger** passed as an attribute to enter directive
-* **bg-info** passed as an attribute to clickOn directive
+* ***bg-danger*** passed as an attribute to enter and leave directive
+* ***bg-info*** passed as an attribute to dblClick and click directive
 
 **Hint**
 `camelCase` directives should be use inside .html files in this way: `camel-case`  

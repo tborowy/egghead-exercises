@@ -10,8 +10,8 @@ describe('directives', function ()
     beforeEach(inject(function ($compile, $rootScope)
     {
         $scope = $rootScope;
-        circle = angular.element('<div enter="bg-danger" leave class="circle center-block"></div>');
-        square = angular.element('<div click-on="bg-info" db-click-on class="square center-block"></div>');
+        circle = angular.element('<div enter="btn-danger" leave="btn-danger" class="circle center-block"></div>');
+        square = angular.element('<div click-on="btn-info" db-click-on="btn-info" class="square center-block"></div>');
         circle = $compile(circle)($rootScope);
         square = $compile(square)($rootScope);
     }));
@@ -22,15 +22,15 @@ describe('directives', function ()
         {
             circle.triggerHandler('mouseenter');
         });
-        it('should add bg-danger a class when mouseenter', function ()
+        it('should add btn-danger a class when mouseenter', function ()
         {
-            expect(circle.hasClass('bg-danger')).toBe(true);
+            expect(circle.hasClass('btn-danger')).toBe(true);
         });
 
-        it('should remove bg-info class when mouseleave', function ()
+        it('should remove btn-danger class when mouseleave', function ()
         {
             circle.triggerHandler('mouseleave');
-            expect(circle.hasClass('bg-danger')).toBe(false);
+            expect(circle.hasClass('btn-danger')).toBe(false);
         });
 
     });
@@ -42,15 +42,15 @@ describe('directives', function ()
             square.triggerHandler('click');
         });
 
-        it('should add bg-info class when click', function ()
+        it('should add btn-info class when click', function ()
         {
-            expect(square.hasClass('bg-info')).toBe(true);
+            expect(square.hasClass('btn-info')).toBe(true);
         });
 
-        it('should remove bg-info class when dblClick', function ()
+        it('should remove btn-info class when dblClick', function ()
         {
             square.triggerHandler('dblclick');
-            expect(square.hasClass('bg-info')).toBe(false);
+            expect(square.hasClass('btn-info')).toBe(false);
         });
 
     });
