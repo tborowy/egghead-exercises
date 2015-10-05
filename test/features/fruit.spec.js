@@ -46,7 +46,7 @@ describe('Fruit application', function ()
         });
         it('should display the new heading', function ()
         {
-            expect(fruitApplication.getHeading()).toEqual('I\'m "orange" please buy me!');
+            expect(fruitApplication.getHeading()).toEqual('I\'m orange please buy me!');
         });
     });
 });

@@ -5,8 +5,8 @@ Applications often need to display value that user has entered. You are provided
 implement functionality that will allow inputs to be displayed along with the information on the title and board.
 
 ##Goals
-* create **FruitCtrl** file with `FruitCtrl` controller belonging to `app` module
-* in controller add three properties: `seller, name, count` with default values set to : **"Mr. John"**, **"apple"** and **3**.
+* create **FruitCtrl.js** file with `FruitCtrl` controller belonging to `app` module
+* in controller add three properties: `seller, name, count` with default values set to : **'Mr. John'**, **'apple'** and **3**.
 * comments in `index.html` should be replaced with appropriate values from the inputs
 
 ##Before you start, please refer to:
