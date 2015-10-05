@@ -5,7 +5,8 @@ Application displays three inputs and an artists table. Each class attribute of 
 
 ##Goals
 You are required to implement a solution that will result in such behavior:
-a value input should be taken as table row class attribute, so after typing 'warning' in the first input then the first table row should be displayed with a class warning. This implies for the other input and rows as well.
+an value input should be taken as table row class attribute, so after typing 'warning' in the first input then the first table row should be displayed with a
+ class warning. This implies for the other input and rows as well.
 
 ###Before you start, please refer to:
 * [angularjs-binding](https://egghead.io/lessons/angularjs-binding)
