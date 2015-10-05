@@ -5,24 +5,11 @@ Controllers often need to communicate and share data with each other. You are gi
 Modify `index.html` file to share data between `LeftCtrl` and `RightCtrl`.
 
 ##Goal
-Use **ng-model** in indicated places to ensure that after typing something in left or right input, both message holders are updated. Remember that all inputs 
-should be bound to the same property.
+Use **ng-model** in appropriate places to ensure that after typing something in left or right input, both message holders are updated. Remember that all inputs 
+should be bound to the same property. Don't change the `controllers.js` file.
 
 **Hint**
 Take a look at `ng-init` directive in `index.html` file
-
-Type text in left input
-
-| **some text**	| some text     	|
-|--------------	|----------------	|
-| some text  	| some text  	    |
-
-
-Type text in right input
-
-| another text | **another text**  	|
-|--------------|----------------	|
-| another text | another text       |
 
 ##Before you start, please refer to:
 * [angularjs-the-dot](https://egghead.io/lessons/angularjs-the-dot)
