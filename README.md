@@ -8,12 +8,12 @@ The world needs more heroes. You are given a hard task to create at least two he
 * `hero` directive restricted as element and with given template as follows: 
 
 ```
-< img src="assets/hero.png" class="hero-position" width="300px">
+< img src="assets/images/hero.png" class="hero-position" width="300px">
 ```
 * `mask` directive restricted as element and with given template as follows: 
 
 ```
-< img src="assets/mask.png" class="mask-position" width="62px">
+< img src="assets/images/hero.png" class="mask-position" width="62px">
 ```
 * `superhero` directive restricted as element with template that use previous directives  - you should put mask after the hero element (use directives inside
  template 
@@ -54,6 +54,9 @@ To unit tests in development mode:
     
     grunt test:dev
     
+To run e2e tests in development mode:
+
+    grunt test:e2e
 
 To run verify jshint, tests and coverage:
 

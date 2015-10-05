@@ -1,5 +1,5 @@
 {
-  "name": "angularjs-unit-scaffolding",
+  "name": "angularjs-scaffolding",
   "version": "0.0.0",
   "private": true,
   "dependencies": {},
@@ -10,6 +10,12 @@
     "grunt-contrib-jshint": "0.11.3",
     "grunt-contrib-watch": "0.6.1",
     "grunt-karma": "0.10.1",
+    "grunt-protractor-runner": "1.1.4",
+    "grunt-protractor-webdriver": "0.1.9",
+    "protractor": "2.1.0",
+    "jasmine": "2.3.2",
+    "jasmine-reporters": "2.0.7",
+    "jasmine-spec-reporter": "2.4.0",
     "karma": "0.12.16",
     "karma-coverage": "0.3.1",
     "karma-jasmine": "0.1.5",
@@ -19,6 +25,7 @@
     "load-grunt-tasks": "0.4.0"
   },
   "scripts": {
+    "pretest": "webdriver-manager update --standalone",
     "test": "grunt verify --force"
   }
 }
