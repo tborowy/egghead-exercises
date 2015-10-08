@@ -16,11 +16,16 @@ an value input should be taken as table row class attribute, so after typing 'wa
 Try to connect input fields with columns of the table.
 
 ##Setup
- You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
  
 ###To install dependencies: 
 
-    npm install && bower install
+```
+npm install
+```
+
+```
+bower install
+```
 
 
 ###To start application in live reload mode:
