@@ -54,7 +54,11 @@ module.exports = function (grunt)
                 },
                 protractor_webdriver: {
                     driver: {
-                        options: {}
+                        options: {
+                            path: 'node_modules/.bin/',
+                            command: 'webdriver-manager start',
+                            keepAlive: true
+                        }
                     }
                 },
                 protractor: {
@@ -112,11 +116,11 @@ module.exports = function (grunt)
                     },
                     verify: {
                         options: {
-                            jshintrc: true
+                            jshintrc: true,
+                            reporter: 'checkstyle',
+                            reporterOutput: 'target/jshint.xml'
                         },
-                        files: {src: ['app/**/*.js', 'test/**/*.js', '!app/bower_components/**/*.js']},
-                        reporter: 'checkstyle',
-                        reporterOutput: 'target/jshint.xml'
+                        files: {src: ['app/**/*.js', 'test/**/*.js', '!app/bower_components/**/*.js']}
                     }
                 }
             }

@@ -13,7 +13,7 @@ provide a working example.
 * `restrictA` directive restricted to the attribute and with the template pattern exactly like in **restrictE** directive(but use description.attribute 
 property)
 * `restrictC` directive restricted to the class and with the template pattern exactly like in **restrictE** directive(but use description.class property)
-* `restrictM` directive restricted to the comment. Furthermore, in the directive body *`alert('directive M: working...);`* should be added.
+* `restrictM` directive restricted to the comment. Furthermore, in the directive body *`alert('Restrict M: working...');`* should be added.
 * please bear in mind that required data is already defined in **AppCtrl** controller
 * **index.html** should be updated with example directive usages(check comments)
 
@@ -28,14 +28,18 @@ property)
 * [restrictions](https://docs.angularjs.org/guide/directive)
 
 ##Setup
- You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
  
 ###To install dependencies 
 
-    npm install && bower install
+```
+npm install
+```
 
+```
+bower install
+```
 
-###To start application in live reload mode:
+###To start application in live reload mode
 
     grunt serve
     
@@ -57,6 +61,5 @@ To run e2e tests in development mode:
 To run verify jshint, tests and coverage:
 
     npm test
-
 
 Good luck!
