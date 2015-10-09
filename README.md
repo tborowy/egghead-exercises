@@ -16,7 +16,7 @@ Take a look at `ng-init` directive in `index.html` file
 
 ##Setup
  
-###To install dependencies: 
+###To install dependencies
 
 ```
 npm install
@@ -26,7 +26,7 @@ npm install
 bower install
 ```
 
-###To start application in live reload mode:
+###To start application in live reload mode
 
     grunt serve
     
