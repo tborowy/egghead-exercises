@@ -13,8 +13,7 @@ implement functionality that will allow inputs to be displayed along with the in
 * [angularjs-controller](https://egghead.io/lessons/angularjs-controllers)
 
 ##Setup
- You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
- 
+
 ###To install dependencies: 
 
 ```
