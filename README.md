@@ -15,12 +15,16 @@ Take a look at `ng-init` directive in `index.html` file
 * [angularjs-the-dot](https://egghead.io/lessons/angularjs-the-dot)
 
 ##Setup
- You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
  
 ###To install dependencies: 
 
-    npm install && bower install
+```
+npm install
+```
 
+```
+bower install
+```
 
 ###To start application in live reload mode:
 
