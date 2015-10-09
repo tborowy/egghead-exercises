@@ -17,7 +17,7 @@ Try to connect input fields with columns of the table.
 
 ##Setup
  
-###To install dependencies: 
+###To install dependencies
 
 ```
 npm install
@@ -28,7 +28,7 @@ bower install
 ```
 
 
-###To start application in live reload mode:
+###To start application in live reload mode
 
     grunt serve
     
