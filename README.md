@@ -38,7 +38,6 @@ Examples of results:
 * [orderBy](https://docs.angularjs.org/api/ng/filter/orderBy)
 
 ##Setup
- You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
  
 ###To install dependencies 
 
