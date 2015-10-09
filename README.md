@@ -17,8 +17,13 @@ implement functionality that will allow inputs to be displayed along with the in
  
 ###To install dependencies: 
 
-    npm install && bower install
+```
+npm install
+```
 
+```
+bower install
+```
 
 ###To start application in live reload mode:
 
