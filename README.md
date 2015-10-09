@@ -14,7 +14,7 @@ implement functionality that will allow inputs to be displayed along with the in
 
 ##Setup
 
-###To install dependencies: 
+###To install dependencies
 
 ```
 npm install
@@ -24,7 +24,7 @@ npm install
 bower install
 ```
 
-###To start application in live reload mode:
+###To start application in live reload mode
 
     grunt serve
     
