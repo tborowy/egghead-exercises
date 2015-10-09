@@ -13,13 +13,16 @@ Secondly, when you click the square it should add a provided class to the square
  (using `dbClickOn` directive).
 
  
- Please be aware that you should be able to pass specified bootstrap class as an argument to the directive.
+ Please be aware that you should be able to pass specified bootstrap class as an argument to the directive:
+ 
 * **index.html** should be fixed to achieve the correct behavior for the circle and square mentioned before(also check comments)
-* ***bg-danger*** passed as an attribute to enter and leave directive
-* ***bg-info*** passed as an attribute to dblClick and click directive
 
-**Hint**
-`camelCase` directives should be use inside .html files in this way: `camel-case`  
+* ***btn-danger*** passed as an attribute to enter and leave directive
+
+* ***btn-info*** passed as an attribute to dblClick and click directive
+
+
+**Hint**: `camelCase` directives should be use inside .html files in this way: `camel-case`  
 
 ##Before you start, please refer to:
 * [angularjs-basic-behaviors](https://egghead.io/lessons/angularjs-basic-behaviors)
@@ -28,14 +31,18 @@ Secondly, when you click the square it should add a provided class to the square
 
 
 ##Setup
- You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
  
 ###To install dependencies 
 
-    npm install && bower install
+```
+npm install
+```
 
+```
+bower install
+```
 
-###To start application in live reload mode:
+###To start application in live reload mode
 
     grunt serve
     
