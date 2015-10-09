@@ -42,10 +42,15 @@ Examples of results:
  
 ###To install dependencies 
 
-    npm install && bower install
+```
+npm install
+```
 
+```
+bower install
+```
 
-###To start application in live reload mode:
+###To start application in live reload mode
 
     grunt serve
     
