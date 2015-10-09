@@ -13,7 +13,7 @@ The world needs more heroes. You are given a hard task to create at least two he
 * `mask` directive restricted as element and with given template as follows: 
 
 ```
-< img src="assets/images/hero.png" class="mask-position" width="62px">
+< img src="assets/images/mask.png" class="mask-position" width="62px">
 ```
 * `superhero` directive restricted as element with template that use previous directives  - you should put mask after the hero element (use directives inside
  template 
@@ -32,14 +32,18 @@ The **superhero** should look as follows:
 * [write-your-first-directive](https://egghead.io/lessons/write-your-first-directive)
 
 ##Setup
- You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
  
 ###To install dependencies 
 
-    npm install && bower install
+```
+npm install
+```
 
+```
+bower install
+```
 
-###To start application in live reload mode:
+###To start application in live reload mode
 
     grunt serve
     
