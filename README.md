@@ -21,16 +21,18 @@ Furthermore, you plan to share your application with others so you need to creat
 * [angularjs-isolate-scope-attribute-binding](https://egghead.io/lessons/angularjs-isolate-scope-attribute-binding)
 
 ##Setup
- You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
  
-###To resolve dependencies run:
+###To install dependencies
 
-###To install dependencies: 
+```
+npm install
+```
 
-    npm install && bower install
+```
+bower install
+```
 
-
-###To start application in live reload mode:
+###To start application in live reload mode
 
     grunt serve
     
@@ -49,4 +51,6 @@ To run verify jshint, tests and coverage:
 
     npm test
 
+
 Good luck!
+
