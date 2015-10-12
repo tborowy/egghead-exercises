@@ -18,14 +18,18 @@ You can use ng-repeat directive and combine them together into one petal.
 * [angularjs-directives-talking-to-controllers](https://egghead.io/lessons/angularjs-directives-talking-to-controllers)
 
 ##Setup
- You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
  
 ###To install dependencies 
 
-    npm install && bower install
+```
+npm install
+```
 
+```
+bower install
+```
 
-###To start application in live reload mode:
+###To start application in live reload mode
 
     grunt serve
     
