@@ -16,14 +16,18 @@ Create `SumCtrl` and `SubCtrl` providing the basic math sum (`addition`)and subt
 * [angularjs-an-alternative-approach-to-controllers](https://egghead.io/lessons/angularjs-an-alternative-approach-to-controllers)
 
 ##Setup
- You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example.
 
 ###To install dependencies 
 
-    npm install && bower install
+```
+npm install
+```
 
+```
+bower install
+```
 
-###To start application in live reload mode:
+###To start application in live reload mode
 
     grunt serve
     
