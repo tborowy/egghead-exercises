@@ -21,14 +21,18 @@ To add class to the element use **addClass('className')** function, to remove it
 * [angularjs-the-basics-of-scope-watch](https://egghead.io/lessons/angularjs-the-basics-of-scope-watch)
 
 ##Setup
-You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example.
+ 
+###To install dependencies
 
-###To install dependencies: 
+```
+npm install
+```
 
-    npm install && bower install
+```
+bower install
+```
 
-
-###To start application in live reload mode:
+###To start application in live reload mode
 
     grunt serve
     
@@ -47,5 +51,5 @@ To run verify jshint, tests and coverage:
 
     npm test
 
-Good luck!
 
+Good luck!
