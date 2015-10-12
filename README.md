@@ -17,14 +17,18 @@ display information about the box.
 * [angularjs-isolate-scope-review](https://egghead.io/lessons/angularjs-isolate-scope-review)
 
 ##Setup
- You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
  
 ###To install dependencies 
 
-    npm install && bower install
+```
+npm install
+```
 
+```
+bower install
+```
 
-###To start application in live reload mode:
+###To start application in live reload mode
 
     grunt serve
     
@@ -46,5 +50,5 @@ To run e2e tests in development mode:
 To run verify jshint, tests and coverage:
 
     npm test
-    
+
 Good luck!
