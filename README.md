@@ -11,14 +11,18 @@ Use ng-transclude in `animal` directive.
 * [angularjs-transclusion-basics](https://egghead.io/lessons/angularjs-transclusion-basics)
 
 ##Setup
- You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. To resolve dependencies run:
-
+ 
 ###To install dependencies 
 
-    npm install && bower install
+```
+npm install
+```
 
+```
+bower install
+```
 
-###To start application in live reload mode:
+###To start application in live reload mode
 
     grunt serve
     
