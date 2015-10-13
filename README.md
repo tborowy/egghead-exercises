@@ -11,7 +11,8 @@ In this application there are two directives working on the same scope. The fina
 * [angularjs-scope-vs-scope](https://egghead.io/lessons/angularjs-scope-vs-scope)
 
 ##Setup
-You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
+ 
+###To install dependencies
 
 ```
 npm install
@@ -21,16 +22,23 @@ npm install
 bower install
 ```
 
-To start the application, run
+###To start application in live reload mode
 
-```
-grunt serve
-```
+    grunt serve
+    
+###Jshint
+To run verify jshint:
+    
+    grunt jshint:default
 
-To start cucumber tests, run sequentially in separate terminals the application and command
+###Run tests
 
-```
-grunt test
-```
+To run e2e tests in development mode:
+
+    grunt test:e2e
+
+To run verify jshint, tests and coverage:
+
+    npm test
 
 Good luck!

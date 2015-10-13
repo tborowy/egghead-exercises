@@ -12,7 +12,7 @@
         };
         this.separateScope = function ()
         {
-            this.otherScopeValue = simpleFactory.get();
+            this.separateScopeValue = simpleFactory.get();
         };
         $scope.ctrl = this;
     });
@@ -24,7 +24,8 @@
             set: function (value)
             {
                 valueFromScope = value;
-            }, get: function ()
+            },
+            get: function ()
             {
                 return valueFromScope;
             }
@@ -34,7 +35,9 @@
     appScope.directive('unit', function ()
     {
         return {
-            restrict: 'E', replace: true, template: '<div> <input id="unit" class="form-control" type="text" ng-model="input"></div>'
+            restrict: 'E',
+            replace: true,
+            template: '<div> <input id="unit" class="form-control" type="text" ng-model="input"></div>'
         };
     });
 

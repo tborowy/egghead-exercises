@@ -18,15 +18,15 @@
                     <unit></unit>
                 </div>
                 <button id="unitButton" class="btn btn-success" ng-click="ctrl.unitScope()">Value from unit scope</button>
-                <div class="text-success">{{ctrl.unitScopeValue}}</div>
+                <h3 class="text-success" ng-bind="ctrl.unitScopeValue"></h3>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label>Value from separate scope</label>
                     <separate></separate>
                 </div>
-                <button id="separateButton" class="btn btn-success" ng-click="ctrl.separateScope()">Value from separate scope</button>
-                <div class="text-danger">{{ctrl.otherScopeValue}}</div>
+                <button id="separateButton" class="btn btn-danger" ng-click="ctrl.separateScope()">Value from separate scope</button>
+                <h3 class="text-danger" ng-bind="ctrl.separateScopeValue"></h3>
             </div>
         </div>
     </div>
