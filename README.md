@@ -7,11 +7,15 @@ Directive **url** has a big template, try resolve this problem by moving it to a
  * don't change functionality directive or exist properties in directive
  * create `urlTemplate.html` file for `url` directive template
 
+##Hint
+Watch out for **String** inside the template! 
+
 ##Before you start, please refer to:
 * [angularjs-templateurl](https://egghead.io/lessons/angularjs-templateurl)
 
 ##Setup
-You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
+ 
+###To install dependencies
 
 ```
 npm install
@@ -21,16 +25,23 @@ npm install
 bower install
 ```
 
-To start the application, run
+###To start application in live reload mode
 
-```
-grunt serve
-```
+    grunt serve
+    
+###Jshint
+To run verify jshint:
+    
+    grunt jshint:default
 
-To start cucumber tests, run sequentially in separate terminals the application and command
+###Run tests
 
-```
-grunt test
-```
+To run e2e tests in development mode:
+
+    grunt test:e2e
+
+To run verify jshint, tests and coverage:
+
+    npm test
 
 Good luck!
