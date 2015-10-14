@@ -38,16 +38,7 @@
 
     TextField.prototype.getValue = function ()
     {
-        var element = this.element;
-        return browser.waitForAngular().then(function ()
-        {
-            return element.getText();
-        });
-    };
-
-    TextField.prototype.isFound = function ()
-    {
-        return this.element.isPresent();
+        return this.element.getText();
     };
 
     TextInput.prototype.setValue = function (text)
@@ -133,7 +124,6 @@
     {
         return helper.file('test/features/pageFragments/testTemplate.html').getContent();
     };
-
 
     module.exports = PageFragment;
 })();
