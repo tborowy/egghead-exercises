@@ -1,4 +1,4 @@
-describe('restrict', function ()
+describe('car app', function ()
 {
     'use strict';
     var route;
@@ -71,15 +71,15 @@ describe('restrict', function ()
 
                 });
 
-                it('should redirect to secret when brand is "special"', function ()
+                it('should redirect to secret when brand is "spy"', function ()
                 {
-                    expect(route.routes['/inputs/:brand?/:capacity?'].redirectTo({brand: 'special', capacity: '3.5'}, '/inputs/special/3.5')).toBe('/secret');
+                    expect(route.routes['/inputs/:brand?/:capacity?'].redirectTo({brand: 'spy', capacity: '3.5'}, '/inputs/spy/3.5')).toBe('/secret');
 
                 });
-                it('should redirect to secret when capacity is "special"', function ()
+                it('should redirect to secret when capacity is "spy"', function ()
                 {
-                    expect(route.routes['/inputs/:brand?/:capacity?'].redirectTo({brand: 'Ferrari', capacity: 'special'},
-                            '/inputs/Ferrari/special')).toBe('/secret');
+                    expect(route.routes['/inputs/:brand?/:capacity?'].redirectTo({brand: 'Ferrari', capacity: 'spy'},
+                            '/inputs/Ferrari/spy')).toBe('/secret');
 
                 });
 

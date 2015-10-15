@@ -1,8 +1,3 @@
-// Karma configuration
-// http://karma-runner.github.io/0.12/config/configuration-file.html
-// Generated on 2014-09-07 using
-// generator-karma 0.8.3
-
 module.exports = function (config)
 {
     'use strict';
@@ -12,43 +7,38 @@ module.exports = function (config)
         autoWatch: true,
 
         // base path, that will be used to resolve files and exclude
-        basePath: '',
+        basePath: '../',
 
         // testing framework to use (jasmine/mocha/qunit/...)
-        frameworks: ['jasmine'], proxies: {
-            '/assets/': '/app/assets/'
-        },
+        frameworks: ['jasmine'],
 
         // list of files / patterns to load in the browser
-        files: ['../app/bower_components/angular/angular.js',
-                '../app/bower_components/angular-mocks/angular-mocks.js',
-                '../app/bower_components/angular-route/angular-route.js',
-                '../app/app.js',
-                'unit/**/*spec.js'],
+        files: ['app/bower_components/angular/angular.js',
+                'app/bower_components/angular-route/angular-route.js',
+                'app/bower_components/angular-mocks/angular-mocks.js',
+                'app/*.js',
+                'app/!(bower_components)/**/*.js',
+                'test/unit/**/*.spec.js'],
 
         // list of files / patterns to exclude
         exclude: [],
 
-
-        reporters: ['spec', 'junit', 'coverage'],
+        reporters: ['spec', 'coverage', 'junit'],
 
         preprocessors: {
-            'app/modules/common/patchModel.service.js': 'coverage'
+            'app/(!bower_components)/**/*.js': 'coverage'
         },
 
         coverageReporter: {
-            dir: 'target/', reporters: [{
-                type: 'html'
-            }, {
-                type: 'cobertura', file: 'coverage.xml'
-            }]
-
+            dir: 'target/',
+            type: 'cobertura',
+            file: 'coverage.xml'
         },
+
 
         junitReporter: {
             outputFile: 'target/test-results.xml'
         },
-
 
         // web server port
         port: 8080,
@@ -68,7 +58,7 @@ module.exports = function (config)
 
         // Continuous Integration mode
         // if true, it capture browsers, run tests and exit
-        singleRun: false,
+        singleRun: true,
 
         colors: true,
 
