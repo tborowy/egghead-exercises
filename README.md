@@ -5,7 +5,6 @@ AngularJS's ngView is a directive that complements the $route service by includi
 
 ##Goals
 Your task is to set up routing in this simple application. 
-
 * configure the routing to display home.html page at `/` path'
 * display message from controller at `home.html`
 * **don't** change `home.html` file and `RouteCtrl`
@@ -14,7 +13,14 @@ Your task is to set up routing in this simple application.
 * [angularjs-ng-view](https://egghead.io/lessons/angularjs-ng-view)
 
 ##Setup
-You should have installed `npm`, `bower`, `grunt-cli`  packages to run this example. First, run sequentially
+ 
+###ngRoute
+
+ * pay attention on **AngularJS 1.2.x Routing Changes: ngRoute** below the movie
+ * add `angular-route.js` from `bower_components` to index.html 
+ * add `ngRoute` dependency to application
+
+###To install dependencies 
 
 ```
 npm install
@@ -24,21 +30,27 @@ npm install
 bower install
 ```
 
-To start the application, run
+###To start application in live reload mode
 
-```
-grunt serve
-```
+    grunt serve
+    
+###Jshint
+To run verify jshint:
+    
+    grunt jshint:default
 
-To start cucumber tests, run sequentially in separate terminals the application and command
+###Run tests
 
-```
-grunt test
-```
+To unit tests in development mode:
+    
+    grunt test:dev
+    
+To run e2e tests in development mode:
 
-###ngRoute
-* pay attention on **AngularJS 1.2.x Routing Changes: ngRoute** below the movie
-* add `angular-route.js` from `bower_components` to index.html 
-* add `ngRoute` dependency to application
+    grunt test:e2e
+
+To run verify jshint, tests and coverage:
+
+    npm test
 
 Good luck!

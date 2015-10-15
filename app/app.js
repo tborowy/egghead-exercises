@@ -13,11 +13,10 @@
 
         this.display = function ()
         {
-            this.message = this.message ? '' : 'I came from a controller';
+            this.message = this.message ? '' : 'I came from a RouteCtrl';
             this.buttonName = this.message === '' ? 'Click to show!' : 'Click to hide!';
 
         };
         $scope.routing = this;
     });
-
 })();
