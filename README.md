@@ -16,16 +16,17 @@ Utilise `templateCache` to store templates and render them in the directive. You
 * [$watch](https://egghead.io/lessons/angularjs-the-basics-of-scope-watch)
 
 ##Setup
- 
+
 ###To install dependencies 
 
- ```
- npm install
- ```
- 
- ```
- bower install
- ```
+```
+npm install
+```
+
+```
+bower install
+```
+
 
 ###To start application in live reload mode
 
