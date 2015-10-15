@@ -5,6 +5,7 @@ AngularJS's ngView is a directive that complements the $route service by includi
 
 ##Goals
 Your task is to set up routing in this simple application. 
+
 * configure the routing to display home.html page at `/` path'
 * display message from controller at `home.html`
 * **don't** change `home.html` file and `RouteCtrl`
