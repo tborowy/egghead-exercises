@@ -1,19 +1,27 @@
-#Exercise 48: Testing a Service
+##Exercise 48: Testing a Service
 
-##Summary
-In this application, you are supposed to create tests to `Calculator` service that cover 4 basic mathematical operations.
+## Summary
 
-##Goals
-* each function of `Calculator` service should be test in a separate **describe** (use function name)
+You are provided with the `User` service uses five functions `save`,`get`,`remove`, `getAll` and `count`. Test this service as best you can.
 
-##Before you start, please refer to:
-* [angularjs-testing-underscores](https://egghead.io/lessons/angularjs-testing-underscores)
+## Goals
+
+Your task is to write unit tests to `User` service. It is composed of five functions:
+
+ * `save(user)` - add new user to `users` object or edit existing user  
+ * `get(id)` - return specified user
+ * `remove(id)` - delete specific user
+ * `getAll()`- return users list
+ * `count()` - return the number of users 
+
+To tests your unit tests use `grunt mutationTest`
+
+## Before you start, please refer to:
 * [angularjs-testing-a-service](https://egghead.io/lessons/angularjs-testing-a-service)
 
-##Setup
- You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
- 
-###To resolve dependencies run:
+## Setup
+
+### To install dependencies 
 
 ```
 npm install
@@ -23,25 +31,27 @@ npm install
 bower install
 ```
 
-###To run the application:
+### To start application in live reload mode
 
-```
-grunt serve
-```
+    grunt serve
+    
+### Jshint
+To run verify jshint:
+    
+    grunt jshint:default
 
-###To test the application:
+### Run tests
 
+To unit tests in development mode:
+    
+    grunt test:dev
 
-To run karma unit tests:
+To run verify jshint, tests and coverage:
 
-```
-npm run karma
-```
+    npm test
 
 To run mutation tests:
-
-```
-npm run mutation
-```
+    
+    grunt mutationTest
 
 Good luck!
