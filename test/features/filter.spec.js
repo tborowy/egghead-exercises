@@ -84,7 +84,7 @@
             'username': 'farmstronge'
         }];
 
-        describe('initialization', function ()
+        describe('Initialization', function ()
         {
             beforeEach(function ()
             {
@@ -101,7 +101,7 @@
             });
         });
 
-        describe('search filter', function ()
+        describe('Search filter', function ()
         {
             beforeEach(function ()
             {
@@ -125,7 +125,7 @@
             });
         });
 
-        describe('rows limit', function ()
+        describe('Rows limit', function ()
         {
             beforeEach(function ()
             {
@@ -173,7 +173,7 @@
             });
         });
 
-        describe('sort data by table header', function ()
+        describe('Sort data by table header', function ()
         {
             beforeEach(function ()
             {
@@ -357,7 +357,7 @@
             });
         });
 
-        describe('filter, sort and limit', function ()
+        describe('Filter, sort and limit', function ()
         {
             beforeEach(function ()
             {
@@ -378,6 +378,25 @@
                 filterApplication.sortById();
                 expect(filterApplication.getTableContent()).toEqual([usersList[12], usersList[11], usersList[10], usersList[8], usersList[5], usersList[1]]);
             });
+        });
+
+        describe('Change order in some column and pick another column', function ()
+        {
+            beforeEach(function ()
+            {
+                browser.get('/');
+            });
+
+            it('should sort table alphabetically by last column', function ()
+            {
+                filterApplication.sortById();
+                filterApplication.sortByUsername();
+                filterApplication.sortByFullName();
+                filterApplication.sortById();
+
+                expect(filterApplication.getTableContent()).toEqual(usersList);
+            });
+            
         });
     });
 })();

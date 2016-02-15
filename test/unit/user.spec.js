@@ -31,12 +31,6 @@ describe('user', function ()
 
     describe('reverse function', function ()
     {
-        it('should set choice id column', function ()
-        {
-            scope.reverseSort('id');
-            expect(scope.choice).toEqual('id');
-        });
-
         it('should set choice username column', function ()
         {
             scope.reverseSort('username');

@@ -9,8 +9,8 @@ Limit the number of displayed records with the radio button (default limit shoul
 by creating `reverseSort` function that sort the data ascending and descending. The table should be sort default by **id** (column name keep in `$scope
 .choice`).
  
-Take a look at `orderBy` documentation to see examples.
-
+After changing order in some column and picking another by click, column should be sorted alphabetically. Take a look at `orderBy` documentation to 
+see examples. 
   
 **Hint!**
 The order of `orderBy` and `limitTo` is relevant.
@@ -38,6 +38,7 @@ Examples of results:
 * [orderBy](https://docs.angularjs.org/api/ng/filter/orderBy)
 
 ##Setup
+ You should have `npm`, `bower`, `grunt-cli`  packages installed to run this example.
  
 ###To install dependencies 
 
