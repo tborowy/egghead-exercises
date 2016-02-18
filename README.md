@@ -19,7 +19,7 @@ Secondly, when you click the square it should add a provided class to the square
 
 * ***btn-danger*** passed as an attribute to enter and leave directive
 
-* ***btn-info*** passed as an attribute to dblClick and click directive
+* ***btn-info*** passed as an attribute to dbClickOn and clickOn directive
 
 
 **Hint**: `camelCase` directives should be use inside .html files in this way: `camel-case`  
