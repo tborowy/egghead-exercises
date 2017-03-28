@@ -3,8 +3,9 @@
     'use strict';
 
     module.exports.config = {
+	/* jshint ignore:start */
         seleniumAddress: 'http://' + process.env.PROTRACTOR_HOST + ':4444/wd/hub',
-
+	/* jshint ignore:end */
         framework: 'jasmine2',
 
         specs: [
