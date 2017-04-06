@@ -43,6 +43,5 @@
     "browser": true,
     "element": true,
     "require": true
-  },
-  "-W097": true
+  }
 }
