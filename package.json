@@ -26,7 +26,7 @@
     "protractor": "4.0.14"
   },
   "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install",
+    "postinstall": "webdriver-manager update --standalone",
     "test": "grunt verify --force"
   }
 }
