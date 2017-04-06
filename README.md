@@ -1,40 +1,40 @@
-#Exercise 5 : Angular filters
+#Exercise 6: Angular ng-repeat and filtering data
 
 ##Summary
-In this application, you are supposed to create three simple filters and use them in the right places.
-You are also supposed to use build-in angular filter to filter value of `tellMe` input which should be displayed in capital letters below the table.
-
+In this application, you are supposed to create `searchStudent` filter allowing user to search through the list of students by filtering the specified field.
 
 ##Goals
-1. `quote` filter - wraps the text with quotes
-2. `withoutH` filter - removes all the letters H and h
-3. `firstLetterUp` filter - converts the first letter of the word to the large ones (take a look at regular expression)
+Your task is to make the `search` input field search through all categories. Each input field is responsible for its own column. Furthermore, you should be able
+ to filter by using multiple fields at the same time.
 
-You are not supposed to edit or add any CSS styles.
+ * write `Warner` in `First Name` field
 
-| Filter | Without filter | With filter |
-|--------|----------------|-------------|
-| quote  | To be, or not to be...| "To be, or not to be..." |
-| withoutH  | The Hobbit: The Battle of the Five Armies   | Te obbit: Te Battle of te Five Armies |
-|firstLetterUp|Visit News for up-to-the-minute news, breaking news, video, audio and stories. |Visit News For Up-To-The-Minute News, Breaking News, Video, Audio And Stories|
+| firstName | lastName |age |email|phone|
+|--------|--------|--------|--------|--------|
+| Warner  |Bridges| 18|warner.bridges@undefined.biz|+1 (914) 451-3055|
 
-##Before you start
-* [angularjs-filters](https://egghead.io/lessons/angularjs-filters)
-* [docs.angularjs: filter](https://docs.angularjs.org/api/ng/filter)
-* [regular expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
-* [regular expression online](https://regex101.com/)
+ * write `1` in `Age` field
+
+| firstName | lastName |age |email|phone|
+|--------|--------|--------|--------|--------|
+| Warner  |Bridges| 18|warner.bridges@undefined.biz|+1 (914) 451-3055|
+| Gray  |Rose| 21|gray.rose@undefined.io|+1 (807) 582-3992|
+
+##Before you start, please refer to:
+* [angularjs-ngrepeat-and-filtering-data](https://egghead.io/lessons/angularjs-ngrepeat-and-filtering-data)
+* [angular filter](https://docs.angularjs.org/api/ng/filter/filter)
 
 ##Setup
  
 ###To install dependencies 
- 
-```
-npm install
-```
 
-```
-bower install
-```
+ ```
+ npm install
+ ```
+ 
+ ```
+ bower install
+ ```
 
 ###To start application in live reload mode
 
@@ -47,10 +47,6 @@ To run verify jshint:
 
 ###Run tests
 
-To unit tests in development mode:
-    
-    grunt test:dev
-    
 To run e2e tests in development mode:
 
     grunt test:e2e

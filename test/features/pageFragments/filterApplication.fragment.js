@@ -10,15 +10,7 @@
         this.element = e;
     }
 
-    function TextField(e)
-    {
-        if (null == e) {
-            throw new Error('element must not be null');
-        }
-        this.element = e;
-    }
-
-    function TableField(e)
+    function Table(e)
     {
         if (null == e) {
             throw new Error('element must not be null');
@@ -41,82 +33,127 @@
         return this.element.clear();
     };
 
-    TextField.prototype.getValue = function ()
+    Table.prototype.getContent = function (tableSelector, columnSelector, colNames)
     {
-        return this.element.getText();
+        return this.element.all(by.css(tableSelector)).map(function (row)
+        {
+            var columns = row.all(by.css(columnSelector));
+            return columns.then(function (cols)
+            {
+                var result = {};
+                cols.forEach(function (col, idx)
+                {
+                    result[colNames[idx]] = col.getText();
+                });
+                return result;
+            });
+        });
     };
 
-    TableField.prototype.getValue = function ()
+    Table.prototype.getRowsAmount = function ()
     {
-        return this.element.getText();
+        return this.element.all(by.css('tbody tr')).count();
     };
-
 
     var helper = {
         input: function (e)
         {
             return new TextInput(e);
         },
-        textField: function (e)
+        table: function (e)
         {
-            return new TextField(e);
-        },
-        tableField: function (e)
-        {
-            return new TextField(e);
+            return new Table(e);
         }
     };
 
     var elements = {
-        textInput: element.bind(element, by.css('input')),
-        filterTellMe: element.bind(element, by.css('h3')),
-        tableField: {
-            firstWithFilter: element.bind(null, by.css('#quote')),
-            secondWithFilter: element.bind(null, by.css('#withoutH')),
-            thirdWithFilter: element.bind(null, by.css('#firstLetterUp'))
-        }
+        input: {
+            search: element.bind(null, by.id('search')),
+            firstName: element.bind(null, by.id('first')),
+            lastName: element.bind(null, by.id('last')),
+            age: element.bind(null, by.id('age')),
+            email: element.bind(null, by.id('email')),
+            phone: element.bind(null, by.id('phone'))
+        },
+        table: element.bind(null, by.id('students'))
     };
 
     function PageFragment()
     {
     }
 
-// get input value
-    PageFragment.prototype.getTextInputValue = function ()
+// clear inputs
+    PageFragment.prototype.clearAllInputs = function ()
     {
-        return helper.input(elements.textInput()).getValue();
+        helper.input(elements.input.search()).clearValue();
+        helper.input(elements.input.firstName()).clearValue();
+        helper.input(elements.input.lastName()).clearValue();
+        helper.input(elements.input.age()).clearValue();
+        helper.input(elements.input.email()).clearValue();
+        helper.input(elements.input.phone()).clearValue();
+    };
+
+    PageFragment.prototype.clearSearchInput = function ()
+    {
+        helper.input(elements.input.search()).clearValue();
+    };
+    PageFragment.prototype.clearFirstNameInput = function ()
+    {
+        helper.input(elements.input.firstName()).clearValue();
+    };
+    PageFragment.prototype.clearLastNameInput = function ()
+    {
+        helper.input(elements.input.lastName()).clearValue();
+    };
+    PageFragment.prototype.clearAgeInput = function ()
+    {
+        helper.input(elements.input.age()).clearValue();
+    };
+    PageFragment.prototype.clearEmailInput = function ()
+    {
+        helper.input(elements.input.email()).clearValue();
+    };
+    PageFragment.prototype.clearPhoneInput = function ()
+    {
+        helper.input(elements.input.phone()).clearValue();
+    };
+
+// table
+    PageFragment.prototype.getTableContent = function ()
+    {
+        return helper.table(elements.table()).getContent('tbody tr', 'td', ['firstName', 'lastName', 'age', 'email', 'phone']);
+    };
+
+    PageFragment.prototype.getNumberOfRows = function ()
+    {
+        return helper.table(elements.table()).getRowsAmount();
     };
 
 // set input value
-    PageFragment.prototype.setTextInputValue = function (filter)
+    PageFragment.prototype.setSearchInputValue = function (text)
     {
-        return helper.input(elements.textInput()).setValue(filter);
+        return helper.input(elements.input.search()).setValue(text);
     };
 
-// clear input value
-    PageFragment.prototype.clearTextInputValue = function ()
+    PageFragment.prototype.setFirstNameInputValue = function (text)
     {
-        return helper.input(elements.textInput()).clearValue();
+        return helper.input(elements.input.firstName()).setValue(text);
     };
-
-// get text after filter
-    PageFragment.prototype.getTextFieldValue = function ()
+    PageFragment.prototype.setLastNameInputValue = function (text)
     {
-        return helper.textField(elements.filterTellMe()).getValue();
+        return helper.input(elements.input.lastName()).setValue(text);
     };
-
-// get table field
-    PageFragment.prototype.getFirstRowWithoutFilterColumn = function ()
+    PageFragment.prototype.setAgeInputValue = function (text)
     {
-        return helper.tableField(elements.tableField.firstWithFilter()).getValue();
+        return helper.input(elements.input.age()).setValue(text);
     };
-    PageFragment.prototype.getSecondRowWithoutFilterColumn = function ()
+    PageFragment.prototype.setEmailInputValue = function (text)
     {
-        return helper.tableField(elements.tableField.secondWithFilter()).getValue();
+        return helper.input(elements.input.email()).setValue(text);
     };
-    PageFragment.prototype.getThirdRowWithoutFilterColumn = function ()
+    PageFragment.prototype.setPhoneInputValue = function (text)
     {
-        return helper.tableField(elements.tableField.thirdWithFilter()).getValue();
+        return helper.input(elements.input.phone()).setValue(text);
     };
 
     module.exports = PageFragment;

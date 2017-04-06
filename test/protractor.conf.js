@@ -1,11 +1,11 @@
+/*global process*/
 (function ()
 {
     'use strict';
 
     module.exports.config = {
-	/* jshint ignore:start */
-        seleniumAddress: 'http://' + process.env.PROTRACTOR_HOST + ':4444/wd/hub',
-	/* jshint ignore:end */
+        seleniumAddress: 'http://' + (process.env.PROTRACTOR_HOST || 'localhost') + ':4444/wd/hub',
+
         framework: 'jasmine2',
 
         specs: [
@@ -16,7 +16,7 @@
             'browserName': 'chrome'
         },
 
-        baseUrl: 'http://' + process.env.HOSTNAME + ':9001',
+        baseUrl: 'http://' + (process.env.HOSTNAME || 'localhost') + ':9001',
 
         allScriptsTimeout: 40000,
         resultJsonOutputFile: 'target/report.json',

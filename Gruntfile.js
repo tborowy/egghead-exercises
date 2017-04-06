@@ -8,23 +8,22 @@ module.exports = function (grunt)
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-protractor-webdriver');
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-karma');
 
     require('load-grunt-tasks')(grunt);
 
 
-    var config = {
+    var paths = {
         app: 'app'
     };
 
     grunt.initConfig({
-                config: config,
+                config: paths,
                 watch: {
                     livereload: {
                         options: {
                             livereload: '<%= connect.options.livereload %>'
                         },
-                        files: ['<%= config.app %>/**/*.html', '<%= config.app %>/**/*.js']
+                        files: ['<%= paths.app %>/**/*.html', '<%= paths.app %>/**/*.js']
                     }
                 },
 
@@ -32,13 +31,12 @@ module.exports = function (grunt)
                     options: {
                         port: 9000,
                         livereload: 35729,
-                        hostname: '127.0.0.1'
+                        hostname: (process.env.HOSTNAME || 'localhost')
                     },
                     test: {
                         options: {
                             base: ['app'],
-                            port: 9001,
-                            hostname: process.env.HOSTNAME
+                            port: 9001
                         }
                     },
                     livereload: {
@@ -46,10 +44,19 @@ module.exports = function (grunt)
                             open: true,
                             middleware: function (connect)
                             {
-                                return [connect().use('/bower_components', connect.static('./bower_components')), connect.static(config.app)
+                                return [connect().use('/bower_components', connect.static('./bower_components')), connect.static(paths.app)
 
                                 ];
                             }
+                        }
+                    }
+                },
+                protractor_webdriver: {
+                    driver: {
+                        options: {
+                            path: 'node_modules/.bin/',
+                            command: 'webdriver-manager start',
+                            keepAlive: true
                         }
                     }
                 },
@@ -86,17 +93,6 @@ module.exports = function (grunt)
                         }
                     }
                 },
-                karma: {
-                    options: {
-                        configFile: 'test/karma.conf.js'
-                    },
-                    unit: {
-                        singleRun: true
-                    },
-                    dev: {
-                        singleRun: false
-                    }
-                },
                 jshint: {
                     default: {
                         options: {
@@ -120,11 +116,13 @@ module.exports = function (grunt)
 
     grunt.registerTask('serve', ['connect:livereload', 'watch']);
 
-    grunt.registerTask('verify', ['jshint:verify', 'karma:unit', 'connect:test', 'protractor:chrome']);
+    var verityTask = ['jshint:verify', 'connect:test', 'protractor_webdriver', 'protractor:chrome'];
+    if (process.env.WEBDRIVER_RUNNIG) {
+        verityTask.splice(verityTask.indexOf('protractor_webdriver'), 1);
+    }
+    grunt.registerTask('verify', verityTask);
 
-    grunt.registerTask('test:dev', ['karma:dev']);
-
-    grunt.registerTask('test:e2e', ['connect:test', 'protractor:chrome']);
+    grunt.registerTask('test:e2e', ['connect:test', 'protractor_webdriver', 'protractor:chrome']);
 
     grunt.registerTask('default', ['serve']);
 };
