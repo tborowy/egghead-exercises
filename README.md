@@ -17,7 +17,7 @@ implement functionality that will allow inputs to be displayed along with the in
 ###To install dependencies
 
 ```
-npm install
+yarn install
 ```
 
 ```
@@ -41,6 +41,6 @@ To run e2e tests in development mode:
 
 To run verify jshint, tests and coverage:
 
-    npm test
+    yarn test
 
 Good luck!
