@@ -25,7 +25,7 @@ Furthermore, you plan to share your application with others so you need to creat
 ###To install dependencies
 
 ```
-npm install
+yarn install
 ```
 
 ```
@@ -49,7 +49,7 @@ To run e2e tests in development mode:
 
 To run verify jshint, tests and coverage:
 
-    npm test
+    yarn test
 
 
 Good luck!
