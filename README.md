@@ -20,7 +20,7 @@ Create `SumCtrl` and `SubCtrl` providing the basic math sum (`addition`)and subt
 ###To install dependencies 
 
 ```
-npm install
+yarn install
 ```
 
 ```
@@ -45,7 +45,7 @@ To unit tests in development mode:
 
 To run verify jshint, tests and coverage:
 
-    npm test
+    yarn test
 
 
 Good luck!
