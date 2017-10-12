@@ -42,6 +42,8 @@
     "spyOn": true,
     "browser": true,
     "element": true,
-    "require": true
+    "require": true,
+    "protractor": true,
+    "alert":true
   }
 }
