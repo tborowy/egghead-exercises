@@ -24,7 +24,7 @@ Your task is to set up routing in this simple application.
 ###To install dependencies 
 
 ```
-npm install
+yarn install
 ```
 
 ```
@@ -52,6 +52,6 @@ To run e2e tests in development mode:
 
 To run verify jshint, tests and coverage:
 
-    npm test
+    yarn test
 
 Good luck!
